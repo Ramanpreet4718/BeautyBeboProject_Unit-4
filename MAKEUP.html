@@ -1,12 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Makeup Kit</title>
+    <style>
+        #parent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        #card {
+            border-left: 1px solid #ebebeb;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+            
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        img {
+            width: 70%;
+        }
+
+        .card {
+            padding: 10px;
+        }
+
+        button::before {
+            content: ''
+        }
+
+
+        /* --------collapse option */
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        /* ----------text */
+        .text_content_body_bottom{
+            margin-left: 20%;
+        }
+        .p_heading{
+            font-weight: bold;
+        }
+        .p_heading:hover{
+            color:#DD0285 ;
+        }
+    </style>
 </head>
+
 <body>
-    MANISH
+    <div class="container">
+        <div class="nav">
+            <h1>nav</h1>
+            <h1>MAKEUP</h1>
+        </div>
+        <div class="bodycontent" style="display: flex;">
+            <div class="sidebar" style="width: 25%;">
+                <h2>SHOP BY</h2>
+                <button type="button" class="collapsible">Price</button>
+                <div class="content">
+                    <div>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue"> Below
+                            ₹1,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹1,000 - ₹2,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹2,000 - ₹3,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹3,000 and </p>
+                    </div>
+                </div>
+                <button type="button" class="collapsible">Open Section 2</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button type="button" class="collapsible">Open Section 3</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt="" style="width: 100% !important; margin-top:20px;">
+
+            </div>
+
+            <div id="parent" style="width:80%; align-items: flex-end;">
+
+            </div>
+            
+        </div>
+        <div class="text_content_body_bottom">
+            <p class="p_heading">Tips on Best Make-up for Winter</p>
+            <p>Winter dictates a drier and even flaky skin, that we all agree. This does not, however, mean that our face and neck should have a gloomy appearance. At Beauty Bebo, we believe that all you have to do is change your make-up combination.
+
+                Better still, we provide these makeup kits online, so you don’t have to stress your skin in the cold looking for makeup solutions.
+                
+                Let’s get the show on the road on some of the basics of the best makeup for winter;</p>
+
+            <p class="p_heading">Include Moisturizing Solutions</p>
+            <p>During winter, as said before, your skin will run dry. Thus, always have a moisturizer in your kit. Our nourishing natural moisturizers will sort you out on this.
+
+                Cream or liquefied foundation should also replace your ponds and powders. This way, you will treat the skin that is threatening to go flaky, while maintaining an attractive outlook.
+                
+                The highlighter should also be liquid. Primer lipstick that leaves a luminous glow will finish the pretty look.
+                
+                Let your neck, lips, eyes and face in general not change for the worse, but for the better. Surprise everyone you come across with your new winter makeup solutions.
+                
+                In summary, ensure that the better part of your make-up kit is filled with moisturizing agents.</p>
+
+            <p class="p_heading">Feel Free to Reach Out to Beauty Bebo</p>
+            <p>Not sure about the exact combinations for your sensitive skin? Reach out to Beauty Bebo. Our friendly customer care is always online and on call to answer your queries and give advice where necessary.</p>
+        </div>
+    </div>
 </body>
+
 </html>
+<script>
+var MAKEUP = [
+        {
+          id: 1,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/68caf778903487000186_1.jpg",
+          name: "Miss Claire Eyeshadow Kit 3716-11-1",
+          price: "395"
+        },
+        {
+          id: 2,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/a/eadff778903487000193_1.jpg",
+          name: "Miss Claire Eyeshadow Kit - 3716-11-2",
+          price: "395"
+        },
+        {
+          id: 3,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/f/ff360238903487002210_1.jpg",
+          name: "Miss Claire M14 - Eyeshadow Blending Brush",
+          price: "428"
+        },
+        {
+          id: 4,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/4/84de0238903487002357_1.jpg",
+          name: "Miss Claire M22 - Contour/Blush Brush",
+          price: "731"
+        },
+        {
+          id: 5,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/1/b14f0238903487002494_1.jpg",
+          name: "Miss Claire M29 - Angled Shader Brush",
+          price: "375"
+        },
+        {
+          id: 6,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_5.jpg",
+          name: "Miss Claire Professional Eyeshadow Palette - 1",
+          price: "1,230"
+        },
+        {
+          id: 7,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_4.jpg",
+          name: "Miss Claire M27 - Brow Perfector Brush (S)",
+          price: "375"
+        },
+        {
+          id: 8,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/4/745c0238903487002395_1.jpg",
+          name: "Miss Claire M24 - Fan Brush",
+          price: "446"
+        },
+        {
+          id: 9,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/9/29350238903487002456_1.jpg",
+          name: "Miss Claire Make Up Palette 9920 (Make Up Kit)",
+          price: "796"
+        },
+        {
+            id: 10,
+            image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d28bf778903487024816_1.jpg",
+            name: "Miss Claire Blusher Kit - 3660-B-3",
+            price: "410"
+        },
+        {
+            id: 11,
+            image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/7/3732f778903487000209_1.jpg",
+            name: "Miss Claire Eyeshadow Kit - 3716-11-3",
+            price: "395"
+        },
+        {
+            id: 12,
+            image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/d/bdd30238903487002319_1.jpg",
+            name: "Miss Claire M20 - Pointed Blending Brush (L)",
+            price: "375"
+        },
+        {
+          id: 13,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/610f0238903487002296_1.jpg",
+          name: "Miss Claire M19 - Eyeshadow Blending Brush",
+          price: "375"
+        },
+        {
+          id: 14,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_2.jpg",
+          name: "Miss Claire Eyeshadow & Blusher Kit - 377-15-2",
+          price: "360"
+        },
+        {
+          id: 15,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_1.jpg",
+          name: "Miss Claire Make Up Palette 9998-2 (Make Up Kit)",
+          price: "915"
+        },
+        {
+          id: 16,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/5/a5750238903487002593_1.jpg",
+          name: "Miss Claire M38 - Application Brush",
+          price: "626"
+        },
+        {
+          id: 17,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/1/a1de0238903487002531_1.jpg",
+          name: "Miss Claire M32 - Lip Brush (L)",
+          price: "375"
+        },
+        {
+          id: 18,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/c/cc430238903487002371_1.jpg",
+          name: "Miss Claire M23 - Angled Contour Brush",
+          price: "653"
+        },
+        {
+          id: 19,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10.jpg",
+          name: "Miss Claire Make Up Palette 9943 (Make Up Kit)",
+          price: "626"
+        },
+        {
+          id: 20,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8903487030787.jpg",
+          name: "Miss Claire Make Up Palette 9927-1 (Make Up Kit)",
+          price: "823"
+        },
+        {
+          id: 21,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/3/73ce0238903487002074_1.jpg",
+          name: "Miss Claire M6 - Powder/Blush Brush",
+          price: "724"
+        },
+        {
+          id: 22,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/0/809c0238903487002050_1.jpg",
+          name: "Miss Claire M5 - Flat Angled Contour Brush",
+          price: "698"
+        },
+        {
+          id: 23,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_9_3.jpg",
+          name: "Miss Claire Make Up Palette 9928 (Make Up Kit)",
+          price: "1,053"
+        },
+        {
+          id: 24,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/40a40238903487001978_1.jpg",
+          name: "Miss Claire M1 - Multitask/Blending Brush",
+          price: "765"
+        },
+        {
+          id: 25,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/1/4192f778903487000216_1.jpg",
+          name: "Miss Claire Eyeshadow Kit - 3716-11-4",
+          price: "395"
+        },
+        {
+          id: 26,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_9_2.jpg",
+          name: "Miss Claire Make Up Palette 9937 (Make Up Kit)",
+          price: "911"
+        },
+        {
+          id: 27,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/8/78930238903487002418_1.jpg",
+          name: "Miss Claire M25 - Eyeliner Brush",
+          price: "325"
+        },
+        {
+          id: 28,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/7/e7b60238903487002692_1.jpg",
+          name: "Miss Claire M44 - Duo Fibre Stippling Brush",
+          price: "823"
+        },
+        {
+          id: 29,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/7/f75ac8d8903487028128_4.jpg",
+          name: "Miss Claire Natural Mineral Compact Powder - 33",
+          price: "455"
+        },
+        {
+          id: 30,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/0/00bac248903380151688a.jpg",
+          name: "Faces Canada Powder Brush",
+          price: "483"
+        },
+        // {
+        //   id: 31,
+        //   image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/2/32ca0238903487002197_1.jpg",
+        //   name: "Miss Claire M13 - Round Crease Brush (S)",
+        //   price: "379"
+        // },
+        ];
+
+
+    //   MAKEUP
+    for (let i = 0; i < MAKEUP.length; i++) {
+
+        // create elements---------------
+        var div = document.createElement("div");
+
+        var img = document.createElement("img");
+        img.src = MAKEUP[i].image_url;
+
+        var productname = document.createElement("p");
+        productname.textContent = MAKEUP[i].name;
+
+        var price = document.createElement("p");
+        price.textContent = MAKEUP[i].price;
+
+
+        var strikedoffprice = document.createElement("p");
+        if (MAKEUP[i].strikedoffprice != undefined) {
+            strikedoffprice.textContent = MAKEUP[i].strikedoffprice;
+        } else {
+            strikedoffprice.textContent = "A";
+            strikedoffprice.style.color = "white";
+        }
+
+        var priceoff = document.createElement("p");
+        if (MAKEUP[i].off != undefined) {
+            priceoff.textContent = MAKEUP[i].off + " " + "%";
+        } else {
+            priceoff.textContent = "A";
+            priceoff.style.color = "white";
+
+        }
+
+        var addtocart = document.createElement("button");
+        addtocart.textContent = "Add to Cart";
+        addtocart.style.backgroundColor = "#DD0285";
+        addtocart.style.border = "#DD0285";
+        addtocart.style.color = "white";
+        addtocart.style.padding = "10px 20px";
+        addtocart.style.borderRadius = "5px";
+        addtocart.style.fontSize = "12.5px";
+
+        var pricediv = document.createElement("div");
+
+        // appending data--------------------
+        strikedoffprice.style.textDecoration = "line-through"
+
+        // ----------attribute
+        pricediv.setAttribute("class", "price" + i);
+        pricediv.style.display = "flex";
+        pricediv.style.justifyContent = "space-around";
+
+        div.setAttribute("id", "card");
+
+        addtocart.setAttribute("id", "cartid" + i);
+
+        addtocart.setAttribute("value", "Add to Cart");
+
+        // ---------append body
+
+        document.getElementById("parent").append(div);
+
+        pricediv.append(strikedoffprice, price, priceoff);
+
+        div.append(img, productname, pricediv, addtocart)
+
+        // add to cart------------------------------------
+
+        addtocart.addEventListener("click", cart);
+
+        function cart() {
+            // let id = "cartid" + i;
+
+            if (document.getElementById("cartid" + i).value == "Add to Cart") {
+                var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
+                var obj = {
+                    // img:MAKEUP[i].image_url,
+                    img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
+                    productname: MAKEUP[i].name,
+                    price: MAKEUP[i].price,
+                    strikedoffprice: MAKEUP[i].strikedoffprice,
+                    count: 1,
+                }
+                carta.push(obj);
+                localStorage.setItem("cartarr", JSON.stringify(carta));
+                // console.log(typeof (id));
+                document.getElementById("cartid" + i).textContent = "Added to Cart";
+                document.getElementById("cartid" + i).value = "Added to Cart";
+
+            }
+
+
+
+
+            // console.log(i);
+
+
+
+        }
+
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
