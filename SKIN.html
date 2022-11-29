@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care</title>
+    <style>
+        #parent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        #card {
+            border-left: 1px solid #ebebeb;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+            
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        img {
+            width: 70%;
+        }
+
+        .card {
+            padding: 10px;
+        }
+
+        button::before {
+            content: ''
+        }
+
+
+        /* --------collapse option */
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        /* ----------text */
+        .text_content_body_bottom{
+            margin-left: 20%;
+        }
+        .p_heading{
+            font-weight: bold;
+        }
+        .p_heading:hover{
+            color:#DD0285 ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1>nav</h1>
+            <h1>SKIN</h1>
+        </div>
+        <div class="bodycontent" style="display: flex;">
+            <div class="sidebar" style="width: 25%;">
+                <h2>SHOP BY</h2>
+                <button type="button" class="collapsible">Price</button>
+                <div class="content">
+                    <div>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue"> Below
+                            ₹1,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹1,000 - ₹2,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹2,000 - ₹3,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹3,000 and </p>
+                    </div>
+                </div>
+                <button type="button" class="collapsible">Open Section 2</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button type="button" class="collapsible">Open Section 3</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt="" style="width: 100% !important; margin-top:20px;">
+
+            </div>
+
+            <div id="parent" style="width:80%; align-items: flex-end;">
+
+            </div>
+            
+        </div>
+        <div class="text_content_body_bottom">
+            <p class="p_heading">Skin Care Products Online</p>
+            <p>The skin is the most conspicuous part of a human body, not to mention the most exposed. For this reason, it deserves care and protection from adverse conditions such as UV rays. You also want a glowing and attractive looking skin, right? All this can be accomplished by using the right products on your skin.
+
+                Beauty Bebo products do not transform your face and body. Rather, they bring out the beautiful skin that you already have. Our main goal is to bring out the best you possible.You will always find our beauty products online, so you don’t necessarily have to worry about our stores.</p>
+            <p class="p_heading">Brands Available for Skin Care Products</p>
+            <p>We offer the best skin care products from all the leading skin care brands. These include: L’Oreal Paris, Joy, Aroma Magic, Lotus Herbs, Biotique, Maybelline, Mamaearth, Vega, Chicco, Neutrogena.
+
+                These brands offer a wide range of products for the skin. Hence, you will never miss out your most suitable skin cosmetic.
+                
+                Below are examples of the functions of the different products available;</p>
+            <p class="p_heading">Sun Screens</p>
+            <p>We have creams and lotions that are specifically meant to protect your skin from sun rays.  Bid goodbye to the sun burns, while accommodating the beautiful tan that summer seasons add to your skin.
+
+                The sun screens are made from different natural herbs, fruits and even oils, depending on the specific product.
+                
+                You will choose your preferred product based on your favorite ingredient mix. Get minerals and vitamins that your skin requires, coupled with dermatological chemical. Your skin protection is definitely optimized.</p>
+            <p class="p_heading">Scrubs and Facials Products</p>
+            <p>When your skin feels rough, then you know its time for treatment. Treat your face to facials and scrubs using products that will bring a smile on your face. Unclog the pores of your skin and allow for better breathability. Dust, sweat and make-up remnants will even darken your skin. Eliminate the dirt with scrubs and cleansers from our collection.
+
+                After the scrubbing, apply aromatic oils that are enriched with minerals and vitamins. This will give your skin a fresh and soft feel.</p>
+            <p class="p_heading">Specific Products for Specific Seasons and Time</p>
+            <p>You want skin creams that are specific for your current season, right? Or probably the best for your nights out, which are different from your daytime cream at work. Look no further, because we have taken this into account as well.
+
+                We have creams that will protect your skin from excessive sun rays. On the other hand, there are products that are made to ensure your skin is not affected by the beating strong winds or even the cold winter.
+                
+                If your skin is already damaged, why not try our healing and repair packages. They are packed with all the best nutrients that mother nature deems fit for broken and uneven skin. So, you have an assurance of a fast healing process, before embarking on your naturally radiant skin.</p>
+            <p class="p_heading">Best Skin Products Online</p>
+            <p>Get the best beauty products online, from where you can study the ingredients, price and variety before purchasing. A skin kit is available for all your skin needs, taking into consideration your skin type.</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var SKIN = [
+        {
+          id: 1,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/b/3b741delotaa00000044_nv1.jpg",
+          name: "Lotus Professional Retemin Plant Retinol & Vitamin C Brightening Boost Night",
+          price: "646"
+        },
+        {
+          id: 2,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/c/7c1a8e9o3xxx00000057_new1.jpg",
+          name: "O3+ Derma Cult Vitamin-C Tonic Solution",
+          price: "533"
+        },
+        {
+          id: 3,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/3/4382eaao3xxx00000050_1.jpg",
+          name: "O3+ Brightening AM & PM Combo",
+          price: "1,701"
+        },
+        {
+          id: 4,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/3/8383271o3-0954_7_.jpg",
+          name: "O3+ Derma Cult Triple Acid Oil-Free Brightening Moisturizer For All Skin",
+          price: "592"
+        },
+        {
+          id: 5,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/7/0740271o3-0950_7_.jpg",
+          name: "O3+ Derma Cult Salicylic + Adaptogen Mask For Acne Marks & Tan Removal",
+          price: "539"
+        },
+        {
+          id: 6,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/e/4e33271o3-0951_7_.jpg",
+          name: "O3+ Derma Cult Resurfacing Energy Facial Peel For Instant Brightening +",
+          price: "735"
+        },
+        {
+          id: 7,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be9d8a3o3-0915_1.jpg",
+          name: "O3+ Caffeinated D-Tan Facial For Intensive Whitening",
+          price: "410"
+        },
+        {
+          id: 8,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/4/9454362o3-0949_5.jpg",
+          name: "O3+ Ultra Healing Brightening Body Lotion Moisturiser With Hyaluronic Acid",
+          price: "449"
+        },
+        {
+          id: 9,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/6/c6f2409o3xxx00000114_0.jpg",
+          name: "O3+ Sara Ayurveda Kumkumadi Brightness Facial Kit For Bridal Glow",
+          price: "2,166"
+        },
+        {
+          id: 10,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/b/6ba91delotaa00000043_nv1.jpg",
+          name: "Lotus Professional Retemin Plant Retinol & Natural Vitamin C Brightening Boost",
+          price: "628"
+        },
+        {
+          id: 11,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/4/04222d8o3xxx00000072_5.jpg",
+          name: "O3+ Anti Ageing Single Dose Kit",
+          price: "464"
+        },
+        {
+          id: 12,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/9/c9222298903487037205_1.jpg",
+          name: "Miss Claire Prestige Anti-Dust Daily Massage Cleansing Cream",
+          price: "675"
+        },
+        {
+          id: 13,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/f/ef93c248903380157734__1_.jpg",
+          name: "Faces Canada Hydro Cleanser",
+          price: "479"
+        },
+        {
+          id: 14,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51e_koru3bs._sl1500_.jpg",
+          name: "O3+ Blueberry Dtan Creme Mask For De Tan & Moisturising Glow",
+          price: "1,442"
+        },
+        {
+          id: 15,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/9/f93d9738903487037762_1.jpg",
+          name: "Miss Claire Pre. Anti Pollution Sun Cream - SPF 50",
+          price: "608"
+        },
+        {
+          id: 16,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/a/1a89f778903487036925_1.jpg",
+          name: "Miss Claire Prestige Anti Dust Daily Pure Cleansing Foam",
+          price: "653"
+        },
+        {
+          id: 17,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/c/ec35271o3-0953_7_.jpg",
+          name: "O3+ Derma Cult Retinol Cream Night Moisturizer For Wrinkles Radiance With",
+          price: "719"
+        },
+        {
+          id: 18,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/a/aa036218903380001839_new_0.jpg",
+          name: "Faces Canada Urban Balance Daily Cleansing Mousse",
+          price: "449"
+        },
+        {
+          id: 19,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/8/d8b46218903380001440_new_0.jpg",
+          name: "Faces Canada Urban Balance Pollution Defense Day Cream SPF 25+UV Filters",
+          price: "1,139"
+        },
+        {
+          id: 20,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/f/9f64401faces00000386_2.jpg",
+          name: "Faces Canada Pink Aloe Vera Pore Tightening Toner",
+          price: "399"
+        },
+        {
+          id: 21,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/0/8081c248903380001464_1.jpg",
+          name: "Faces Canada Urban Balance Skin Comfort Serum",
+          price: "1,127"
+        },
+        {
+          id: 22,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/4/24706218903380002539_new_0.jpg",
+          name: "Faces Canada Urban Glow Clarifying Creamy Foaming Cleanser",
+          price: "395"
+        },
+        {
+          id: 23,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/f/ff826218903380002522_new_0.jpg",
+          name: "Faces Canada Urban Glow Dark Spots Reducing Night Cream",
+          price: "899"
+        },
+        {
+          id: 24,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/e/aed2c248903380002515_3.jpg",
+          name: "Faces Canada Urban Glow Skin Brightening Day Cream Spf 20+ Uv Filters",
+          price: "899"
+        },
+        {
+          id: 25,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/a/2ae2c248903380003321a_1.jpg",
+          name: "Faces Canada Tan Be Gone De Tan Skin Brightening Clay Mask",
+          price: "404"
+        },
+        {
+          id: 26,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/5/c543c248903380001488a.jpg",
+          name: "Faces Canada Urban Balance Daily Scrub Cleanser",
+          price: "505"
+        },
+        {
+          id: 27,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/e/3ec9ca0biode00000020_1.jpg",
+          name: "Bioderma Photoderm Spot Age SPF 50+ Reduces Spots And Wrinkles Antioxidant",
+          price: "1,553"
+        },
+        {
+          id: 28,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/61b0ca0biode00000046_1.jpg",
+          name: "Bioderma Atoderm Intensive Gel Creme For Anti-Itching, Lipid-Replenishing",
+          price: "818"
+        },
+        {
+          id: 29,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/7/e78872cbiode00000013__1_.jpg",
+          name: "Bioderma Sensibio Tonique Soothing Moisturising Lotion Face & Eyes",
+          price: "449"
+        },
+        {
+          id: 30,
+          image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/a/9aa643ebiode00000001-01.jpg",
+          name: "Bioderma Cicabio Arnica+ SOS Quickly Repairs And Soothes Skin Damage",
+          price: "909"
+        },
+        // {
+        //   id: 3,
+        //   image_url:"",
+        //   name: "",
+        //   price: ""
+        // },
+        ];
+
+
+    //   SKIN
+    for (let i = 0; i < SKIN.length; i++) {
+
+        // create elements---------------
+        var div = document.createElement("div");
+
+        var img = document.createElement("img");
+        img.src = SKIN[i].image_url;
+
+        var productname = document.createElement("p");
+        productname.textContent = SKIN[i].name;
+
+        var price = document.createElement("p");
+        price.textContent = SKIN[i].price;
+
+
+        var strikedoffprice = document.createElement("p");
+        if (SKIN[i].strikedoffprice != undefined) {
+            strikedoffprice.textContent = SKIN[i].strikedoffprice;
+        } else {
+            strikedoffprice.textContent = "A";
+            strikedoffprice.style.color = "white";
+        }
+
+        var priceoff = document.createElement("p");
+        if (SKIN[i].off != undefined) {
+            priceoff.textContent = SKIN[i].off + " " + "%";
+        } else {
+            priceoff.textContent = "A";
+            priceoff.style.color = "white";
+
+        }
+
+        var addtocart = document.createElement("button");
+        addtocart.textContent = "Add to Cart";
+        addtocart.style.backgroundColor = "#DD0285";
+        addtocart.style.border = "#DD0285";
+        addtocart.style.color = "white";
+        addtocart.style.padding = "10px 20px";
+        addtocart.style.borderRadius = "5px";
+        addtocart.style.fontSize = "12.5px";
+
+        var pricediv = document.createElement("div");
+
+        // appending data--------------------
+        strikedoffprice.style.textDecoration = "line-through"
+
+        // ----------attribute
+        pricediv.setAttribute("class", "price" + i);
+        pricediv.style.display = "flex";
+        pricediv.style.justifyContent = "space-around";
+
+        div.setAttribute("id", "card");
+
+        addtocart.setAttribute("id", "cartid" + i);
+
+        addtocart.setAttribute("value", "Add to Cart");
+
+        // ---------append body
+
+        document.getElementById("parent").append(div);
+
+        pricediv.append(strikedoffprice, price, priceoff);
+
+        div.append(img, productname, pricediv, addtocart)
+
+        // add to cart------------------------------------
+
+        addtocart.addEventListener("click", cart);
+
+        function cart() {
+            // let id = "cartid" + i;
+
+            if (document.getElementById("cartid" + i).value == "Add to Cart") {
+                var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
+                var obj = {
+                    // img:SKIN[i].image_url,
+                    img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
+                    productname: SKIN[i].name,
+                    price: SKIN[i].price,
+                    strikedoffprice: SKIN[i].strikedoffprice,
+                    count: 1,
+                }
+                carta.push(obj);
+                localStorage.setItem("cartarr", JSON.stringify(carta));
+                // console.log(typeof (id));
+                document.getElementById("cartid" + i).textContent = "Added to Cart";
+                document.getElementById("cartid" + i).value = "Added to Cart";
+
+            }
+
+
+
+
+            // console.log(i);
+
+
+
+        }
+
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
