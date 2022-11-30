@@ -5,260 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair</title>
-    <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous">
-    </script>
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous"></script>
+
     <style>
-        .container {
-            display: inline-block;
-        }
-
-        #parent {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-        }
-
-        #card {
-            border-left: 1px solid #ebebeb;
-            border-right: 1px solid #ebebeb;
-            border-bottom: 1px solid #ebebeb;
-
-            text-align: center;
-            padding: 10px;
-
-        }
-
-        img {
-            width: 70%;
-        }
-
-        .card {
-            padding: 10px;
-        }
-
-        button::before {
-            content: ''
-        }
-
-
-        /* --------collapse option */
-        .collapsible {
-            /* background-color: rgb(245, 239, 239); */
-            color: rgb(69, 65, 65);
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            border-bottom:3px solid white ;
-
-        }
-
-        .active,
-        .collapsible:hover {
-            color: black;
-        }
-
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            /* background-color: #f1f1f1; */
-        }
-
-        /* ----------text */
-        .text_content_body_bottom {
-            margin-left: 20%;
-        }
-
-        .p_heading {
-            font-weight: bold;
-        }
-
-        .p_heading:hover {
-            color: #DD0285;
-        }
-
-        /* ------------footer */
-        footer {
-            color: white;
-            font-family: "Roboto", sans-serif;
-        }
-
-        .footer-main-aj {
-            /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-            background-color: #232323;
-        }
-
-        .footer-main-aj a {
-            text-decoration: none;
-            color: #a2a0a0;
-        }
-
-        .footer-bottom-2-aj {
+        .cart {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 34px;
-            margin: auto;
-            font-weight: 100;
-            font-size: medium;
-            background-color: rgba(0, 0, 0, 0.65);
-            border-top: 1px rgb(76, 74, 74) solid;
-            color: #a5a7a0;
-            font-size: 13px;
         }
 
-        .footer-bottom-1-aj {
-            width: 90%;
-            margin: auto;
+        .cart_2ndsection {
+            border: 2px solid rgba(225, 218, 218, 0.451);
+            padding: 40px;
+        }
+
+        #shipping,
+        #discnt,
+        .checkout {
+            padding: 10px 20px;
+            width: 360px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px 20px;
+            width: 360px;
+            margin: 10px 0px;
+        }
+
+        input {
+            width: 355px;
+        }
+
+        label {
+            margin-top: 20px;
+        }
+
+        form {
+            margin: 10px 0px;
+        }
+
+        .priceSection {
             display: flex;
             justify-content: space-between;
-            border-top: 1px rgb(76, 74, 74) solid;
-            padding: 10px 0;
+            /* margin: 10px 0px; */
         }
 
-        .footer-bottom-1-aj .footer-right-signup {
-            display: flex;
-
-            align-items: center;
-            gap: 30px;
-        }
-
-        .signup-buttons-place {
-            display: flex;
-            align-items: center;
-        }
-
-        .enter-signup-text {
-            height: 50px;
-            width: 300px;
-            border: none;
-            color: #999999;
-            box-sizing: border-box;
-            padding-left: 10%;
-            font-size: 18px;
-        }
-
-        ::placeholder {
-            font-size: 16px;
-        }
-
-        .enter-signup-button {
-            background-color: #dd0285;
-            font-size: 1rem;
-            color: whitesmoke;
-            font-weight: 700;
-            width: 100px;
-            border: none;
-            height: 50px;
-        }
-
-        .footer-right-signup div:first-child {
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .footer-top {
-            margin: auto;
-            padding-top: 1%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: baseline;
-        }
-
-        .footer-main-aj li {
-            list-style: circle;
-            list-style-position: inside;
-            margin-bottom: 10px;
-        }
-
-        .footer-main-aj li:hover,
-        .footer-main-aj a:hover,
-        .categories span:hover {
-            color: #dd0285;
-        }
-
-        .socials-wrap .links-contact {
-            display: flex;
-
-            gap: 5%;
-        }
-
-        .li-social a {
-            display: block;
-            background-color: #dd0285;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 10px 0;
-            height: 35px;
-            width: 35px;
-            border-radius: 50%;
-        }
-
-        .links-contact li {
-            list-style: none;
-        }
-
-        .links li a span,
-        .phone,
-        .time {
-            font-size: medium;
-            color: #999999;
-        }
-
-        .footer-block-title {
-            display: inline-block;
-            padding-bottom: 10px;
-            margin: 10px 10px 10px 48px;
-            border-bottom: 2px dashed #dd0285;
-        }
-
-        .footer-main-aj h3 {
-            font-size: medium;
-        }
-
-        .divide {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: baseline;
-            gap: 10vh;
-        }
-
-        .fa {
+        .checkout {
+            background-color: #DD0285;
             color: white;
+            font-size: 16px;
+            border: none;
         }
 
-        .phone:hover,
-        .time:hover {
-            color: #999999 !important;
+        .checkout:hover {
+            background-color: #444;
+            /* color: white; */
+            font-size: 16px;
+            border: none;
         }
 
-        .phone,
-        .time {
-            margin: 10px 0 !important;
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
 
-        .footer-block-title {
-            font-size: 22px;
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
         }
 
-        .footer-block-title h3 {
-            margin: 5px;
-        }
-
-        .links {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-        }
-
-        /* -----------header */
         * {
             font-family: "Roboto", sans-serif;
         }
@@ -463,6 +281,184 @@
         .fa-bag-shopping {
             padding-right: 20px;
         }
+
+        /* -----------footer------------------ */
+          /* ------------footer */
+          footer {
+            color: white;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .footer-main-aj {
+            /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+            background-color: #232323;
+        }
+
+        .footer-main-aj a {
+            text-decoration: none;
+            color: #a2a0a0;
+        }
+
+        .footer-bottom-2-aj {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 34px;
+            margin: auto;
+            font-weight: 100;
+            font-size: medium;
+            background-color: rgba(0, 0, 0, 0.65);
+            border-top: 1px rgb(76, 74, 74) solid;
+            color: #a5a7a0;
+            font-size: 13px;
+        }
+
+        .footer-bottom-1-aj {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px rgb(76, 74, 74) solid;
+            padding: 10px 0;
+        }
+
+        .footer-bottom-1-aj .footer-right-signup {
+            display: flex;
+
+            align-items: center;
+            gap: 30px;
+        }
+
+        .signup-buttons-place {
+            display: flex;
+            align-items: center;
+        }
+
+        .enter-signup-text {
+            height: 50px;
+            width: 300px;
+            border: none;
+            color: #999999;
+            box-sizing: border-box;
+            padding-left: 10%;
+            font-size: 18px;
+        }
+
+        ::placeholder {
+            font-size: 16px;
+        }
+
+        .enter-signup-button {
+            background-color: #dd0285;
+            font-size: 1rem;
+            color: whitesmoke;
+            font-weight: 700;
+            width: 100px;
+            border: none;
+            height: 50px;
+        }
+
+        .footer-right-signup div:first-child {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .footer-top {
+            margin: auto;
+            padding-top: 1%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+
+        .footer-main-aj li {
+            list-style: circle;
+            list-style-position: inside;
+            margin-bottom: 10px;
+        }
+
+        .footer-main-aj li:hover,
+        .footer-main-aj a:hover,
+        .categories span:hover {
+            color: #dd0285;
+        }
+
+        .socials-wrap .links-contact {
+            display: flex;
+
+            gap: 5%;
+        }
+
+        .li-social a {
+            display: block;
+            background-color: #dd0285;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px 0;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+        }
+
+        .links-contact li {
+            list-style: none;
+        }
+
+        .links li a span,
+        .phone,
+        .time {
+            font-size: medium;
+            color: #999999;
+        }
+
+        .footer-block-title {
+            display: inline-block;
+            padding-bottom: 10px;
+            margin: 10px 10px 10px 48px;
+            border-bottom: 2px dashed #dd0285;
+        }
+
+        .footer-main-aj h3 {
+            font-size: medium;
+        }
+
+        .divide {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+            gap: 10vh;
+        }
+
+        .fa {
+            color: white;
+        }
+
+        .phone:hover,
+        .time:hover {
+            color: #999999 !important;
+        }
+
+        .phone,
+        .time {
+            margin: 10px 0 !important;
+        }
+
+        .footer-block-title {
+            font-size: 22px;
+        }
+
+        .footer-block-title h3 {
+            margin: 5px;
+        }
+
+        .links {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
     </style>
 </head>
 
@@ -471,7 +467,7 @@
         <header>
             <div class="top">
                 <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="logo"
-                    style="width:20%" />
+                    style="width: 14%;" />
                 <div class="control">
                     <select name="select-box-cat" id="cat">
                         <option value="">All Category</option>
@@ -1106,102 +1102,90 @@
             </div>
         </header>
     </div>
-    <div class="container">
+    <h1>SHOPPING CART</h1>
+    <div class="cart" id="cart">
+        <div id="cart_1stsection" style="width:70% ;">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ITEMS</th>
+                            <th>NAME</th>
+                            <th>PRICE</th>
+                            <th>QTY</th>
+                            <th>SUBTOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataAppend">
 
-        <div class="bodycontent" style="display: flex;">
-            <div class="sidebar" style="width: 25%;">
-                <button type="button" class="collapsible">CATEGORY</button>
-                <div class="content">
-                    <div>
-                        <p class="text-secondary"> > Hair Care</p>
-                        <p class="text-secondary"> > Hair Loss</p>
-
-                    </div>
-                </div>
-                <h2>SHOP BY</h2>
-                <button type="button" class="collapsible">SKIN TYPE</button>
-                <div class="content">
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Combination </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Dry </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Normal </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Oily </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Sensitive </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">All Skin Type</p>
-
-                </div>
-                <button type="button" class="collapsible">PRICE</button>
-                <div class="content">
-                    <div>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck1" value="1000"> Below
-                            ₹1,000 </p>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck2" value="2000">
-                            ₹1,000 - ₹2,000 </p>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck3" value="3000">
-                            ₹2,000 - ₹3,000 </p>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck4" value="3001">
-                            ₹3,000 and above</p>
-                    </div>
-                </div>
-                <button type="button" class="collapsible">BRAND</button>
-                <div class="content">
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Tresemme</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Boroplus</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Boroplus</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Head & Shoulders</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Vlcc</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Vega</p>
-
-                </div>
-                <button type="button" class="collapsible">HAIR TYPE </button>
-                <div class="content">
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Normal </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Curly </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Straight </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Fine </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Oily </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Dryness </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Dull Hair </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Thin </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Thick </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Wavy </p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">All Hair Type </p>
-                </div>
-                <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt=""
-                    style="width: 100% !important; margin-top:20px;">
-
+                    </tbody>
+                </table>
             </div>
-
-            <div id="parent" style="width:80%; align-items: flex-end;">
-
-            </div>
-
         </div>
-        <div class="text_content_body_bottom">
-            <p class="p_heading">Hair Products Online</p>
-            <p>Your outlook is enhanced in a big way by your hair. At Beauty Bebo, hair care is taken with seriousness.
-                Which is why we have taken time to research and get you the best hair care products India and abroad.
-            </p>
+        <div class="cart_2ndsection" style="width:30% ;">
+            <h1>SUMMARY</h1>
+            <button id="shipping" onclick="demoDisplay()">ESTIMATE SHIPPING AND TAX</button>
+            <div class="address" id="myP1" style="display:none;">
+                <form action="">
+                    <label for="">Country</label> <br>
+                    <select id="Country">
+                        <option value="India">India</option>
+                    </select>
+                    <br>
 
-            <p class="p_heading">Hair Styling Products Online</p>
-            <p>Whether you want your hair straight, curly, wavy, we have all the tools and products required.
+                    <label for="">State</label><br>
+                    <select id="State">
+                        <option value="India">Please select a region, state or province.</option>
+                    </select>
+                    <br>
 
-                Get your hair dry within seconds with our classic dryers, and trim it to your desired length with
-                perfect trimmers.
+                    <label for="">Zip/Postal Code</label>
+                    <br>
+                    <input type="text" name="" id="">
 
-                Straighteners or curlers here will give you the best hair outlook. And don’t forget, people will judge
-                you at a glance by your hair. Give them the impression you want out there.
-            </p>
+                </form>
+                <p>Best Way</p>
 
-            <p class="p_heading">Hair Texture and Outlook</p>
-            <p>If your hair is dry and breaking, then all it requires is a good treatment. Get this from our array of
-                hydrating and nourishing oils and sprays.</p>
+            </div>
+            <div class="priceSection">
+                <div>
+                    <p>Subtotal</p>
+                </div>
+                <div>
+                    <p id="subtotal">0</p>
+                </div>
+            </div>
+            <div class="priceSection">
+                <div>
+                    <p>Shipping (Best Way- Max 7 Business Days)</p>
+                </div>
+                <div>
+                    <p>55</p>
+                </div>
+            </div>
+            <div class="priceSection">
+                <div>
+                    <p>Order Total Incl. GST</p>
+                </div>
+                <div>
+                    <p id="total">0</p>
+                </div>
+            </div>
+            <button id="discnt" onclick="demoDisplay1()">APPLY DISCOUNT CODE</button>
+            <br>
+            <div id="discount" style="display:none;">
+                <input type="text" name="" id="discountcode" placeholder="Enter discount code">
+                <BR></BR>
+                <button>APPLY DISCOUNT</button>
 
-            <p class="p_heading">Dandruff and Scalp Treatment Products</p>
-            <p>No one wants to always have the annoying urge to scratch their scalp. It messes with your hair style and
-                may even break into a wound. It is more uncomfortable than words can express. Our dandruff and scalp
-                treatments save you from this stress.</p>
+            </div>
+            <div>
+
+                <button class="checkout">PROCEED TO CHECKOUT</button>
+            </div>
         </div>
     </div>
+
     <footer>
         <div class="footer-main-aj">
             <div class="footer-top">
@@ -1335,506 +1319,135 @@
         </div>
         <!--footer-main-ajn-->
     </footer>
+
 </body>
 
 </html>
 <script>
-    var mensData = [
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/6/f658864trese00000061_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Shampoo & Mask Combo",
-            price: 1160,
-            off: 7,
-            strikedoffprice: 1200,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/f/9f5a0dd8901248154192_1.jpg",
-            name: "Boroplus Aloe Vera Gel With Green Tea",
-            price: 360,
-            //   strikedoffprice: 999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/3/93d343en_3401344957253-01.jpg",
-            name: " Bioderma Node Ds+ Shampooing Anti-Dandruff Intense Shampoo",
-            price: 1527,
-            off: 5,
-            strikedoffprice: 1607,
+    var cartarr = JSON.parse(localStorage.getItem("cartarr")) || [];
+    // console.log(cartarr.length);
 
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/9/e9c4ccctrese00000051_1.jpg",
-            name: "Tresemme Propure Moisture Boost - Shampoo + Mask + Serum Combo",
-            price: 1488,
-            off: 7,
-            strikedoffprice: 1600,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/d/1d6accctrese00000049_1.jpg",
-            name: "Tresemme Propure Moisture Boost - Shampoo + Conditioner + Serum",
-            price: 1300,
-            off: 7,
-            strikedoffprice: 1400,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/d/1d6accctrese00000049_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery - Shampoo + Mask + Serum Combo",
-            price: 1488,
-            off: 7,
-            strikedoffprice: 1600,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/d/fd3cfb5trese00000046_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery - Shampoo + Conditioner + Serum ",
-            price: 1300,
-            off: 7,
-            strikedoffprice: 1400,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/a/0a37fb5trese00000047_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Serum With Aloe Essence Sulphate",
-            price: 400,
-            //   strikedoffprice: ,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/c/9cc7fb5trese00000045_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Mask With Aloe Essence Sulphate Free",
-            price: 651,
-            off: 7,
-            strikedoffprice: 700,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/6/6644a8ctrese00000044_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Conditioner With Aloe Essence",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/6/6644a8ctrese00000044_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Shampoo With Aloe Essence Sulphate",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/0/30cb3d88901030871252_1.jpg",
-            name: "Tresemme Keratin Smooth Hair Serum",
-            price: 350,
-            //   strikedoffprice: 999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/9/e91dfb5trese00000042_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Serum With Fermented Rice Water",
-            price: 400,
-            //   strikedoffprice: 3499,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/b/8b11fb5trese00000043_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Mask With Fermented Rice Water",
-            price: 651,
-            off: 7,
-            strikedoffprice: 700,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/9/0924fb5trese00000041_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Conditioner Fermented Rice Water",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/e/8e0ca8ctrese00000040_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Shampoo With Fermented Rice Water",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/c/3cabc5a8901030805080_2.jpg",
-            name: "Sunsilk Almond & Honey Shampoo",
-            price: 315,
-            //   strikedoffprice: 1699,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/c/8c9c39226479_s1-8901030897429.jpg",
-            name: "Indulekha Bringha Hair Strengthening Lepam",
-            price: 603,
-            off: 7,
-            strikedoffprice: 648,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/a/7ab36558901088159562_7.jpeg",
-            name: "Livon Super Styler Hair Serum For Women & Men For Hair Straightening",
-            price: 375,
-            //   strikedoffprice: 4999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/9/4902430773829_2__1.jpg",
-            name: "Head & Shoulders Cool Menthol Anti-Dandruff Shampoo",
-            price: 300,
-            off: 7,
-            strikedoffprice: 315,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/c/8c2e07e205000000436877.jpg",
-            name: "Shahnaz Husain Hair Touch-Up Plus - Brown",
-            price: 302,
-            off: 10,
-            strikedoffprice: 335,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/3/23e539226478_s1-8901030897436.jpg",
-            name: "Indulekha Bringha Hair Strengthening Serum",
-            price: 718,
-            off: 10,
-            strikedoffprice: 756,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/a/2ae55ce4902430871464.jpg",
-            name: "Head & Shoulders Cool Menthol 2-In-1 Anti-Dandruff Shampoo + Conditioner - 650ml",
-            price: 805,
-            off: 8,
-            strikedoffprice: 875,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/b/6b028414987176112545.jpg",
-            name: "Head & Shoulders 2-In-1 Anti-Hairfall Anti-Dandruff Shampoo + Conditioner",
-            price: 338,
-            off: 10,
-            strikedoffprice: 375,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/e/fe332d68907122014729_1.jpg ",
-            name: "Vlcc Onion & Fenugreek Conditioner",
-            price: 299,
-            //   strikedoffprice: 4999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/d/5d762d68907122014736_1.jpg",
-            name: "Vlcc Onion & Fenugreek Hair Oil",
-            price: 399,
-            //   strikedoffprice: 2799,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/4/f4342d68907122014712_1.jpg",
-            name: "Vlcc Onion & Fenugreek Shampoo",
-            price: 374,
-            off: 12,
-            strikedoffprice: 425,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/c/8c4225a8904086320842_2.jpg",
-            name: "Vega Hot Curl Brush - Large (H1-Prl)",
-            price: 899,
-            off: 10,
-            strikedoffprice: 999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/c/1cb925avegax00000041_1.jpg",
-            name: "VEGA Multi-Styler Hair Brush & Hair Dryer Keratin Infused Coating & Anti-Static Bristles, (VHSD-01)",
-            price: 2613,
-            off: 5,
-            strikedoffprice: 2750,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d39a25avegax00000027_1.jpg",
-            name: "Vega K-Shine Hair Straightener(Vhsh-28)",
-            price: 1208,
-            off: 5,
-            strikedoffprice: 1299,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/e/9ee625avegax00000026_1.jpg",
-            name: "Vega Go-Pro 2100 Hair Dryer(Vhdh-25)",
-            price: 1709,
-            off: 5,
-            strikedoffprice: 1799,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/2/72e225a8904086321191_0.jpg",
-            name: "Vega Hot Curl Brush - Big (E16-Prb)",
-            price: 446,
-            off: 15,
-            strikedoffprice: 525,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/1/b12825avegax00000046_1.jpg",
-            name: "VEGA Black Shine Hair Straightening Brush With Ionic Technology & 16 Temprature Settings (VHSB-04)",
-            price: 2374,
-            off: 5,
-            strikedoffprice: 2499,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/9/b98825avegax00000042_1.jpg",
-            name: "Vega K-Glam 3 In 1 Hair Styler - Rose Gold (Vhscc-04)",
-            price: 2184,
-            strikedoffprice: 2299,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4c8425a8904086303180_1.jpg",
-            name: "Vega 3-In-1 Keratin Hair Styler (Vhscc-03) - Rose Gold",
-            price: 2089,
-            off: 5,
-            strikedoffprice: 2199,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/9/596225avegax00000009_1.jpg",
-            name: "Vega I-Wave Hair Waver(Vhwr-01)",
-            price: 1899,
-            off: 5,
-            strikedoffprice: 1999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/6/c65525avegax00000003_1.jpg",
-            name: "Vega Vhth 16 Beard Trimmer",
-            price: 1394,
-            off: 7,
-            strikedoffprice: 1499,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/5/d55b25avegax00000085_1.jpg",
-            name: "Vega Go Glam Hair Straightener With Titanium Plates & 3 Temperature",
-            price: 1899,
-            off: 5,
-            strikedoffprice: 1999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/7/f70525a8904086395291_0.jpg",
-            name: "Vega Self-Style Flat Hair Straightener (Vhsh-27)",
-            price: 1471,
-            off: 8,
-            strikedoffprice: 1599,
-        },
-    ];
+    if (cartarr.length == 0) {
+        // window.location.reload;
+        document.getElementById("cart").textContent = " ";
+        var div = document.createElement("div");
+
+        // var h1 = document.createElement("h1");
+        // h1.textContent="SHOPPING CART";
+
+        var p1 = document.createElement("p");
+        p1.textContent = "You have no items in your shopping cart.";
+
+        var p2 = document.createElement("p");
+        p2.textContent = "Click here to continue shopping.";
+        document.getElementById("cart").append(div);
+        div.append(p1, p2)
+    }
+    else {
         
-    display(mensData);
-
-    // mensData.sort(function(a,b){
-    //     return a.price-b.price;
-    // })
-
-    //   mensData
-
-    function display(Data) {
-        if(Data.length==0){
-            Data=mensData;
+        var d1 = true;
+        var d2 = true;
+        function demoDisplay() {
+            if (d1 == true) {
+                document.getElementById("myP1").style.display = "block";
+                d1 = !d1;
+            } else {
+                document.getElementById("myP1").style.display = "none";
+                d1 = !d1;
+            }
         }
-        document.getElementById("parent").textContent=" ";
-        for (let i = 0; i < Data.length; i++) {
 
-            // create elements---------------
-            var div = document.createElement("div");
-
-            var img = document.createElement("img");
-            img.src = Data[i].image_url;
-
-            var productname = document.createElement("p");
-            productname.textContent = Data[i].name;
-
-            var price = document.createElement("p");
-            price.textContent = Data[i].price;
-
-
-            var strikedoffprice = document.createElement("p");
-            if (Data[i].strikedoffprice != undefined) {
-                strikedoffprice.textContent = Data[i].strikedoffprice;
-                strikedoffprice.style.fontSize="15px";
+        function demoDisplay1() {
+            if (d2 == true) {
+                document.getElementById("discount").style.display = "block";
+                d2 = !d2;
             } else {
-                strikedoffprice.textContent = "A";
-                strikedoffprice.style.color = "white";
+                document.getElementById("discount").style.display = "none";
+                d2 = !d2;
             }
+        }
 
-            var priceoff = document.createElement("p");
-            if (Data[i].off != undefined) {
-                priceoff.textContent = Data[i].off + " " + "%" +" Off";
-                priceoff.style.color="Green";
-                priceoff.style.fontWeight="bold";
-            } else {
-                priceoff.textContent = "A";
-                priceoff.style.color = "white";
+        DisplayCartItems();
 
-            }
+        function DisplayCartItems() {
+            document.querySelector("tbody").textContent="";
 
-            var addtocart = document.createElement("button");
-            addtocart.textContent = "Add to Cart";
-            addtocart.style.backgroundColor = "#DD0285";
-            addtocart.style.border = "#DD0285";
-            addtocart.style.color = "white";
-            addtocart.style.padding = "10px 20px";
-            addtocart.style.borderRadius = "5px";
-            addtocart.style.fontSize = "12.5px";
+            var totalprice = 0;
+            var maindiv = document.getElementById("dataAppend");
 
-            var pricediv = document.createElement("div");
+            cartarr.map(function(ele,i){
+                var divtemp = document.createElement("tr");
 
-            // appending data--------------------
-            strikedoffprice.style.textDecoration = "line-through"
+                var imgtd = document.createElement("td");
+                var img = document.createElement("img");
+                img.src = ele.img;
+                img.style.width = "40%"
+                imgtd.append(img);
 
-            // ----------attribute
-            pricediv.setAttribute("class", "price" + i);
-            pricediv.style.display = "flex";
-            pricediv.style.justifyContent = "space-around";
+                var name = document.createElement("td");
+                name.textContent = ele.productname;
 
-            div.setAttribute("id", "card");
+                var price = document.createElement("td");
+                price.textContent = ele.price;
 
-            addtocart.setAttribute("id", "cartid" + i);
+                var tempprice = +ele.price;
+                totalprice += tempprice;
 
-            addtocart.setAttribute("value", "Add to Cart");
+                var quantity = document.createElement("td");
+                quantity.textContent = ele.count;
 
-            // ---------append body
+                var total = document.createElement("td");
+                total.textContent = totalprice;
 
-            document.getElementById("parent").append(div);
+                divtemp.append(imgtd, name, price, quantity, total);
+                maindiv.append(divtemp);
 
-            pricediv.append(strikedoffprice, price, priceoff);
 
-            div.append(img, productname, pricediv, addtocart)
-                console.log(Data);
+                var divbutton=document.createElement("div");
 
-            // add to cart------------------------------------
+                var divbuttonRemove=document.createElement("button");
+                divbuttonRemove.textContent="Remove From Cart"
+                divbuttonRemove.addEventListener("click", removeCartItem);
 
-            addtocart.addEventListener("click", cart);
+                var divbutton_increase=document.createElement("button");
+                divbutton_increase.textContent="+";
 
-            function cart() {
-                // let id = "cartid" + i;
 
-                if (document.getElementById("cartid" + i).value == "Add to Cart") {
-                    var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
-                    var obj = {
-                        img:mensData[i].image_url,
-                        productname: Data[i].name,
-                        price: Data[i].price,
-                        strikedoffprice: Data[i].strikedoffprice,
-                        count: 1,
-                    }
-                    carta.push(obj);
-                    localStorage.setItem("cartarr", JSON.stringify(carta));
-                    // console.log(typeof (id));
-                    document.getElementById("cartid" + i).textContent = "Added to Cart";
-                    document.getElementById("cartid" + i).value = "Added to Cart";
 
+                var divbutton_Decrese=document.createElement("button");
+                divbutton_Decrese.textContent="-";
+
+
+                divbutton.append(divbutton_increase,divbutton_Decrese,divbuttonRemove);
+                maindiv.append(divbutton);
+                
+                function removeCartItem(){
+                    cartarr.splice(i,1);
+                    
+                    localStorage.setItem("cartarr",JSON.stringify(cartarr));
+                    DisplayCartItems();
+                    // console.log(cartarr);
+                    // window.location.reload;
                 }
-
-            }
+            }); 
         }
-    }
 
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
-
-    // ----------header-----------
-    document.querySelector(".fa-user").addEventListener("click", dropdown);
-
-    function dropdown() {
-        var menu = document.querySelector(".loginRegisterDropdown");
-        if (menu.style.display == "none") {
-            menu.style.display = "block";
-        } else {
-            menu.style.display = "none";
-        }
-    }
-    
-
-
-    // --------------pricesort---------------
-    // p1000 = document.getElementById("myCheck1");
-    document.getElementById("myCheck1").addEventListener("click", sort1000);
-    var check1=true;
-    
-    function sort1000() {
-        check1=!check1;
-       var below100= mensData.filter(function(ele){
-            if(Number(ele.price)<=1000 && check1==false){
-                return ele;
-            }
-            
-        });
-
-        display(below100);
-        // console.log(below100);
 
     }
 
-    document.getElementById("myCheck2").addEventListener("click", sort2000);
-    var check2=true;
 
-    function sort2000() {
-        check2=!check2;
+     // ----------header-----------
+     document.querySelector(".fa-user").addEventListener("click", dropdown);
 
-       var below100= mensData.filter(function(ele){
-            if(Number(ele.price)>1000 && Number(ele.price)<=2000  && check2==false){
-                return ele;
-            }
-        });
-
-        display(below100);
-        // console.log(below100);
+function dropdown() {
+    var menu = document.querySelector(".loginRegisterDropdown");
+    if (menu.style.display == "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
     }
+}
 
-    document.getElementById("myCheck3").addEventListener("click", sort3000);
-    var check3=true;
-
-    function sort3000() {
-        check3=!check3;
-
-       var below100= mensData.filter(function(ele){
-            if(Number(ele.price)>=2000 && Number(ele.price)<=3000 && check3==false){
-                return ele;
-            }
-        });
-
-        display(below100);
-        // console.log(below100);
-    }
 
 
 </script>
