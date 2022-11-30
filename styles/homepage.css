@@ -380,7 +380,7 @@ footer {
 
 .homepage-section1-left{
   float: left;
-  width: 15%;
+  width: 20%;
 }
 
 .homepage-section1-left .menu-block-content ul{
@@ -392,20 +392,43 @@ footer {
   margin-left: auto;
 }
 
+.homepage-section1-right{
+  z-index: -1;
+}
+
 .fa-list-ul{
   color: black;
   margin-right: 5px;
 }
+
  .menu-block-title >p{
   font-weight: bold;
+  padding-left: 10px;
  }
- .menu-block-content ul li a{
+
+ .menu-block-content-title a{
   text-decoration: none;
   padding-left: 5px;
   color: black;
   line-height: 29px;
  }
 
- .menu-block-content ul li img{
+ .menu-block-content-title{
+  display: flex;
+  align-items: flex-start;
+  padding: 5px 5px 5px 10px;
+ }
+
+ .menu-block-content-title:hover{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+ }
  
+ .homepage-section1{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding-bottom: 1px;
+ }
+
+ .homepage-section1-right .slide img{
+  width: 100%;
+  background-size: cover;
  }
