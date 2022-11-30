@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fregrance</title>
+    <style>
+        #parent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        #card {
+            border-left: 1px solid #ebebeb;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+            
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        img {
+            width: 70%;
+        }
+
+        .card {
+            padding: 10px;
+        }
+
+        button::before {
+            content: ''
+        }
+
+
+        /* --------collapse option */
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        /* ----------text */
+        .text_content_body_bottom{
+            margin-left: 20%;
+        }
+        .p_heading{
+            font-weight: bold;
+        }
+        .p_heading:hover{
+            color:#DD0285 ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1>nav</h1>
+            <h1>Personal Care</h1>
+        </div>
+        <div class="bodycontent" style="display: flex;">
+            <div class="sidebar" style="width: 25%;">
+                <h2>SHOP BY</h2>
+                <button type="button" class="collapsible">Price</button>
+                <div class="content">
+                    <div>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue"> Below
+                            ₹1,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹1,000 - ₹2,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹2,000 - ₹3,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
+                            ₹3,000 and </p>
+                    </div>
+                </div>
+                <button type="button" class="collapsible">Open Section 2</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button type="button" class="collapsible">Open Section 3</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt="" style="width: 100% !important; margin-top:20px;">
+
+            </div>
+
+            <div id="parent" style="width:80%; align-items: flex-end;">
+
+            </div>
+            
+        </div>
+        <div class="text_content_body_bottom">
+            <p class="p_heading">Hair Products Online</p>
+            <p>Your outlook is enhanced in a big way by your hair. At Beauty Bebo, hair care is taken with seriousness. Which is why we have taken time to research and get you the best hair care products India and abroad.</p>
+
+            <p class="p_heading">Hair Styling Products Online</p>
+            <p>Whether you want your hair straight, curly, wavy, we have all the tools and products required.
+
+                Get your hair dry within seconds with our classic dryers, and trim it to your desired length with perfect trimmers.
+                
+                Straighteners or curlers here will give you the best hair outlook. And don’t forget, people will judge you at a glance by your hair. Give them the impression you want out there.
+            </p>
+
+            <p class="p_heading">Hair Texture and Outlook</p>
+            <p>If your hair is dry and breaking, then all it requires is a good treatment. Get this from our array of hydrating and nourishing oils and sprays.</p>
+
+            <p class="p_heading">Dandruff and Scalp Treatment Products</p>
+            <p>No one wants to always have the annoying urge to scratch their scalp. It messes with your hair style and may even break into a wound. It is more uncomfortable than words can express. Our dandruff and scalp treatments save you from this stress.</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+   var fregranceData  = [
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+      name: "KamaSutra Thrill Deodorant (150ml each)",
+      price: 396.00,
+    },
+    {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+        name: "kamaSutra Blaze Deodorant - Pack Of 2 (150ml each)",
+        price: 396.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+        name: "KamaSutra Urge Power Series Perfume Spray- Pack Of 2 (135ml each)",
+        price: 396.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+        name: "KamaSutra Woman Sparkle Perfume Body Spray (150ml each) ",
+        price: 398.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+        name: "KamaSutra Woman Enigma Perfume Body Spray - Pack Of 2 (150ml each) ",
+        price: 398.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+        name: "Plum Bodylovin' Feelin' So Rose Body Misz (150ml) ",
+        price: 457.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+        name: "Plum Bodylovin' Orchid You Not Body Misz (150ml) ",
+        price: 473.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+        name: " Plum Bodylovin' Trippin' Mimosas Body Mist (150ml)",
+        price: 473.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+        name: " Mamaearth Eau De Parfum For A Fragrance As Unique As You (50ml)",
+        price: 629.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg ",
+        name: " Mamaearth ME Deo For A Scent That’s Unique To You (120ml)",
+        price: 299.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/8/s8.jpg",
+        name: " Calvin Klein Eternity For Men Eau De Parfum (50ml)",
+        price:3468.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo21.jpg",
+        name: "Fogg Bleu Series Island Fragrance Body Spray (120ml) ",
+        price: 255.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo20.jpg",
+        name: "Fogg Rush Fragrance Body Spray (150ml) ",
+        price:230.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo15.jpg",
+        name: " Fogg Scent Intensio Men Fragrance Body Spray (100ml)",
+        price:539.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo13.jpg",
+        name: " Fogg Master Cedar Body Spray (150ml)",
+        price: 275.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo12.jpg",
+        name: "Fogg Black Fresh Aromatic Fragrance Body Spray (150ml)",
+        price:250.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo10.jpg",
+        name: "Fogg Master Agar Body Spray (150ml)",
+        price: 275.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo8.jpg",
+        name: "Fogg Scent Xpressio Men Fragrance Body Spray (100ml)",
+        price: 539.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo7.jpg",
+        name: "Fogg Dynamic Fragrance Body Spray (150ml)",
+        price: 250.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo6.jpg",
+        name: "Fogg Scent Xtremo Men Fragrance Body Spray (100ml)",
+        price: 539.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo3.jpg",
+        name: "Fogg Master Oak Body Spray (150ml)",
+        price: 275.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/r/rr.jpg",
+        name: "Fogg Scent Beautiful Secret Women Fragrance Body Spray (100ml)",
+        price: 539.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/5/e55.jpg",
+        name: "Engage Yin Eau De Parfum For Men (90ml)",
+        price: 459.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d29.jpg",
+        name: "Denver Sporting Club Rider Deo (165ml)",
+        price: 179.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d28.jpg",
+        name: "Denver Hamilton Caliber Perfume - 100ml (100ml)",
+        price: 448.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d27.jpg",
+        name: "Denver Sporting Club - Victor Deo - 165ml (165ml)",
+        price: 179.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d26.png",
+        name: "Denver Hamilton Imperial Perfume (60ml)",
+        price: 257.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d25.jpg",
+        name: "Denver Royal Oud Deo - Hamilton (150ml)",
+        price: 179.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d24.jpg",
+        name: "Denver Hamilton Imperial Perfume - 100ml (100ml)",
+        price: 448.00,
+      },
+      {
+        image_url:
+          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/l/pl34.jpg",
+        name: "Plum Green Tea Clear Skin Specialist Duo",
+        price: 1663.00,
+      },
+  ];
+
+
+    //    fregranceData
+    for (let i = 0; i <  fregranceData.length; i++) {
+
+        // create elements---------------
+        var div = document.createElement("div");
+
+        var img = document.createElement("img");
+        img.src =  fregranceData[i].image_url;
+
+        var productname = document.createElement("p");
+        productname.textContent =  fregranceData[i].name;
+
+        var price = document.createElement("p");
+        price.textContent =  fregranceData[i].price;
+
+
+        var strikedoffprice = document.createElement("p");
+        if ( fregranceData[i].strikedoffprice != undefined) {
+            strikedoffprice.textContent =  fregranceData[i].strikedoffprice;
+        } else {
+            strikedoffprice.textContent = "A";
+            strikedoffprice.style.color = "white";
+        }
+
+        var priceoff = document.createElement("p");
+        if ( fregranceData[i].off != undefined) {
+            priceoff.textContent =  fregranceData[i].off + " " + "%";
+        } else {
+            priceoff.textContent = "A";
+            priceoff.style.color = "white";
+
+        }
+
+        var addtocart = document.createElement("button");
+        addtocart.textContent = "Add to Cart";
+        addtocart.style.backgroundColor = "#DD0285";
+        addtocart.style.border = "#DD0285";
+        addtocart.style.color = "white";
+        addtocart.style.padding = "10px 20px";
+        addtocart.style.borderRadius = "5px";
+        addtocart.style.fontSize = "12.5px";
+
+        var pricediv = document.createElement("div");
+
+        // appending data--------------------
+        strikedoffprice.style.textDecoration = "line-through"
+
+        // ----------attribute
+        pricediv.setAttribute("class", "price" + i);
+        pricediv.style.display = "flex";
+        pricediv.style.justifyContent = "space-around";
+
+        div.setAttribute("id", "card");
+
+        addtocart.setAttribute("id", "cartid" + i);
+
+        addtocart.setAttribute("value", "Add to Cart");
+
+        // ---------append body
+
+        document.getElementById("parent").append(div);
+
+        pricediv.append(strikedoffprice, price, priceoff);
+
+        div.append(img, productname, pricediv, addtocart)
+
+        // add to cart------------------------------------
+
+        addtocart.addEventListener("click", cart);
+
+        function cart() {
+            // let id = "cartid" + i;
+
+            if (document.getElementById("cartid" + i).value == "Add to Cart") {
+                var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
+                var obj = {
+                    // img: fregranceData[i].image_url,
+                    img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
+                    productname:  fregranceData[i].name,
+                    price:  fregranceData[i].price,
+                    strikedoffprice:  fregranceData[i].strikedoffprice,
+                    count: 1,
+                }
+                carta.push(obj);
+                localStorage.setItem("cartarr", JSON.stringify(carta));
+                // console.log(typeof (id));
+                document.getElementById("cartid" + i).textContent = "Added to Cart";
+                document.getElementById("cartid" + i).value = "Added to Cart";
+
+            }
+
+
+
+
+            // console.log(i);
+
+
+
+        }
+
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
