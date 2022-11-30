@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair</title>
+    <title>Personal Care</title>
     <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous">
     </script>
     <style>
@@ -1339,314 +1339,284 @@
 
 </html>
 <script>
-    var mensData = [
+   var PersonalCareData = [
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/6/f658864trese00000061_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Shampoo & Mask Combo",
-            price: 1160,
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/4/0461c248903380005356a_1.jpg",
+            name: "Faces Canada Bath N Body Milk & Honey Body Scrub",
+            price: 399,
             off: 7,
             strikedoffprice: 1200,
         },
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/f/9f5a0dd8901248154192_1.jpg",
-            name: "Boroplus Aloe Vera Gel With Green Tea",
-            price: 360,
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/3/93edc248903380005349a_1.jpg",   
+            name: "Faces Canada Bath N Body Milk & Honey Body Cream",
+            price: 399,
             //   strikedoffprice: 999,
         },
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/3/93d343en_3401344957253-01.jpg",
-            name: " Bioderma Node Ds+ Shampooing Anti-Dandruff Intense Shampoo",
-            price: 1527,
-            off: 5,
-            strikedoffprice: 1607,
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d3211068058664152346_1.jpg", 
+            name: "Chicco Baby Moments Mild Bodywash Refresh",
+            price: 431,
+            off: 10,
+            strikedoffprice: 479,
 
         },
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/9/e9c4ccctrese00000051_1.jpg",
-            name: "Tresemme Propure Moisture Boost - Shampoo + Mask + Serum Combo",
-            price: 1488,
-            off: 7,
-            strikedoffprice: 1600,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/d/1d6accctrese00000049_1.jpg",
-            name: "Tresemme Propure Moisture Boost - Shampoo + Conditioner + Serum",
-            price: 1300,
-            off: 7,
-            strikedoffprice: 1400,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/d/1d6accctrese00000049_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery - Shampoo + Mask + Serum Combo",
-            price: 1488,
-            off: 7,
-            strikedoffprice: 1600,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/d/fd3cfb5trese00000046_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery - Shampoo + Conditioner + Serum ",
-            price: 1300,
-            off: 7,
-            strikedoffprice: 1400,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/a/0a37fb5trese00000047_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Serum With Aloe Essence Sulphate",
-            price: 400,
-            //   strikedoffprice: ,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/c/9cc7fb5trese00000045_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Mask With Aloe Essence Sulphate Free",
-            price: 651,
-            off: 7,
-            strikedoffprice: 700,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/6/6644a8ctrese00000044_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Conditioner With Aloe Essence",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/6/6644a8ctrese00000044_1.jpg",
-            name: "Tresemme Pro Pure Moisture Boost Shampoo With Aloe Essence Sulphate",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/0/30cb3d88901030871252_1.jpg",
-            name: "Tresemme Keratin Smooth Hair Serum",
-            price: 350,
-            //   strikedoffprice: 999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/9/e91dfb5trese00000042_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Serum With Fermented Rice Water",
-            price: 400,
-            //   strikedoffprice: 3499,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/b/8b11fb5trese00000043_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Mask With Fermented Rice Water",
-            price: 651,
-            off: 7,
-            strikedoffprice: 700,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/9/0924fb5trese00000041_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Conditioner Fermented Rice Water",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/e/8e0ca8ctrese00000040_1.jpg",
-            name: "Tresemme Pro Pure Damage Recovery Shampoo With Fermented Rice Water",
-            price: 465,
-            off: 7,
-            strikedoffprice: 500,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/c/3cabc5a8901030805080_2.jpg",
-            name: "Sunsilk Almond & Honey Shampoo",
-            price: 315,
-            //   strikedoffprice: 1699,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/c/8c9c39226479_s1-8901030897429.jpg",
-            name: "Indulekha Bringha Hair Strengthening Lepam",
-            price: 603,
-            off: 7,
-            strikedoffprice: 648,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/a/7ab36558901088159562_7.jpeg",
-            name: "Livon Super Styler Hair Serum For Women & Men For Hair Straightening",
-            price: 375,
-            //   strikedoffprice: 4999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/9/4902430773829_2__1.jpg",
-            name: "Head & Shoulders Cool Menthol Anti-Dandruff Shampoo",
-            price: 300,
-            off: 7,
-            strikedoffprice: 315,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/c/8c2e07e205000000436877.jpg",
-            name: "Shahnaz Husain Hair Touch-Up Plus - Brown",
-            price: 302,
-            off: 10,
-            strikedoffprice: 335,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/3/23e539226478_s1-8901030897436.jpg",
-            name: "Indulekha Bringha Hair Strengthening Serum",
-            price: 718,
-            off: 10,
-            strikedoffprice: 756,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/a/2ae55ce4902430871464.jpg",
-            name: "Head & Shoulders Cool Menthol 2-In-1 Anti-Dandruff Shampoo + Conditioner - 650ml",
-            price: 805,
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/7/974e43ebiode00000007-01.jpg",
+            name: "Bioderma Atoderm Huile De Douche 24h Hydration Ultra-Nourishing Anti-",
+            price: 1256,
             off: 8,
-            strikedoffprice: 875,
+            strikedoffprice: 1365,
         },
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/b/6b028414987176112545.jpg",
-            name: "Head & Shoulders 2-In-1 Anti-Hairfall Anti-Dandruff Shampoo + Conditioner",
-            price: 338,
-            off: 10,
-            strikedoffprice: 375,
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/613f25a8904086380051_0.jpg",
+            name: "Vega Natural Bristle Bath Brush (Nba-1/3)",
+            price: 440,
+            // off: 7,
+            // strikedoffprice: 1400,
         },
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/e/fe332d68907122014729_1.jpg ",
-            name: "Vlcc Onion & Fenugreek Conditioner",
-            price: 299,
-            //   strikedoffprice: 4999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/d/5d762d68907122014736_1.jpg",
-            name: "Vlcc Onion & Fenugreek Hair Oil",
-            price: 399,
-            //   strikedoffprice: 2799,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/4/f4342d68907122014712_1.jpg",
-            name: "Vlcc Onion & Fenugreek Shampoo",
-            price: 374,
-            off: 12,
-            strikedoffprice: 425,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/c/8c4225a8904086320842_2.jpg",
-            name: "Vega Hot Curl Brush - Large (H1-Prl)",
-            price: 899,
-            off: 10,
-            strikedoffprice: 999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/c/1cb925avegax00000041_1.jpg",
-            name: "VEGA Multi-Styler Hair Brush & Hair Dryer Keratin Infused Coating & Anti-Static Bristles, (VHSD-01)",
-            price: 2613,
-            off: 5,
-            strikedoffprice: 2750,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d39a25avegax00000027_1.jpg",
-            name: "Vega K-Shine Hair Straightener(Vhsh-28)",
-            price: 1208,
-            off: 5,
-            strikedoffprice: 1299,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/e/9ee625avegax00000026_1.jpg",
-            name: "Vega Go-Pro 2100 Hair Dryer(Vhdh-25)",
-            price: 1709,
-            off: 5,
-            strikedoffprice: 1799,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/2/72e225a8904086321191_0.jpg",
-            name: "Vega Hot Curl Brush - Big (E16-Prb)",
-            price: 446,
-            off: 15,
-            strikedoffprice: 525,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/1/b12825avegax00000046_1.jpg",
-            name: "VEGA Black Shine Hair Straightening Brush With Ionic Technology & 16 Temprature Settings (VHSB-04)",
-            price: 2374,
-            off: 5,
-            strikedoffprice: 2499,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/9/b98825avegax00000042_1.jpg",
-            name: "Vega K-Glam 3 In 1 Hair Styler - Rose Gold (Vhscc-04)",
-            price: 2184,
-            strikedoffprice: 2299,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4c8425a8904086303180_1.jpg",
-            name: "Vega 3-In-1 Keratin Hair Styler (Vhscc-03) - Rose Gold",
-            price: 2089,
-            off: 5,
-            strikedoffprice: 2199,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/9/596225avegax00000009_1.jpg",
-            name: "Vega I-Wave Hair Waver(Vhwr-01)",
-            price: 1899,
-            off: 5,
-            strikedoffprice: 1999,
-        },
-        {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/6/c65525avegax00000003_1.jpg",
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/6/c65525avegax00000003_1.jpg",
             name: "Vega Vhth 16 Beard Trimmer",
             price: 1394,
             off: 7,
             strikedoffprice: 1499,
         },
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/5/d55b25avegax00000085_1.jpg",
-            name: "Vega Go Glam Hair Straightener With Titanium Plates & 3 Temperature",
-            price: 1899,
-            off: 5,
-            strikedoffprice: 1999,
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/3/036eb038906118415373-1.jpg",
+            name: "Plum Bodylovin' Shea Got It Body Oil",
+            price: 457,
+            off: 13,
+            strikedoffprice: 525,
         },
         {
-            image_url:
-                "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/7/f70525a8904086395291_0.jpg",
-            name: "Vega Self-Style Flat Hair Straightener (Vhsh-27)",
-            price: 1471,
-            off: 8,
-            strikedoffprice: 1599,
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/2/0296d298906118411078_1.jpg",
+            name: "Plum Bodylovin' Coffee Wake-A-Ccino Body Scrub",
+            price: 479,
+            off: 13,
+            strikedoffprice: 550,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/1/212b3f0plumx00000337_1.jpg",
+            name: "Plum Bodylovin' Minions Goin' Bananas Body Scrub",
+            price: 479,
+            off: 13,
+            strikedoffprice: 550,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/402ad29plumx00000006_1.jpg",
+            name: "Plum Bodylovin' Drivin' Me Cherry Body Butter",
+            price: 525,
+            // off: 7,
+            // strikedoffprice: 500,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/68bdd29plumx00000232_1.jpg",
+            name: "Plum Bodylovin' Caramel Popcorn Body Wash",
+            price: 323,
+            off: 15,
+            strikedoffprice: 380,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/c/0cdad298906118410767_1.jpg",
+            name: "Plum Bodylovin' Drivin' Me Cherry Gel Body Scrub",
+            price: 495,
+            off: 10,
+            strikedoffprice: 550,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/a/8a82d298906118410774_1.jpg",
+            name: "Plum Bodylovin' Vanilla Vibes Sugar Body Scrub",
+            price: 495,
+            off: 10,
+            strikedoffprice: 550,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/0/c066d29plumx00000075_1.jpg",
+            name: "Plum Bodylovin' Hawaiian Rumba De-Odorizing Pit Cream",
+            price: 345,
+            // off: 7,
+            // strikedoffprice: 700,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/2/62446568906118410798_1.jpg",
+            name: "Plum Bodylovin' Vanilla Vibes Body Oil",
+            price: 495,
+            off: 10,
+            strikedoffprice: 550,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/b/ab23c3a4005808628087_1.jpg",
+            name: "Nivea Men Body Wash- Pure Impact With Purifying Minerals Particles-",
+            price: 449,
+            off: 10,
+            strikedoffprice: 499,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/c/cc81c3a4005900747129_1.jpg",
+            name: "Nivea Body Wash, Frangipani & Oil Shower Gel, Pampering Care &",
+            price: 449,
+            off: 10,
+            strikedoffprice: 499,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/8/081cc3a4005900128492_3.jpg",
+            name:"Nivea Men Body Wash, Active Clean With Active Charcoal, Shower Gel For",
+            price: 449,
+            off: 10,
+            strikedoffprice: 499,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/e/9e8384e8906087778424_8.jpg",
+            name: "Mamaearth Vitamin C Underarm Scrub With Vitamin C And Turmeric For",
+            price: 299,
+            //   strikedoffprice: 4999,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/d/3dd79e8dovex00000087_new_4.jpg",
+            name: "Dove Body Love Pro Age Body Butter, For Mature Skin, Paraben Free",
+            price: 414,
+            off: 10,
+            strikedoffprice: 460,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/bebde6c44115_s1-8901030880896jpg.jpg",
+            name: "Dove Derma Protect Moisturising Wash",
+            price: 475,
+            // off: 10,
+            // strikedoffprice: 335,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/0/a0c917317394_s1_8901030844805.jpg",
+            name: "Dove Rich Moisture Hypoallergenic Body Wash",
+            price: 400,
+            // off: 10,
+            // strikedoffprice: 756,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/e/aef7b5917552_s1_8901030875397.jpg",
+            name: "Dove Deep Moisture Body Wash",
+            price: 460,
+            // off: 8,
+            // strikedoffprice: 875,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/d/bdc7b5944066_s1_8901030875380.jpg",
+            name: "Dove Gentle Exfoliating Beads Body Wash For Softer Smoother Skin",
+            price: 470,
+            // off: 10,
+            // strikedoffprice: 375,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/2/3258e279318637043309_1.jpg",
+            name: "Cetaphil Baby Moisturising Bath & Wash",
+            price: 612,
+            off: 10,
+            strikedoffprice: 680,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/f/6f2ae277640203242888_1.jpg",
+            name: "Cetaphil Baby Gentle Wash With Organic Calendula",
+            price: 621,
+            off: 10,
+            strikedoffprice: 690,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/f/ffa10fb8906009452111_1.jpg",
+            name: "Biotique Bio Apricot Refreshing Body Wash - 800ml",
+            price: 648,
+            off: 10,
+            strikedoffprice: 720,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/0/1085e2d37000974758.jpg",
+            name: "Olay Ultra Moisture Body Wash With Coconut Oil",
+            price: 650,
+            // off: 10,
+            // strikedoffprice: 999,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/e/9eb2e2d37000524090.jpg",
+            name: "Olay Ultra Moisture Body Wash With Avocado Oil",
+            price: 650,
+            // off: 5,
+            // strikedoffprice: 2750,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/a/6a32e2d37000974789.jpg",
+            name: "Olay Daily Moisture Body Wash With Almond Milk",
+            price: 650,
+            // off: 5,
+            // strikedoffprice: 1299,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/7/3700097464_2_.jpg",
+            name: "Olay Ultra Moisture Shea Butter Body Wash",
+            price: 650,
+            // off: 5,
+            // strikedoffprice: 1799,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/r/aroma_magic_mineral_glow_scrub_2000x.jpg",
+            name: "Aroma Magic Mineral Glow Scrub (All Skin Types)",
+            price: 310,
+            // off: 15,
+            // strikedoffprice: 525,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png",
+            name: "Organic Harvest Cleansing Milk With Essential Oils",
+            price: 491,
+            off: 10,
+            strikedoffprice: 545,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/680c9508904311903031__1_.jpg",
+            name: "Wow Skin Science Thai Body Massage Oil",
+            price: 540,
+            off: 10,
+            strikedoffprice: 599,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/c/cca52498904311901341_1.jpg",
+            name: "Wow Skin Science Moroccan Rose Otto Foaming Body Wash",
+            price: 339,
+            // off: 5,
+            // strikedoffprice: 2199,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/407c3408908003416601_1.jpg",
+            name: "Organic Harvest Lavender Essential Oil",
+            price:405,
+            off: 10,
+            strikedoffprice: 450,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/c/dcc62fd8904311902386_1.jpg",
+            name: "Wow Skin Science Ubtan Body Wash",
+            price: 399,
+            // off: 7,
+            // strikedoffprice: 1499,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va109.jpg",
+            name: "Mamaearth Vitamin C Nourishing Bathing Soap With Vitamin C And",
+            price: 299,
+            // off: 5,
+            // strikedoffprice: 1999,
+        },
+        {
+            image_url: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va106.jpg",
+            name: "Mamaearth Coco Nourishing Bathing Soap With Coffee & Cocoa",
+            price: 299,
+            // off: 8,
+            // strikedoffprice: 1599,
         },
     ];
+
+
         
-    display(mensData);
+    display(PersonalCareData);
 
     // mensData.sort(function(a,b){
     //     return a.price-b.price;
@@ -1656,7 +1626,7 @@
 
     function display(Data) {
         if(Data.length==0){
-            Data=mensData;
+            Data=PersonalCareData;
         }
         document.getElementById("parent").textContent=" ";
         for (let i = 0; i < Data.length; i++) {
@@ -1678,6 +1648,7 @@
             if (Data[i].strikedoffprice != undefined) {
                 strikedoffprice.textContent = Data[i].strikedoffprice;
                 strikedoffprice.style.fontSize="15px";
+
             } else {
                 strikedoffprice.textContent = "A";
                 strikedoffprice.style.color = "white";
@@ -1738,7 +1709,7 @@
                 if (document.getElementById("cartid" + i).value == "Add to Cart") {
                     var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
                     var obj = {
-                        img:mensData[i].image_url,
+                        img:Data[i].image_url,                        
                         productname: Data[i].name,
                         price: Data[i].price,
                         strikedoffprice: Data[i].strikedoffprice,
@@ -1792,7 +1763,7 @@
     
     function sort1000() {
         check1=!check1;
-       var below100= mensData.filter(function(ele){
+       var below100= PersonalCareData.filter(function(ele){
             if(Number(ele.price)<=1000 && check1==false){
                 return ele;
             }
@@ -1810,7 +1781,7 @@
     function sort2000() {
         check2=!check2;
 
-       var below100= mensData.filter(function(ele){
+       var below100= PersonalCareData.filter(function(ele){
             if(Number(ele.price)>1000 && Number(ele.price)<=2000  && check2==false){
                 return ele;
             }
@@ -1826,7 +1797,7 @@
     function sort3000() {
         check3=!check3;
 
-       var below100= mensData.filter(function(ele){
+       var below100= PersonalCareData.filter(function(ele){
             if(Number(ele.price)>=2000 && Number(ele.price)<=3000 && check3==false){
                 return ele;
             }
