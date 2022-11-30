@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fregrance</title>
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous">
+    </script>
     <style>
+        .container {
+            display: inline-block;
+        }
+
         #parent {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -17,7 +23,7 @@
             border-left: 1px solid #ebebeb;
             border-right: 1px solid #ebebeb;
             border-bottom: 1px solid #ebebeb;
-            
+
             text-align: center;
             padding: 10px;
 
@@ -38,8 +44,8 @@
 
         /* --------collapse option */
         .collapsible {
-            background-color: #777;
-            color: white;
+            background-color: rgb(245, 239, 239);
+            color: rgb(69, 65, 65);
             cursor: pointer;
             padding: 18px;
             width: 100%;
@@ -51,379 +57,1568 @@
 
         .active,
         .collapsible:hover {
-            background-color: #555;
+            color: black;
         }
 
         .content {
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: #f1f1f1;
+            /* background-color: #f1f1f1; */
         }
 
         /* ----------text */
-        .text_content_body_bottom{
+        .text_content_body_bottom {
             margin-left: 20%;
         }
-        .p_heading{
+
+        .p_heading {
             font-weight: bold;
         }
-        .p_heading:hover{
-            color:#DD0285 ;
+
+        .p_heading:hover {
+            color: #DD0285;
+        }
+
+        /* ------------footer */
+        footer {
+            color: white;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .footer-main-aj {
+            /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+            background-color: #232323;
+        }
+
+        .footer-main-aj a {
+            text-decoration: none;
+            color: #a2a0a0;
+        }
+
+        .footer-bottom-2-aj {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 34px;
+            margin: auto;
+            font-weight: 100;
+            font-size: medium;
+            background-color: rgba(0, 0, 0, 0.65);
+            border-top: 1px rgb(76, 74, 74) solid;
+            color: #a5a7a0;
+            font-size: 13px;
+        }
+
+        .footer-bottom-1-aj {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px rgb(76, 74, 74) solid;
+            padding: 10px 0;
+        }
+
+        .footer-bottom-1-aj .footer-right-signup {
+            display: flex;
+
+            align-items: center;
+            gap: 30px;
+        }
+
+        .signup-buttons-place {
+            display: flex;
+            align-items: center;
+        }
+
+        .enter-signup-text {
+            height: 50px;
+            width: 300px;
+            border: none;
+            color: #999999;
+            box-sizing: border-box;
+            padding-left: 10%;
+            font-size: 18px;
+        }
+
+        ::placeholder {
+            font-size: 16px;
+        }
+
+        .enter-signup-button {
+            background-color: #dd0285;
+            font-size: 1rem;
+            color: whitesmoke;
+            font-weight: 700;
+            width: 100px;
+            border: none;
+            height: 50px;
+        }
+
+        .footer-right-signup div:first-child {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .footer-top {
+            margin: auto;
+            padding-top: 1%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+
+        .footer-main-aj li {
+            list-style: circle;
+            list-style-position: inside;
+            margin-bottom: 10px;
+        }
+
+        .footer-main-aj li:hover,
+        .footer-main-aj a:hover,
+        .categories span:hover {
+            color: #dd0285;
+        }
+
+        .socials-wrap .links-contact {
+            display: flex;
+
+            gap: 5%;
+        }
+
+        .li-social a {
+            display: block;
+            background-color: #dd0285;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px 0;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+        }
+
+        .links-contact li {
+            list-style: none;
+        }
+
+        .links li a span,
+        .phone,
+        .time {
+            font-size: medium;
+            color: #999999;
+        }
+
+        .footer-block-title {
+            display: inline-block;
+            padding-bottom: 10px;
+            margin: 10px 10px 10px 48px;
+            border-bottom: 2px dashed #dd0285;
+        }
+
+        .footer-main-aj h3 {
+            font-size: medium;
+        }
+
+        .divide {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+            gap: 10vh;
+        }
+
+        .fa {
+            color: white;
+        }
+
+        .phone:hover,
+        .time:hover {
+            color: #999999 !important;
+        }
+
+        .phone,
+        .time {
+            margin: 10px 0 !important;
+        }
+
+        .footer-block-title {
+            font-size: 22px;
+        }
+
+        .footer-block-title h3 {
+            margin: 5px;
+        }
+
+        .links {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        /* -----------header */
+        * {
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            align-items: center;
+        }
+
+        .control {
+            margin: 10px 0px;
+            border: 1px solid #e6e6e6;
+            border-radius: 2px;
+            color: #b3b3b3;
+        }
+
+        #cat {
+            padding: 10px 100px 10px 5px;
+            border: transparent;
+            color: #b3b3b3;
+        }
+
+        #search {
+            padding: 10px 100px 10px 5px;
+            border: transparent;
+            color: #b3b3b3;
+        }
+
+        .fa-magnifying-glass {
+            color: white;
+        }
+
+        .search-btn {
+            padding: 11px 16px;
+            background-color: #dd0285;
+            border-color: transparent;
+            border-radius: 0 2px 2px 0;
+        }
+
+        ::placeholder {
+            color: #b3b3b3;
+            opacity: 1;
+        }
+
+
+        .header-links {
+            display: flex;
+        }
+
+        .wishlist-div {
+            margin-right: 10px;
+        }
+
+        .wishlist {
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        .fa-heart {
+            font-size: 18px;
+            color: black;
+        }
+
+        .user {
+            padding: 8px;
+            background-color: white;
+            border: 1px solid #d9d9d9;
+        }
+
+        .fa-user {
+            font-size: 18px;
+            color: black;
+        }
+
+        .btn {
+            background-color: white;
+            color: black;
+        }
+
+        .btn:hover {
+            background-color: #dd0285;
+            color: white;
+        }
+
+        .loginRegisterDropdown {
+            list-style: none;
+            background-color: white;
+            width: 5%;
+            text-align: left;
+            padding: 10px 40px 10px 10px;
+            display: none;
+            position: absolute;
+            margin: 3rem 0 0 3rem;
+            box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+        }
+
+        .loginRegisterDropdown li {
+            margin: 7px;
+        }
+
+        .loginRegisterDropdown li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .loginRegisterDropdown li a:hover {
+            color: #dd0285;
+        }
+
+        .nav-menu ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-menu ul li {
+            list-style: none;
+        }
+
+        .nav-bar {
+            width: 100%;
+            height: 51px;
+            background: #dd0285;
+        }
+
+        .nav-menu {
+            width: 84%;
+            margin: auto;
+        }
+
+
+        .nav-links {
+            float: left;
+            position: relative;
+        }
+
+        .nav-menu ul li a {
+            display: block;
+            padding: 16px 26px;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        .nav-menu ul li div {
+            display: none;
+            position: absolute;
+            background-color: white;
+            padding: 10px;
+            width: max-content;
+
+        }
+
+        .nav-menu ul li:hover div {
+            display: flex;
+        }
+
+        .nav-menu ul li div ul {
+            padding-left: 10px;
+            width: max-content;
+        }
+
+        .nav-menu ul li div ul li p {
+            font-size: 13px;
+            padding: 0px 6px;
+            margin: 5px 0px;
+        }
+
+        .nav-menu ul li div ul li:first-child p {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .nav-menu ul li div img {
+            width: 50%;
+            height: 70%;
+            background-size: cover;
+            margin-left: 10px;
+        }
+
+        .nav-cart {
+            padding-top: 15px;
+            width: 90%;
+        }
+
+        .nav-cart a {
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            float: right;
+            color: white;
+        }
+
+        .fa-bag-shopping {
+            padding-right: 20px;
         }
     </style>
 </head>
 
 <body>
+    <div class="nav">
+        <header>
+            <div class="top">
+                <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="logo"
+                    style="width:20%" />
+                <div class="control">
+                    <select name="select-box-cat" id="cat">
+                        <option value="">All Category</option>
+                        <option value="Make up">Make up</option>
+                        <option value="Skin">Skin</option>
+                        <option value="Hair">Hair</option>
+                        <option value="Personal Care">Personal Care</option>
+                        <option value="Mom & Baby Care">Mom & Baby Care</option>
+                        <option value="Fragrance">Fragrance</option>
+                        <option value="Ayurveda">Ayurveda</option>
+                    </select>
+                    <span>|</span>
+                    <input type="text" id="search" placeholder="Enter Your Search..." />
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="header-links">
+                    <div class="wishlist-div">
+                        <a href="wishlist"><i class="fa-solid fa-heart wishlist btn"></i></a>
+                    </div>
+                    <div class="user-acc">
+                        <i class="fa-solid fa-user user btn"></i>
+                        <span>My Account</span>
+                    </div>
+                    <ul class="loginRegisterDropdown">
+                        <li>
+                            <a href=".login">Login</a>
+                        </li>
+                        <li>
+                            <a href=".register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-menu">
+                    <ul>
+                        <li class="nav-links">
+                            <a href=".makeup">MAKEUP</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <p>FACE</p>
+                                    </li>
+                                    <li>
+                                        <p>BB Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Blush</p>
+                                    </li>
+                                    <li>
+                                        <p>Bronzer</p>
+                                    </li>
+                                    <li>
+                                        <p>CC Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Contour</p>
+                                    </li>
+                                    <li>
+                                        <p>Concealer</p>
+                                    </li>
+                                    <li>
+                                        <p>Compact & Powder</p>
+                                    </li>
+                                    <li>
+                                        <p>Face Primer</p>
+                                    </li>
+                                    <li>
+                                        <p>Foundation</p>
+                                    </li>
+                                    <li>
+                                        <p>Highlighters</p>
+                                    </li>
+                                    <li>
+                                        <p>Loose Powder</p>
+                                    </li>
+                                    <li>
+                                        <p>Makeup Kits</p>
+                                    </li>
+                                    <li>
+                                        <p>Makeup Remover</p>
+                                    </li>
+                                    <li>
+                                        <p>Setting Spray</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>EYE</p>
+                                    </li>
+                                    <li>
+                                        <p>Contact Lenses</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Kit</p>
+                                    </li>
+                                    <li>
+                                        <p>Eyeliner</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Shadow</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Primer</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye-Palettes</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Makeup Remover</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Brow Enhancers</p>
+                                    </li>
+                                    <li>
+                                        <p>False Eyelashes</p>
+                                    </li>
+                                    <li>
+                                        <p>Kajal</p>
+                                    </li>
+                                    <li>
+                                        <p>Mascara</p>
+                                    </li>
+                                    <li>
+                                        <p>Under Eye Concealer</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>LIPS</p>
+                                    </li>
+                                    <li>
+                                        <p>Lipstick</p>
+                                    </li>
+                                    <li>
+                                        <p>Liquid Lipstick</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Liner</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Gloss</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Balm</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Crayon</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Stain</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Plumper</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>NAILS</p>
+                                    </li>
+                                    <li>
+                                        <p>Manicure & Pedicure Kits</p>
+                                    </li>
+                                    <li>
+                                        <p>Nail Polish</p>
+                                    </li>
+                                    <li>
+                                        <p>Nail Care</p>
+                                    </li>
+                                    <li>
+                                        <p>Nail Polish Sets</p>
+                                    </li>
+                                    <li>
+                                        <p>Nail Art Kits</p>
+                                    </li>
+                                    <li>
+                                        <p>Nail Polish Remover</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>TOOLS BRUSHES</p>
+                                    </li>
+                                    <li>
+                                        <p>Blush Brush</p>
+                                    </li>
+                                    <li>
+                                        <p>Eyelash Curlers</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Brush</p>
+                                    </li>
+                                    <li>
+                                        <p>Face Brush</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Brush</p>
+                                    </li>
+                                    <li>
+                                        <p>Makeup Pouches</p>
+                                    </li>
+                                    <li>
+                                        <p>Mirrors</p>
+                                    </li>
+                                    <li>
+                                        <p>Sponges & Applicators</p>
+                                    </li>
+                                    <li>
+                                        <p>Sharpeners</p>
+                                    </li>
+                                    <li>
+                                        <p>Tweezers</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-links">
+                            <a href=".skin">SKIN</a>
+                            <div style="width:700px">
+                                <ul>
+                                    <li>
+                                        <p>EYE CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>Dark Circles</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Contour Care</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Masks</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Serums</p>
+                                    </li>
+                                    <li>
+                                        <p>Puffiness</p>
+                                    </li>
+                                    <li>
+                                        <p>Under Eye Creams</p>
+                                    </li>
+                                    <li>
+                                        <p>Under Eye Wrinkles</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>FACE CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>Anti- Ageing Creams</p>
+                                    </li>
+                                    <li>
+                                        <p>Bleach Creams</p>
+                                    </li>
+                                    <li>
+                                        <p>Brightening Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Face Wash</p>
+                                    </li>
+                                    <li>
+                                        <p>Facial Wipes</p>
+                                    </li>
+                                    <li>
+                                        <p>Face Oil</p>
+                                    </li>
+                                    <li>
+                                        <p>Face Cleansers</p>
+                                    </li>
+                                    <li>
+                                        <p>Facial Kits</p>
+                                    </li>
+                                    <li>
+                                        <p>Face Tools</p>
+                                    </li>
+                                    <li>
+                                        <p>Moisturizer</p>
+                                    </li>
+                                    <li>
+                                        <p>Mask & Peels</p>
+                                    </li>
+                                    <li>
+                                        <p>Serum</p>
+                                    </li>
+                                    <li>
+                                        <p>Toner & Astringents</p>
+                                    </li>
+                                    <li>
+                                        <p>Cleansing Creams</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>BODY CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>All Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Moisturizers</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Toners</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Sun Care</p>
+                                    </li>
+                                    <li>
+                                        <p>Brightening Lotion</p>
+                                    </li>
+                                    <li>
+                                        <p>Dark Circles & Wrinkles</p>
+                                    </li>
+                                    <li>
+                                        <p>Day Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Foot Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Remover Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Hand Creams</p>
+                                    </li>
+                                    <li>
+                                        <p>Hands & Feet</p>
+                                    </li>
+                                    <li>
+                                        <p>Kits & Combos</p>
+                                    </li>
+                                    <li>
+                                        <p>Night Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Neck Creams</p>
+                                    </li>
+                                </ul>
+
+                                <img style="width: 40%;"
+                                    src="https://www.beautybebo.com/pub/media/mega-menu/SKIN_cATA.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-links">
+                            <a href=".hair">HAIR</a>
+                            <div style="width:700px">
+                                <ul>
+                                    <li>
+                                        <p>HAIR CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>Color Protection</p>
+                                    </li>
+                                    <li>
+                                        <p>Dandruff</p>
+                                    </li>
+                                    <li>
+                                        <p>Dry Shampoo</p>
+                                    </li>
+                                    <li>
+                                        <p>Gels & Waxes</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Spray</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Color/ Dye</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Creams & Masks </p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Styling</p>
+                                    </li>
+                                    <li>
+                                        <p>Hairfall & Thinning </p>
+                                    </li>
+                                    <li>
+                                        <p>Straighteners </p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>HAIR LOSS</p>
+                                    </li>
+                                    <li>
+                                        <p>Conditioner</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Oil</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Serum</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Growth Solutions</p>
+                                    </li>
+                                    <li>
+                                        <p>Shampoo</p>
+                                    </li>
+                                </ul>
+
+                                <img style="width: 40%;"
+                                    src="https://www.beautybebo.com/pub/media/mega-menu/hair_cata.jpg"
+                                    alt="headandsholder">
+                            </div>
+                        </li>
+                        <li class="nav-links">
+                            <a href=".personalCare">PERSONAL CARE</a>
+                            <div style="width: 700px;">
+                                <ul>
+                                    <li>
+                                        <p>BATH & BODY</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Cleansers</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Massage Oil</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Wash</p>
+                                    </li>
+                                    <li>
+                                        <p>Creams</p>
+                                    </li>
+                                    <li>
+                                        <p>Essential Oils</p>
+                                    </li>
+                                    <li>
+                                        <p>Foot Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Scrubs & Exfoliants</p>
+                                    </li>
+                                    <li>
+                                        <p>Ubtan & Face Packs</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>BATHING ACCESSORIES</p>
+                                    </li>
+                                    <li>
+                                        <p>Bath Brushes</p>
+                                    </li>
+                                    <li>
+                                        <p>Loofahs</p>
+                                    </li>
+                                    <li>
+                                        <p>Shower Caps</p>
+                                    </li>
+                                    <li>
+                                        <p>Sponges</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>BATH & SHOWER</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Soaps</p>
+                                    </li>
+                                    <li>
+                                        <p>Shower Gel</p>
+                                    </li>
+                                </ul>
+
+                                <img src="https://www.beautybebo.com/pub/media/mega-menu/personal_cata.jpg"
+                                    alt="personalcare">
+                            </div>
+                        </li>
+                        <li class="nav-links">
+                            <a href=".momBabyCare">MOM & BABY CARE</a>
+                            <div style="width:600px;">
+                                <ul>
+                                    <li>
+                                        <p>BABY CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>Bath Time</p>
+                                    </li>
+                                    <li>
+                                        <p>Diapers</p>
+                                    </li>
+                                    <li>
+                                        <p>Lotions & Creams</p>
+                                    </li>
+                                    <li>
+                                        <p>Oils</p>
+                                    </li>
+                                    <li>
+                                        <p>Powder</p>
+                                    </li>
+                                    <li>
+                                        <p>Shampoo</p>
+                                    </li>
+                                    <li>
+                                        <p>Soaps</p>
+                                    </li>
+                                    <li>
+                                        <p>Sterilizer & Cleaners</p>
+                                    </li>
+                                    <li>
+                                        <p>Rash Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Wipes</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>MOM CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>Lotions & Creams</p>
+                                    </li>
+                                    <li>
+                                        <p>Personal Care</p>
+                                    </li>
+                                </ul>
+
+                                <img style="width:40%;"
+                                    src="https://www.beautybebo.com/pub/media/mega-menu/mom_baby_cata.jpg"
+                                    alt="babycare">
+                            </div>
+                        </li>
+                        <li class="nav-links">
+                            <a href=".fragrance">FRAGRANCE</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <p>Perfumes</p>
+                                    </li>
+                                    <li>
+                                        <p>Deodorants roll ons</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Mist/Spray</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-links">
+                            <a href=".ayurveda">AYURVEDA</a>
+                            <div style="width:100%">
+                                <ul>
+                                    <li>
+                                        <p>NATURAL SKIN CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Wash</p>
+                                    </li>
+                                    <li>
+                                        <p>Body Lotion</p>
+                                    </li>
+                                    <li>
+                                        <p>Cleansers</p>
+                                    </li>
+                                    <li>
+                                        <p>Cream</p>
+                                    </li>
+                                    <li>
+                                        <p>Eye Care</p>
+                                    </li>
+                                    <li>
+                                        <p>Face Wash</p>
+                                    </li>
+                                    <li>
+                                        <p>Gel</p>
+                                    </li>
+                                    <li>
+                                        <p>Lip Care</p>
+                                    </li>
+                                    <li>
+                                        <p>Mask</p>
+                                    </li>
+                                    <li>
+                                        <p>Pack</p>
+                                    </li>
+                                    <li>
+                                        <p>Scrub</p>
+                                    </li>
+                                    <li>
+                                        <p>Sun Protection</p>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        <p>NATURAL HAIR CARE</p>
+                                    </li>
+                                    <li>
+                                        <p>Conditioner</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Oils</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Serum</p>
+                                    </li>
+                                    <li>
+                                        <p>Hair Gel</p>
+                                    </li>
+                                    <li>
+                                        <p>Shampoo</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-cart">
+                    <a href=".cart"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
+                </div>
+            </div>
+        </header>
+    </div>
     <div class="container">
-        <div class="nav">
-            <h1>nav</h1>
-            <h1>Personal Care</h1>
-        </div>
+
         <div class="bodycontent" style="display: flex;">
             <div class="sidebar" style="width: 25%;">
-                <h2>SHOP BY</h2>
-                <button type="button" class="collapsible">Price</button>
+                <button type="button" class="collapsible">CATEGORY</button>
                 <div class="content">
                     <div>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue"> Below
-                            ₹1,000 </p>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
-                            ₹1,000 - ₹2,000 </p>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
-                            ₹2,000 - ₹3,000 </p>
-                        <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">
-                            ₹3,000 and </p>
+                        <p class="text-secondary"> > Hair Care</p>
+                        <p class="text-secondary"> > Hair Loss</p>
+
                     </div>
                 </div>
-                <button type="button" class="collapsible">Open Section 2</button>
+                <h2>SHOP BY</h2>
+                <button type="button" class="collapsible">SKIN TYPE</button>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Combination </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Dry </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Normal </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Oily </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Sensitive </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">All Skin Type</p>
+
                 </div>
-                <button type="button" class="collapsible">Open Section 3</button>
+                <button type="button" class="collapsible">PRICE</button>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck1" value="1000"> Below
+                            ₹1,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck2" value="2000">
+                            ₹1,000 - ₹2,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck3" value="3000">
+                            ₹2,000 - ₹3,000 </p>
+                        <p class="text-secondary"><input type="checkbox" id="myCheck4" value="3001">
+                            ₹3,000 and above</p>
+                    </div>
                 </div>
-                <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt="" style="width: 100% !important; margin-top:20px;">
+                <button type="button" class="collapsible">BRAND</button>
+                <div class="content">
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Tresemme</p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Boroplus</p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Boroplus</p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Head & Shoulders</p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Vlcc</p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Vega</p>
+
+                </div>
+                <button type="button" class="collapsible">HAIR TYPE </button>
+                <div class="content">
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Normal </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Curly </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Straight </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Fine </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Oily </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Dryness </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Dull Hair </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Thin </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Thick </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Wavy </p>
+                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">All Hair Type </p>
+                </div>
+                <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt=""
+                    style="width: 100% !important; margin-top:20px;">
 
             </div>
 
             <div id="parent" style="width:80%; align-items: flex-end;">
 
             </div>
-            
+
         </div>
         <div class="text_content_body_bottom">
-            <p class="p_heading">Hair Products Online</p>
-            <p>Your outlook is enhanced in a big way by your hair. At Beauty Bebo, hair care is taken with seriousness. Which is why we have taken time to research and get you the best hair care products India and abroad.</p>
+            <p class="p_heading">Best Fragrance Online</p>
+            <p>A sweet-smelling body is everyone’s desire, right? The difference comes in the aromatic fragrance preference. Beauty Bebo provides you with so many options of the best fragrance online you will never run short.</p>
+            <p class="p_heading">Perfumes</p>
+            <p>Do you want perfumes that announce your presence even before sight? Or are you modest with your preferred perfume?  Do you want perfumes that last a whole day on your clothes?
 
-            <p class="p_heading">Hair Styling Products Online</p>
-            <p>Whether you want your hair straight, curly, wavy, we have all the tools and products required.
+                Get yourself your best perfume online, all from pronounced brands. Try out a unique but best fragrance that will define you and get an exotic or natural smell that will leave you confident throughout your day.</p>
+            <p class="p_heading">Deodorants and Roll on</p>
+            <p>Branded deo always gives you a sense of credence, whether when solo or around people.Our deo price online is considerate of all budgets, yet the quality is unbeatable.
 
-                Get your hair dry within seconds with our classic dryers, and trim it to your desired length with perfect trimmers.
-                
-                Straighteners or curlers here will give you the best hair outlook. And don’t forget, people will judge you at a glance by your hair. Give them the impression you want out there.
-            </p>
-
-            <p class="p_heading">Hair Texture and Outlook</p>
-            <p>If your hair is dry and breaking, then all it requires is a good treatment. Get this from our array of hydrating and nourishing oils and sprays.</p>
-
-            <p class="p_heading">Dandruff and Scalp Treatment Products</p>
-            <p>No one wants to always have the annoying urge to scratch their scalp. It messes with your hair style and may even break into a wound. It is more uncomfortable than words can express. Our dandruff and scalp treatments save you from this stress.</p>
+                We have top deodorants and roll on types that will prevent the foul smell of sweat. Use them any time of the day you feel uncomfortable, as they are porch must-haves.</p>
+            <p class="p_heading">Body Mist/ Spray</p>
+            <p>Treat your body to a subtle fragrance from our collection of top brand sprays/ mist. They have all been proven safe for your skin. Killing bacteria and preventing bad smell, these products will bring up a positive vibe in your day. A nice scent goes a long way into providing a positive attitude about you.</p>
+            <p class="p_heading">Brands</p>
+            <p>Eva, Blue Heaven, Biotique, Engage, Calvin Klein, Fogg, Denver, VLCC, Nivea</p>
+            <p class="p_heading">Get the Best of Beauty Bebo</p>
+            <p>We have a wide range of smells for your body, ranging from fruits, to natural wood smells. You also have an option for the exotic and personalized blendsthat no one will place, yet leave the distinctive feeling of class.</p>
         </div>
     </div>
+    <footer>
+        <div class="footer-main-aj">
+            <div class="footer-top">
+                <div class="divide">
+                    <div class="one">
+                        <div class="footer-block-title">
+                            <h3>CONTACT INFO</h3>
+                        </div>
+                        <div class="list-contact-aj">
+                            <ul class="links-contact">
+                                <li class="phone">(+91) 97990 30777</li>
+                                <li class="mail">
+                                    <a href="mailto:support@beautybebo.com">support@beautybebo.com</a><br><a
+                                        href="mailto:sales@beautybebo.com">sales@beautybebo.com
+                                    </a>
+                                </li>
+                                <li class="time">Open time: 10:00AM - 7:00PM</li>
+                            </ul>
+                        </div>
+                        <div class="socials-wrap">
+                            <ul class="links-contact">
+                                <li class="li-social facebook-social">
+                                    <a title="Facebook" href="https://www.facebook.com/BeautyBebo-339715696750230/"
+                                        target="_blank"><span class="fa fa-facebook icon-social"
+                                            aria-hidden="true"></span></a>
+                                </li>
+                                <li class="li-social pinterest-social">
+                                    <a title="Instagram" href="https://www.instagram.com/beautybeboofficial/"
+                                        target="_blank"><span class="fa fa-instagram icon-social"
+                                            aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="two">
+                        <div class="footer-block-title">
+                            <h3>QUICK LINKS</h3>
+                        </div>
+                        <div class="footer-block-content">
+                            <ul class="links">
+                                <li><a href="./pages/aboutus.html">About us</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li>
+                                    <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+                                </li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li>
+                                    <a href="/return-policy">Return and Refund Policy</a>
+                                </li>
+                                <li><a href="/shipping-policy">Shipping Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="divide">
+                    <div class="three">
+                        <div class="footer-block-title">
+                            <h3>CUSTOMER</h3>
+                        </div>
+                        <div class="footer-block-content">
+                            <ul class="links">
+                                <li><a href="/customer/account/">My Account</a></li>
+                                <li><a href="/track-order/">Track your Order</a></li>
+                                <li><a href="/order-return">Order Returns</a></li>
+                                <li><a href="/wishlist/">Wishlist</a></li>
+                                <li><a href="/blog/">News &amp; Events</a></li>
+                                <li><a href="./pages/faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="four">
+                        <div class="footer-block-title">
+                            <h3>CATEGORIES</h3>
+                        </div>
+                        <div class="footer-block-content categories">
+                            <ul class="links">
+                                <li>
+                                    <a
+                                        href="https://www.beautybebo.com/makeup.html?___store=default"><span>Makeup</span></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.beautybebo.com/skin.html?___store=default"><span>Skin</span></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.beautybebo.com/hair.html?___store=default"><span>Hair</span></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.beautybebo.com/personal-care.html?___store=default"><span>Personal
+                                            Care</span></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.beautybebo.com/mom-baby-care.html?___store=default"><span>Mom
+                                            &amp; Baby Care</span></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.beautybebo.com/fragrance.html?___store=default"><span>Fragrance</span></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.beautybebo.com/ayurveda.html?___store=default"><span>Ayurveda</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-1-aj">
+                <div class="footer-payment_img">
+                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
+                </div>
+                <div class="footer-right-signup">
+                    <div><span>Signup For Newsletter</span></div>
+                    <div class="signup-buttons-place">
+                        <div>
+                            <input type="text" class="enter-signup-text" placeholder="Signup For Newsletter">
+                        </div>
+
+                        <div>
+                            <input type="button" value="Subscribe" class="enter-signup-button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-2-aj">Made by Ramanpreet Singh,Manoj Kumar, Sourav Partab Singh & Manish Verma.
+            </div>
+        </div>
+        <!--footer-main-ajn-->
+    </footer>
 </body>
 
 </html>
 <script>
-   var fregranceData  = [
+    var fregranceData = [
     {
       image_url:
         "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
       name: "KamaSutra Thrill Deodorant (150ml each)",
-      price: 396.00,
+      price: 1396.00,
     },
     {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
-        name: "kamaSutra Blaze Deodorant - Pack Of 2 (150ml each)",
-        price: 396.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
-        name: "KamaSutra Urge Power Series Perfume Spray- Pack Of 2 (135ml each)",
-        price: 396.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
-        name: "KamaSutra Woman Sparkle Perfume Body Spray (150ml each) ",
-        price: 398.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
-        name: "KamaSutra Woman Enigma Perfume Body Spray - Pack Of 2 (150ml each) ",
-        price: 398.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
-        name: "Plum Bodylovin' Feelin' So Rose Body Misz (150ml) ",
-        price: 457.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
-        name: "Plum Bodylovin' Orchid You Not Body Misz (150ml) ",
-        price: 473.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
-        name: " Plum Bodylovin' Trippin' Mimosas Body Mist (150ml)",
-        price: 473.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
-        name: " Mamaearth Eau De Parfum For A Fragrance As Unique As You (50ml)",
-        price: 629.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg ",
-        name: " Mamaearth ME Deo For A Scent That’s Unique To You (120ml)",
-        price: 299.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/8/s8.jpg",
-        name: " Calvin Klein Eternity For Men Eau De Parfum (50ml)",
-        price:3468.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo21.jpg",
-        name: "Fogg Bleu Series Island Fragrance Body Spray (120ml) ",
-        price: 255.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo20.jpg",
-        name: "Fogg Rush Fragrance Body Spray (150ml) ",
-        price:230.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo15.jpg",
-        name: " Fogg Scent Intensio Men Fragrance Body Spray (100ml)",
-        price:539.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo13.jpg",
-        name: " Fogg Master Cedar Body Spray (150ml)",
-        price: 275.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo12.jpg",
-        name: "Fogg Black Fresh Aromatic Fragrance Body Spray (150ml)",
-        price:250.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo10.jpg",
-        name: "Fogg Master Agar Body Spray (150ml)",
-        price: 275.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo8.jpg",
-        name: "Fogg Scent Xpressio Men Fragrance Body Spray (100ml)",
-        price: 539.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo7.jpg",
-        name: "Fogg Dynamic Fragrance Body Spray (150ml)",
-        price: 250.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo6.jpg",
-        name: "Fogg Scent Xtremo Men Fragrance Body Spray (100ml)",
-        price: 539.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo3.jpg",
-        name: "Fogg Master Oak Body Spray (150ml)",
-        price: 275.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/r/rr.jpg",
-        name: "Fogg Scent Beautiful Secret Women Fragrance Body Spray (100ml)",
-        price: 539.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/5/e55.jpg",
-        name: "Engage Yin Eau De Parfum For Men (90ml)",
-        price: 459.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d29.jpg",
-        name: "Denver Sporting Club Rider Deo (165ml)",
-        price: 179.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d28.jpg",
-        name: "Denver Hamilton Caliber Perfume - 100ml (100ml)",
-        price: 448.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d27.jpg",
-        name: "Denver Sporting Club - Victor Deo - 165ml (165ml)",
-        price: 179.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d26.png",
-        name: "Denver Hamilton Imperial Perfume (60ml)",
-        price: 257.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d25.jpg",
-        name: "Denver Royal Oud Deo - Hamilton (150ml)",
-        price: 179.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d24.jpg",
-        name: "Denver Hamilton Imperial Perfume - 100ml (100ml)",
-        price: 448.00,
-      },
-      {
-        image_url:
-          "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/l/pl34.jpg",
-        name: "Plum Green Tea Clear Skin Specialist Duo",
-        price: 1663.00,
-      },
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+      name: "kamaSutra Blaze Deodorant - Pack Of 2 (150ml each)",
+      price: 1396.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+      name: "KamaSutra Urge Power Series Perfume Spray- Pack Of 2 (135ml each)",
+      price: 1796.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+      name: "KamaSutra Woman Sparkle Perfume Body Spray (150ml each) ",
+      price: 398.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_6.jpg",
+      name: "KamaSutra Woman Enigma Perfume Body Spray - Pack Of 2 (150ml each) ",
+      price: 398.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+      name: "Plum Bodylovin' Feelin' So Rose Body Misz (150ml) ",
+      price: 457.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+      name: "Plum Bodylovin' Orchid You Not Body Misz (150ml) ",
+      price: 473.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+      name: " Plum Bodylovin' Trippin' Mimosas Body Mist (150ml)",
+      price: 473.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg",
+      name: " Mamaearth Eau De Parfum For A Fragrance As Unique As You (50ml)",
+      price: 629.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/e/me-deodorant.jpg ",
+      name: " Mamaearth ME Deo For A Scent That’s Unique To You (120ml)",
+      price: 299.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/8/s8.jpg",
+      name: " Calvin Klein Eternity For Men Eau De Parfum (50ml)",
+      price: 3468.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo21.jpg",
+      name: "Fogg Bleu Series Island Fragrance Body Spray (120ml) ",
+      price: 255.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo20.jpg",
+      name: "Fogg Rush Fragrance Body Spray (150ml) ",
+      price: 230.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo15.jpg",
+      name: " Fogg Scent Intensio Men Fragrance Body Spray (100ml)",
+      price: 539.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo13.jpg",
+      name: " Fogg Master Cedar Body Spray (150ml)",
+      price: 275.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo12.jpg",
+      name: "Fogg Black Fresh Aromatic Fragrance Body Spray (150ml)",
+      price: 250.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo10.jpg",
+      name: "Fogg Master Agar Body Spray (150ml)",
+      price: 275.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo8.jpg",
+      name: "Fogg Scent Xpressio Men Fragrance Body Spray (100ml)",
+      price: 539.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo7.jpg",
+      name: "Fogg Dynamic Fragrance Body Spray (150ml)",
+      price: 250.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo6.jpg",
+      name: "Fogg Scent Xtremo Men Fragrance Body Spray (100ml)",
+      price: 539.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo3.jpg",
+      name: "Fogg Master Oak Body Spray (150ml)",
+      price: 275.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/r/rr.jpg",
+      name: "Fogg Scent Beautiful Secret Women Fragrance Body Spray (100ml)",
+      price: 539.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/5/e55.jpg",
+      name: "Engage Yin Eau De Parfum For Men (90ml)",
+      price: 459.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d29.jpg",
+      name: "Denver Sporting Club Rider Deo (165ml)",
+      price: 179.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d28.jpg",
+      name: "Denver Hamilton Caliber Perfume - 100ml (100ml)",
+      price: 448.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d27.jpg",
+      name: "Denver Sporting Club - Victor Deo - 165ml (165ml)",
+      price: 179.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d26.png",
+      name: "Denver Hamilton Imperial Perfume (60ml)",
+      price: 257.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d25.jpg",
+      name: "Denver Royal Oud Deo - Hamilton (150ml)",
+      price: 179.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d24.jpg",
+      name: "Denver Hamilton Imperial Perfume - 100ml (100ml)",
+      price: 448.00,
+    },
+    {
+      image_url:
+        "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/l/pl34.jpg",
+      name: "Plum Green Tea Clear Skin Specialist Duo",
+      price: 1663.00,
+    },
   ];
+    
+    display(fregranceData);
 
+    // fregranceData.sort(function(a,b){
+    //     return a.price-b.price;
+    // })
 
-    //    fregranceData
-    for (let i = 0; i <  fregranceData.length; i++) {
+    //   fregranceData
 
-        // create elements---------------
-        var div = document.createElement("div");
-
-        var img = document.createElement("img");
-        img.src =  fregranceData[i].image_url;
-
-        var productname = document.createElement("p");
-        productname.textContent =  fregranceData[i].name;
-
-        var price = document.createElement("p");
-        price.textContent =  fregranceData[i].price;
-
-
-        var strikedoffprice = document.createElement("p");
-        if ( fregranceData[i].strikedoffprice != undefined) {
-            strikedoffprice.textContent =  fregranceData[i].strikedoffprice;
-        } else {
-            strikedoffprice.textContent = "A";
-            strikedoffprice.style.color = "white";
+    function display(Data) {
+        if(Data.length==0){
+            Data=fregranceData;
         }
+        document.getElementById("parent").textContent=" ";
+        for (let i = 0; i < Data.length; i++) {
 
-        var priceoff = document.createElement("p");
-        if ( fregranceData[i].off != undefined) {
-            priceoff.textContent =  fregranceData[i].off + " " + "%";
-        } else {
-            priceoff.textContent = "A";
-            priceoff.style.color = "white";
+            // create elements---------------
+            var div = document.createElement("div");
 
-        }
+            var img = document.createElement("img");
+            img.src = Data[i].image_url;
 
-        var addtocart = document.createElement("button");
-        addtocart.textContent = "Add to Cart";
-        addtocart.style.backgroundColor = "#DD0285";
-        addtocart.style.border = "#DD0285";
-        addtocart.style.color = "white";
-        addtocart.style.padding = "10px 20px";
-        addtocart.style.borderRadius = "5px";
-        addtocart.style.fontSize = "12.5px";
+            var productname = document.createElement("p");
+            productname.textContent = Data[i].name;
 
-        var pricediv = document.createElement("div");
+            var price = document.createElement("p");
+            price.textContent = Data[i].price;
 
-        // appending data--------------------
-        strikedoffprice.style.textDecoration = "line-through"
 
-        // ----------attribute
-        pricediv.setAttribute("class", "price" + i);
-        pricediv.style.display = "flex";
-        pricediv.style.justifyContent = "space-around";
+            var strikedoffprice = document.createElement("p");
+            if (Data[i].strikedoffprice != undefined) {
+                strikedoffprice.textContent = Data[i].strikedoffprice;
+            } else {
+                strikedoffprice.textContent = "A";
+                strikedoffprice.style.color = "white";
+            }
 
-        div.setAttribute("id", "card");
-
-        addtocart.setAttribute("id", "cartid" + i);
-
-        addtocart.setAttribute("value", "Add to Cart");
-
-        // ---------append body
-
-        document.getElementById("parent").append(div);
-
-        pricediv.append(strikedoffprice, price, priceoff);
-
-        div.append(img, productname, pricediv, addtocart)
-
-        // add to cart------------------------------------
-
-        addtocart.addEventListener("click", cart);
-
-        function cart() {
-            // let id = "cartid" + i;
-
-            if (document.getElementById("cartid" + i).value == "Add to Cart") {
-                var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
-                var obj = {
-                    // img: fregranceData[i].image_url,
-                    img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
-                    productname:  fregranceData[i].name,
-                    price:  fregranceData[i].price,
-                    strikedoffprice:  fregranceData[i].strikedoffprice,
-                    count: 1,
-                }
-                carta.push(obj);
-                localStorage.setItem("cartarr", JSON.stringify(carta));
-                // console.log(typeof (id));
-                document.getElementById("cartid" + i).textContent = "Added to Cart";
-                document.getElementById("cartid" + i).value = "Added to Cart";
+            var priceoff = document.createElement("p");
+            if (Data[i].off != undefined) {
+                priceoff.textContent = Data[i].off + " " + "%";
+            } else {
+                priceoff.textContent = "A";
+                priceoff.style.color = "white";
 
             }
 
+            var addtocart = document.createElement("button");
+            addtocart.textContent = "Add to Cart";
+            addtocart.style.backgroundColor = "#DD0285";
+            addtocart.style.border = "#DD0285";
+            addtocart.style.color = "white";
+            addtocart.style.padding = "10px 20px";
+            addtocart.style.borderRadius = "5px";
+            addtocart.style.fontSize = "12.5px";
 
+            var pricediv = document.createElement("div");
 
+            // appending data--------------------
+            strikedoffprice.style.textDecoration = "line-through"
 
-            // console.log(i);
+            // ----------attribute
+            pricediv.setAttribute("class", "price" + i);
+            pricediv.style.display = "flex";
+            pricediv.style.justifyContent = "space-around";
 
+            div.setAttribute("id", "card");
 
+            addtocart.setAttribute("id", "cartid" + i);
 
+            addtocart.setAttribute("value", "Add to Cart");
+
+            // ---------append body
+
+            document.getElementById("parent").append(div);
+
+            pricediv.append(strikedoffprice, price, priceoff);
+
+            div.append(img, productname, pricediv, addtocart)
+                console.log(Data);
+
+            // add to cart------------------------------------
+
+            addtocart.addEventListener("click", cart);
+
+            function cart() {
+                // let id = "cartid" + i;
+
+                if (document.getElementById("cartid" + i).value == "Add to Cart") {
+                    var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
+                    var obj = {
+                        // img:fregranceData[i].image_url,
+                        img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
+                        productname: Data[i].name,
+                        price: Data[i].price,
+                        strikedoffprice: Data[i].strikedoffprice,
+                        count: 1,
+                    }
+                    carta.push(obj);
+                    localStorage.setItem("cartarr", JSON.stringify(carta));
+                    // console.log(typeof (id));
+                    document.getElementById("cartid" + i).textContent = "Added to Cart";
+                    document.getElementById("cartid" + i).value = "Added to Cart";
+
+                }
+
+            }
         }
-
     }
 
     var coll = document.getElementsByClassName("collapsible");
@@ -440,4 +1635,70 @@
             }
         });
     }
+
+    // ----------header-----------
+    document.querySelector(".fa-user").addEventListener("click", dropdown);
+
+    function dropdown() {
+        var menu = document.querySelector(".loginRegisterDropdown");
+        if (menu.style.display == "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
+        }
+    }
+
+
+    // --------------pricesort---------------
+    // p1000 = document.getElementById("myCheck1");
+    document.getElementById("myCheck1").addEventListener("click", sort1000);
+    var check1=true;
+    
+    function sort1000() {
+        check1=!check1;
+       var below100= fregranceData.filter(function(ele){
+            if(Number(ele.price)<=1000 && check1==false){
+                return ele;
+            }
+            
+        });
+
+        display(below100);
+        // console.log(below100);
+
+    }
+
+    document.getElementById("myCheck2").addEventListener("click", sort2000);
+    var check2=true;
+
+    function sort2000() {
+        check2=!check2;
+
+       var below100= fregranceData.filter(function(ele){
+            if(Number(ele.price)>1000 && Number(ele.price)<=2000  && check2==false){
+                return ele;
+            }
+        });
+
+        display(below100);
+        // console.log(below100);
+    }
+
+    document.getElementById("myCheck3").addEventListener("click", sort3000);
+    var check3=true;
+
+    function sort3000() {
+        check3=!check3;
+
+       var below100= fregranceData.filter(function(ele){
+            if(Number(ele.price)>=2000 && Number(ele.price)<=3000 && check3==false){
+                return ele;
+            }
+        });
+
+        display(below100);
+        // console.log(below100);
+    }
+
+
 </script>
