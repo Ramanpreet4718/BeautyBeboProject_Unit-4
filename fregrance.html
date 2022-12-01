@@ -44,7 +44,7 @@
 
         /* --------collapse option */
         .collapsible {
-            background-color: rgb(245, 239, 239);
+            /* background-color: rgb(245, 239, 239); */
             color: rgb(69, 65, 65);
             cursor: pointer;
             padding: 18px;
@@ -1559,7 +1559,7 @@
             }
 
             var addtocart = document.createElement("button");
-            addtocart.textContent = "Add to Cart";
+            addtocart.innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Add to Cart';
             addtocart.style.backgroundColor = "#DD0285";
             addtocart.style.border = "#DD0285";
             addtocart.style.color = "white";
@@ -1602,17 +1602,18 @@
                 if (document.getElementById("cartid" + i).value == "Add to Cart") {
                     var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
                     var obj = {
-                        // img:fregranceData[i].image_url,
-                        img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
-                        productname: Data[i].name,
-                        price: Data[i].price,
-                        strikedoffprice: Data[i].strikedoffprice,
+                        img:fregranceData[i].image_url,
+                        // img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
+                        productname: fregranceData[i].name,
+                        price: fregranceData[i].price,
+                        strikedoffprice: fregranceData[i].strikedoffprice,
                         count: 1,
                     }
                     carta.push(obj);
                     localStorage.setItem("cartarr", JSON.stringify(carta));
                     // console.log(typeof (id));
-                    document.getElementById("cartid" + i).textContent = "Added to Cart";
+                    document.getElementById("cartid" + i).innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Added to Cart';
+                    // addtocart.innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Add to Cart';
                     document.getElementById("cartid" + i).value = "Added to Cart";
 
                 }
