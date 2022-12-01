@@ -5,6 +5,10 @@ body{
   padding: 0px;
   margin: 0px;
 }
+
+header{
+  margin-bottom: .5rem;
+}
 .top {
   display: flex;
   justify-content: space-between;
@@ -376,6 +380,9 @@ footer {
 .homepage-section1{
   width: 80%;
   margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding-bottom: 1px;
+  margin-bottom: .5rem;
 }
 
 .homepage-section1-left{
@@ -422,13 +429,19 @@ footer {
  .menu-block-content-title:hover{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
  }
- 
- .homepage-section1{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  padding-bottom: 1px;
- }
 
  .homepage-section1-right .slide img{
   width: 100%;
   background-size: cover;
  }
+
+ .homepage-section-blueHeaven-container{
+    width: 80%;
+    margin: auto;
+ }
+
+ .homepage-section-blueHeaven-container img{
+  width: 100%;
+ }
+
+ 
