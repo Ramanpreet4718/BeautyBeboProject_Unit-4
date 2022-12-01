@@ -9,15 +9,66 @@
     <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous"></script>
 
     <style>
+
+    @media screen and (min-width:701px) and (max-width:1000px) {
+      /* Here Write all the necessery styles for Medium Screen size  */
+      
+     
+    }
+
+    @media screen and (min-width:100px) and (max-width:700px) {
+      /* Here Write all the necessery styles for Small Screen size  */
+      header,footer{
+        display: none;
+      }
+      .cart{
+        display: block !important;
+      }
+      #cart_1stsection ,.cart_2ndsection,h1{
+        width: 100% !important;
+        padding: 10px !important;
+      }
+      table{
+        font-size: 11px;
+        /* border: 1px solid; */
+        width: 90% !important;
+      }
+      #divbutton_in {
+        font-size: 12px !important;
+        margin: 4px;
+      }
+      .priceSection{
+        justify-content: start !important;
+      }
+      .priceSection>div{
+        margin: 5px;
+      }
+     
+    }
+        /* ----------apply coupne and add sub and remove */
         #divbutton_in {
-            background-color: #DD0285;
+            background: #333;
             padding: 5px 14px;
             font-size: 15px;
             border: none;
             color: white;
-            margin-right: 10px;
+            margin-right: 4px;
+            border-radius: 20px;
         }
-
+        #divbutton_in:hover{
+            background-color: #DD0285;
+        }
+        button#disc {
+            margin-bottom: 10px;
+            padding: 11px;
+            color: white;
+            background: #333;
+            border: none;
+        }
+        button#disc:hover{
+            background-color: #DD0285;
+        }
+/* -------------------------------------------------------------------- */
         div#cart_1stsection {
             margin: 20px;
         }
@@ -38,14 +89,15 @@
             margin-bottom: 20px;
         }
 
-        select {
+        /* select {
             padding: 10px 20px;
             width: 360px;
             margin: 10px 0px;
-        }
+        } */
 
         input {
-            width: 355px;
+            width: 342px;
+            padding: 9px;
         }
 
         label {
@@ -1147,7 +1199,21 @@
 
                     <label for="">State</label><br>
                     <select id="State">
-                        <option value="India">Please select a region, state or province.</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
                     </select>
                     <br>
 

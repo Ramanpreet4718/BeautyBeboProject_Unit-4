@@ -9,6 +9,18 @@
     <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous">
     </script>
     <style>
+     @media screen and (min-width:701px) and (max-width:1000px) {
+      /* Here Write all the necessery styles for Medium Screen size  */
+      
+     
+    }
+
+    @media screen and (min-width:100px) and (max-width:700px) {
+        .bodycontent, #parent, .sidebar{
+        display: block !important;
+        width: 100% !important;
+      }
+    }
         .container {
             display: inline-block;
         }
@@ -1666,7 +1678,7 @@
             }
 
             var addtocart = document.createElement("button");
-            addtocart.textContent = "Add to Cart";
+            addtocart.innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Add to Cart';
             addtocart.style.backgroundColor = "#DD0285";
             addtocart.style.border = "#DD0285";
             addtocart.style.color = "white";
@@ -1718,7 +1730,7 @@
                     carta.push(obj);
                     localStorage.setItem("cartarr", JSON.stringify(carta));
                     // console.log(typeof (id));
-                    document.getElementById("cartid" + i).textContent = "Added to Cart";
+                    document.getElementById("cartid" + i).innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Added to Cart';
                     document.getElementById("cartid" + i).value = "Added to Cart";
 
                 }
