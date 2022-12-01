@@ -444,4 +444,166 @@ footer {
   width: 100%;
  }
 
- 
+ .homepage-section-hotdeals-heading p{
+  padding-bottom: 2px;
+  text-decoration: underline #dd0285;
+  margin-bottom: 0px;
+ }
+
+
+ .homepage-section-hotdeals-container{
+  width: 80%;
+  margin: auto;
+ }
+
+ .homepage-section-hotdeals-products-container{
+  border: 1px solid rgb(233, 233, 233);
+ }
+
+ .homepage-section-hotdeals-card{
+  border-left: 1px solid rgb(233, 233, 233);
+  overflow: hidden;
+  
+ }
+
+ .homepage-section-hotdeals-discription{
+  overflow: hidden;
+  max-height: 49px;
+  min-height: 49px;
+  text-align: center;
+ }
+
+ .homepage-section-hotdeals-productName{
+  text-align: center;
+  font-size: 14px;
+  padding: 0px 15px;
+  text-transform: capitalize;
+  font-weight: 400;
+ }
+
+ .homepage-section-hotdeals-productName:hover{
+  color: #dd0285;
+ }
+
+ .homepage-section-hotdeals-priceDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .homepage-section-hotdeals-mrp{
+  text-decoration: line-through;
+  font-size: 13px;
+  color: grey;
+  margin-right: 10px;
+ }
+
+ .homepage-section-hotdeals-price{
+  margin-right: 10px;
+  color: rgb(221, 2, 133) !important;
+  font-weight: bold;
+ }
+
+ .homepage-section-hotdeals-discount{
+  color: #008000;
+  font-weight: bold;
+ }
+
+ .homepage-section-hotdeals-buttonDiv{
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  margin-bottom: 3rem;
+ }
+
+ .homepage-section-hotdeals-cartButton{
+  margin-right: 5px;
+  padding: 7px 23px;
+  background-color: rgb(221, 2, 133);
+  color: white;
+  border: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+ }
+
+ .homepage-section-hotdeals-cartButton:hover{
+  opacity: 0.7;
+ }
+
+ .homepage-section-hotdeals-wishlistButton{
+  background-color: rgb(102, 102, 102);
+  border: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 7px 10px;
+ }
+
+ .homepage-section-hotdeals-wishlistButton:hover{
+  background-color: rgb(221, 2, 133);
+ }
+
+ .homepage-section-hotdeals-wishlistButton >.fa-heart{
+  color: white;
+  font-size: 14px;
+ }
+
+ .fa-basket-shopping{
+  padding-right: 5px;
+ }
+
+ .homepage-section-hotdeals-heading{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .homepage-section-hotdeals-heading .dots{
+  display: flex !important;
+  list-style-type: none;
+  justify-content:end ;
+ }
+
+ .homepage-section-hotdeals-heading .dots button{
+  font-size: 0px;
+  width: 8px;
+  height: 8px;
+  padding: 2px;
+  border: none;
+  border-radius: 50px;
+  background-color: black;
+  margin-right: .3rem;
+  cursor: pointer;
+}
+
+.homepage-section-hotdeals-heading .dots .slick-active button{
+  background-color:#dd0285;
+  width: 30px;
+}
+
+.joyandLotusAdd{
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+  margin-top: .5rem;
+  justify-content: center;
+}
+
+.joyAdd, .lotusAdd{
+  width: 50%;
+  margin: auto;
+}
+
+.joyAdd>img, .lotusAdd>img{
+  width: 100%;
+}
+
+.listtingtabs-gird{
+  width: 80%;
+  margin: auto;
+}
+
+.listtingtabs-gird>img{
+  width: 100%;
+} 
+
+

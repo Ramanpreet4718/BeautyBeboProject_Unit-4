@@ -1,28 +1,3 @@
-document.querySelector(".fa-user").addEventListener("click", dropdown);
-
-function dropdown(){
-    var menu = document.querySelector(".loginRegisterDropdown");
-    if(menu.style.display=="none"){
-        menu.style.display = "block";
-    }else{
-        menu.style.display = "none";
-    }
-}
-
-$(document).ready(function(){
-    $('.homepage-section1-right').slick({
-        arrows:false,
-        dots:true,
-        appendDots:".homepage-section1-right-slider-dots",
-        dotsClass:"dots",
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    });
-  });
-
-  
-
 var hotDealsData = [
     {
         image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/b/bbj0001565-1.jpg",
@@ -193,5 +168,173 @@ var hotDealsData = [
         strikedoffprice: 396,
     },
 ]
+
+var bestSeller = [
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/o/ponds_super_light_gel_oil_free_moisturiser_with_hyaluronic_acid_vitamin_e2.jpg",
+        name: "ponds super light gel oil free moisturiser with hyaluronic acid + vitamin e",
+        price: 264,
+        off: 12,
+        strikedoffprice: 299,
+    },
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-140.jpg",
+        name: "blue heaven candy matte lip color",
+        price: 125,
+        off: 0,
+        strikedoffprice: 0,
+    },
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-89.jpg",
+        name: "ponds white beauty anti spot fairness day cream spf 15 pa++",
+        price: 240,
+        off: 0,
+        strikedoffprice: 0,
+    }
+]
+
+var latestProducts = [
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/b/3b741delotaa00000044_nv1.jpg",
+        name: "Lotus Professional Retemin Plant Retinol & Vitamin C Brightening",
+        price: 646,
+        off: 7,
+        strikedoffprice: 695,
+    },
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/c/7c1a8e9o3xxx00000057_new1.jpg",
+        name: "O3+ Derma Cult Vitamin-C Tonic Solution",
+        price: 533,
+        off: 11,
+        strikedoffprice: 599,
+    },
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/3/4382eaao3xxx00000050_1.jpg",
+        name: "O3+ Brightening Am & Pm Combo",
+        price: 1701,
+        off: 5,
+        strikedoffprice: 1790,
+    },
+]
+
+var mostViewed = [
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/f/9f1b98c8904352000683_1.jpg",
+        name: "biotique bio green apple fresh daily purifying shampoo & conditioner",
+        price: 299,
+        off: 0,
+        strikedoffprice: 0,
+    },
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/2/t2_1.jpg",
+        name: "ponds triple vitamin moisturizing lotion",
+        price: 200,
+        off: 20,
+        strikedoffprice: 250,
+    },
+    {
+        image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-88.jpg",
+        name: "pantene pro-v oil replacement (pack of 2)",
+        price: 342,
+        off: 10,
+        strikedoffprice: 380,
+    },
+]
+
+hotDealsLayout()
+
+function hotDealsLayout(){
+    hotDealsData.map(function(element){
+    var div = document.querySelector(".homepage-section-hotdeals-products");
+    var cardDiv = document.createElement("div");
+    cardDiv.setAttribute("class","homepage-section-hotdeals-card")
+    var cardImg = document.createElement("img");
+    var cardNameDiv = document.createElement("div");
+    cardNameDiv.setAttribute("class","homepage-section-hotdeals-discription")
+    var cardName = document.createElement("p");
+    cardName.setAttribute("class","homepage-section-hotdeals-productName")
+    var priceDiv = document.createElement("div");
+    priceDiv.setAttribute("class","homepage-section-hotdeals-priceDiv")
+    var cardPrice = document.createElement("p");
+    cardPrice.setAttribute("class","homepage-section-hotdeals-price")
+    var cardMRP = document.createElement("p");
+    cardMRP.setAttribute("class","homepage-section-hotdeals-mrp")
+    var cardDiscount = document.createElement("p");
+    cardDiscount.setAttribute("class","homepage-section-hotdeals-discount")
+    var buttonDiv = document.createElement("div");
+    buttonDiv.setAttribute("class","homepage-section-hotdeals-buttonDiv")
+    var cardButton = document.createElement("button");
+    cardButton.setAttribute("class","homepage-section-hotdeals-cartButton")
+    var cardWishlist = document.createElement("button");
+    cardWishlist.setAttribute("class","homepage-section-hotdeals-wishlistButton")
+
+    cardImg.src = element.image_url;
+    cardName.textContent = element.name;
+    cardPrice.textContent = "₹"+element.price+".00";
+    if(element.strikedoffprice==0){
+        cardMRP.textContent = "";
+    }else{
+        cardMRP.textContent = "₹"+element.strikedoffprice+".00";
+    }
+    if(element.off==0){
+        cardDiscount.textContent = "";
+    }else{
+        cardDiscount.textContent = element.off+"% off";
+    }
+
+    cardButton.innerHTML = '<i class="fa-solid fa-basket-shopping"></i>'+' Add to Cart';
+    cardWishlist.innerHTML = '<i class="fa-solid fa-heart"></i>';
+
+    priceDiv.append(cardMRP,cardPrice,cardDiscount);
+    buttonDiv.append(cardButton,cardWishlist)
+    cardNameDiv.append(cardName)
+    cardDiv.append(cardImg,cardNameDiv,priceDiv,buttonDiv);
+    div.append(cardDiv);
+})
+
+
+}
+
+
+
+
+
+
+document.querySelector(".fa-user").addEventListener("click", dropdown);
+
+function dropdown(){
+    var menu = document.querySelector(".loginRegisterDropdown");
+    if(menu.style.display=="none"){
+        menu.style.display = "block";
+    }else{
+        menu.style.display = "none";
+    }
+}
+
+$(document).ready(function(){
+    $('.homepage-section1-right').slick({
+        arrows:false,
+        dots:true,
+        appendDots:".homepage-section1-right-slider-dots",
+        dotsClass:"dots",
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    });
+    $('.homepage-section-hotdeals-products').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows:false,
+        dots:true,
+        appendDots:".homepage-section-hotdeals-heading",
+        dotsClass:"dots",
+        autoplay: true,
+        autoplaySpeed: 10000,
+      });
+  });
+
+  
+
 
 
