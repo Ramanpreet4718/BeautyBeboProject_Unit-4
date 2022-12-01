@@ -9,6 +9,18 @@
     <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous"></script>
 
     <style>
+        #divbutton_in {
+            background-color: #DD0285;
+            padding: 5px 14px;
+            font-size: 15px;
+            border: none;
+            color: white;
+            margin-right: 10px;
+        }
+
+        div#cart_1stsection {
+            margin: 20px;
+        }
         .cart {
             display: flex;
         }
@@ -70,12 +82,12 @@
             width: 100%;
         }
 
-        td,
+        /* td,
         th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
-        }
+        } */
 
         * {
             font-family: "Roboto", sans-serif;
@@ -824,7 +836,7 @@
                             </div>
                         </li>
                         <li class="nav-links">
-                            <a href=".hair">HAIR</a>
+                            <a href="hair.html">HAIR</a>
                             <div style="width:700px">
                                 <ul>
                                     <li>
@@ -889,7 +901,7 @@
                             </div>
                         </li>
                         <li class="nav-links">
-                            <a href=".personalCare">PERSONAL CARE</a>
+                            <a href="personalcare.html">PERSONAL CARE</a>
                             <div style="width: 700px;">
                                 <ul>
                                     <li>
@@ -1097,7 +1109,7 @@
                     </ul>
                 </div>
                 <div class="nav-cart">
-                    <a href=".cart"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
+                    <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
                 </div>
             </div>
         </header>
@@ -1152,7 +1164,7 @@
                     <p>Subtotal</p>
                 </div>
                 <div>
-                    <p id="subtotal">0</p>
+                    <p id="totalcost">0</p>
                 </div>
             </div>
             <div class="priceSection">
@@ -1168,15 +1180,15 @@
                     <p>Order Total Incl. GST</p>
                 </div>
                 <div>
-                    <p id="total">0</p>
+                    <p id="totalcost">0</p>
                 </div>
             </div>
-            <button id="discnt" onclick="demoDisplay1()">APPLY DISCOUNT CODE</button>
+            <button id="discnt" onclick="demoDisplay1()">APPLY DISCOUNT CODE FOR 1000Rs.</button>
             <br>
             <div id="discount" style="display:none;">
                 <input type="text" name="" id="discountcode" placeholder="Enter discount code">
                 <BR></BR>
-                <button>APPLY DISCOUNT</button>
+                <button id="disc">APPLY DISCOUNT</button>
 
             </div>
             <div>
@@ -1324,6 +1336,7 @@
 
 </html>
 <script>
+
     var cartarr = JSON.parse(localStorage.getItem("cartarr")) || [];
     // console.log(cartarr.length);
 
@@ -1370,10 +1383,12 @@
         DisplayCartItems();
 
         function DisplayCartItems() {
+            var totalprice = 0;
+
             document.querySelector("tbody").textContent="";
 
-            var totalprice = 0;
             var maindiv = document.getElementById("dataAppend");
+                // maindiv.style.margin="100px";
 
             cartarr.map(function(ele,i){
                 var divtemp = document.createElement("tr");
@@ -1391,31 +1406,92 @@
                 price.textContent = ele.price;
 
                 var tempprice = +ele.price;
-                totalprice += tempprice;
+                var tempcount=+ele.count;
+                var subtotaltemp= tempprice*tempcount;
+                totalprice += subtotaltemp;
+                document.getElementById("totalcost").textContent=totalprice;
 
+// ------
                 var quantity = document.createElement("td");
                 quantity.textContent = ele.count;
 
                 var total = document.createElement("td");
-                total.textContent = totalprice;
+                total.textContent = subtotaltemp;
+
+                
+
+
+                var divbutton=document.createElement("div");
+                divbutton.style.margin="15px";
+
+
+                var divbuttonRemove=document.createElement("button");
+                divbuttonRemove.textContent="Remove From Cart"
+                divbuttonRemove.setAttribute("id","divbutton_in");
+                
+                divbuttonRemove.addEventListener("click", removeCartItem);
+
+                var divbutton_increase=document.createElement("button");
+                divbutton_increase.textContent="+";
+                divbutton_increase.setAttribute("id","divbutton_in");
+
+                divbutton_increase.addEventListener("click", addproduct);
+                var quantity = document.createElement("td");
+
+                function addproduct(){
+                    
+                    tempcount+=1;
+                    quantity.textContent = tempcount;
+                    ele.count=tempcount;
+                    subtotaltemp=tempprice*tempcount;
+                    total.textContent = subtotaltemp;
+                    totalprice+=tempprice;
+                    console.log(totalprice)
+
+                    document.getElementById("totalcost").textContent=totalprice;
+
+
+                    localStorage.setItem("cartarr",JSON.stringify(cartarr));
+
+                    // DisplayCartItems();
+
+                }
+
+                var divbutton_Decrese=document.createElement("button");
+                divbutton_Decrese.textContent="-";
+                divbutton_Decrese.setAttribute("id","divbutton_in");
+
+                divbutton_Decrese.addEventListener("click",subproduct);
+
+                function subproduct(){
+                    if(tempcount===1){
+                        // countcost(i);
+                        removeCartItem();
+                    }else{
+                        tempcount-=1;
+                        quantity.textContent = tempcount;
+                        ele.count=tempcount;
+                        subtotaltemp=tempprice*tempcount;
+                        total.textContent = subtotaltemp;
+                        totalprice-=tempprice;
+
+                         console.log(totalprice)
+
+                        document.getElementById("totalcost").textContent=totalprice;
+
+                        localStorage.setItem("cartarr",JSON.stringify(cartarr));
+                    }
+                    
+                } 
+
+                quantity.textContent = tempcount;
 
                 divtemp.append(imgtd, name, price, quantity, total);
                 maindiv.append(divtemp);
 
 
-                var divbutton=document.createElement("div");
 
-                var divbuttonRemove=document.createElement("button");
-                divbuttonRemove.textContent="Remove From Cart"
-                divbuttonRemove.addEventListener("click", removeCartItem);
-
-                var divbutton_increase=document.createElement("button");
-                divbutton_increase.textContent="+";
-
-
-
-                var divbutton_Decrese=document.createElement("button");
-                divbutton_Decrese.textContent="-";
+                
 
 
                 divbutton.append(divbutton_increase,divbutton_Decrese,divbuttonRemove);
@@ -1429,6 +1505,8 @@
                     // console.log(cartarr);
                     // window.location.reload;
                 }
+
+               
             }); 
         }
 
@@ -1439,15 +1517,23 @@
      // ----------header-----------
      document.querySelector(".fa-user").addEventListener("click", dropdown);
 
-function dropdown() {
-    var menu = document.querySelector(".loginRegisterDropdown");
-    if (menu.style.display == "none") {
-        menu.style.display = "block";
-    } else {
-        menu.style.display = "none";
+    function dropdown() {
+        var menu = document.querySelector(".loginRegisterDropdown");
+        if (menu.style.display == "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
+        }
     }
-}
 
-
-
+    // ----------------------------
+        document.getElementById("disc").addEventListener("click",discountedprice );
+        function discountedprice(){
+            var token= document.getElementById("discountcode").value;
+            if(token==="abcd"){
+                var t=+ document.getElementById("totalcost").textContent;
+                document.getElementById("totalcost").textContent=(t-1000);
+                console.log(t);
+            }
+        }
 </script>

@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hair</title>
     <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous">
+    //     <link
+    //   rel="stylesheet"
+    //   href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700"
+    // />
     </script>
     <style>
         .container {
@@ -893,7 +897,7 @@
                             </div>
                         </li>
                         <li class="nav-links">
-                            <a href=".personalCare">PERSONAL CARE</a>
+                            <a href="personalcare.html">PERSONAL CARE</a>
                             <div style="width: 700px;">
                                 <ul>
                                     <li>
@@ -1101,7 +1105,7 @@
                     </ul>
                 </div>
                 <div class="nav-cart">
-                    <a href=".cart"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
+                    <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
                 </div>
             </div>
         </header>
@@ -1695,7 +1699,8 @@
             }
 
             var addtocart = document.createElement("button");
-            addtocart.textContent = "Add to Cart";
+            addtocart.innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Add to Cart';
+            // cardButton.innerHTML = '<i class="fa-solid fa-basket-shopping"></i>'+' Add to Cart';
             addtocart.style.backgroundColor = "#DD0285";
             addtocart.style.border = "#DD0285";
             addtocart.style.color = "white";
@@ -1747,7 +1752,7 @@
                     carta.push(obj);
                     localStorage.setItem("cartarr", JSON.stringify(carta));
                     // console.log(typeof (id));
-                    document.getElementById("cartid" + i).textContent = "Added to Cart";
+                    document.getElementById("cartid" + i).innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+'Added to Cart';
                     document.getElementById("cartid" + i).value = "Added to Cart";
 
                 }
