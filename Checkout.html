@@ -1250,10 +1250,11 @@
            <h2>Payment Method</h2>
             <hr>
             
-            <input type="checkbox"><span id="orderprocess1">Cash on delivery</span>
+            <!-- <input type="checkbox" id="checkbox1" onclick="manish()"><span id="orderprocess1">Cash on delivery</span>
 
-            <hr>
-            <input type="checkbox"><span id="orderprocess2"> Debit/Credit Card/Net banking/Wallet - PayUmoney</span>
+            <hr> -->
+            <!-- <input type="checkbox"> -->
+            <span id="orderprocess2"> Debit/Credit Card/Net banking/Wallet - PayUmoney</span>
             
           <form action="" id="form2">
            <input  class="carddata" id="cardnum"type="number" placeholder="enter your card number">
@@ -1443,6 +1444,9 @@
 
        function orderfun(){
            event.preventDefault();
+          //  if(document.getElementById("orderprocess1")==true){
+          //   console.log("sfkjdsnfd");
+          //  }
            alert("Order has been placed Successfully.");
            document.querySelector("#cardnum").value="";
            document.querySelector("#cvv").value="";
@@ -1450,4 +1454,5 @@
            document.querySelector("#name").value="";
         window.location.href="receipt.html";
        }
+     
 </script>
