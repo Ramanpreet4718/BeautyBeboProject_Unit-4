@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment Gateway</title>
     <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700"
@@ -14,479 +15,70 @@
     crossorigin="anonymous"
   ></script>
     <style>
-      #topbar {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
-        padding: 10px;
-      }
-      #beautyLogo {
-        width: 288px;
-        height: 68px;
-      }
-      #topmiddleinner {
-        margin-top: 5px;
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 12px;
-        line-height: 19.92px;
+        #form>input[type=text],
+        #form>input[type=number] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
 
-        border: 0.5px solid rgb(214, 214, 214);
-      }
-      #categoryDropDown {
-        font-size: large;
-        border: 0px;
-      }
-      #topmiddleinner {
-        border: 0.5px solid rgb(233 233 233);
-        padding-left: 10px;
-        font-size: 10px;
-        border-radius: 5px;
-      }
+        #payment_form {
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            width: 33%;
+            margin: auto;
+            padding-bottom: 30px;
+            /* border-radius: 12px; */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: space-between;             
+            padding: 10px 20px 10px 20px;
+             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+             background-color: #fafafa;
 
-      #searchbar {
-        font-size: large;
-        padding-right: 20px;
-        border: 0;
-        outline: 0;
-      }
-      #searchbox {
-        font-size: large;
-        padding: 15px 17px 15px 17px;
-        margin-left: -5px;
-        border: 0;
-        background-color: #dd0285;
-        color: white;
-        border-radius: 3px;
-        
-      }
-      option {
-        font-size: large;
-      }
+        }
 
-      #toprightCorner {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 10%;
-      }
-      #heart,
-      #personlogo {
-        font-size: 30px;
-        margin: auto;
-        margin-top: 10px;
-        margin-right: 15px;
-        background-color: white;
-        border: 1px solid black;
-      }
-      #personlogo {
-        margin-right: 0;
-        border: 1px solid rgb(151, 151, 151);
-      }
-      #personlogo:hover {
-        background-color: #dd0285;
-        color: white;
-      }
-      #heart:hover {
-        background-color: #dd0285;
-        color: white;
-      }
+        #butto {
+            width: 20%;
+            padding: 12px;
 
-      #signupbuttoncorner {
-        display: flex;
-      }
-      #text {
-        padding-top: 20px;
-      }
-
-      /* navbar css start */
-
-      .navbar {
-        width: 100%;
-        overflow: hidden;
-
-        background-color: #dd0285;
-      }
-
-      .navbar a {
-        float: right;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      .dropdown {
-        float: left;
-        overflow: hidden;
-        margin-left: 10px;
-      }
-
-      .dropdown .dropbtn {
-        font-size: 16px;
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font: inherit;
-        margin: 0;
-        font-weight: bold;
-      }
-
-      /* .navbar a:hover, */
-      .dropdown:hover .dropbtn {
-        background-color: #c60277;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: white;
-        /* width: 30%; */
-        left: 0;
-        box-shadow: 0px 8px 16px 0px rgba(238, 236, 236, 0.938);
-        z-index: 1;
-      }
-
-      .dropdown-content .header {
-        background: white;
-        padding: 16px;
-        color: white;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-        margin-left: 10px;
-      }
-      .column {
-        margin-top: -10px;
-      }
-
-      /* Create three equal columns that floats next to each other */
-      .column {
-        float: left;
-        /* width: 30%; */
-        padding: 10px;
-        margin-right: 10px;
-
-        /* margin-left: 10px; */
-      }
-      .brands {
-        display: flex;
-        justify-content: space-between;
-        border-top: 2px solid rgb(148, 148, 148);
-        margin-bottom: -18px;
-      }
-      .brands > h3:nth-child(2) {
-        font-size: 15px;
-        background-color: #dd0285;
-        color: white;
-        padding: 9px;
-      }
-
-      #bransformation {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 17px;
-        margin-top: 20px;
-      }
-      #bransformation > div {
-        padding: 10px 15px 10px 15px;
-        text-align: center;
-        border: 1px solid rgb(148, 148, 148);
-      }
-      #bransformation > div:hover {
-        background-color: #b8b4b4fa;
-      }
-      .extra {
-        float: left;
-        /* width: 30%; */
-        height: 140px;
-        padding: 10px;
-        margin-right: 10px;
-
-        /* margin-left: 10px; */
-      }
-
-      .column a {
-        float: none;
-        color: #666666;
-        font-size: 13px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-        margin-bottom: -16px;
-        margin-left: -14px;
-        margin-top: -20px;
-      }
-
-      .navbar a:hover {
-        color: #c60277;
-      }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      /* harshit css ended */
-      #banner{
-             display: block;
-             position: relative;
-             width: 101%;
-             margin-top: -61px;
-             margin-left: -8px;
-             cursor: pointer;
-             z-index: 1;
-         }
-
-         #play{
-             display: block;
-             position: relative;
-            margin-top:14px;
-            margin-left: 86.5%;
-            height: 47px;
+            /* border: 1px solid rgba(209, 213, 219); */
+            /* background-color: teal; */
+            /* border-radius: 4px; */
+            box-sizing: border-box;
+            margin-top: 35px;
+            margin-bottom: 16px;
+            resize: vertical;
+            border: #444444;
+            background-color: #444444;
+            color: white;
             cursor: pointer;
-            z-index: 2;
-         }
-         #btnScrollToTop{
-             position:fixed;
-             right: 20px;
-             bottom: 20px;
-             width: 45px;
-             height: 45px;
-             border-radius:50% ;
-             background-color:#dd0285 ;
-             box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-             color: white;
-             cursor: pointer;
-             border: none;
-             outline: none;
-         }
-
-         #btnScrollToTop:active{
-             background-color: #c20978;
-         }
-
-         #fullbox{
-             width: 80%;
-             /* height: 600px; */
-             /* border: 1px solid red; */
-             margin: auto;
-             display: flex;
-             justify-content: center;
-             margin-top: 20px;
-             margin-bottom: 20px;
-         }
-
-         #fullbox1{
-             width: 35%;
-             height: 470px;
-             /* border: 1px solid yellow; */
-             padding: 10px 20px 10px 20px;
-             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-             background-color: #fafafa;
-         }
-         #fullbox2{
-             width: 57%;
-             /* height: 580px; */
-             /* border: 1px solid blue; */
-             /* margin-left: 20px; */
-             padding: 10px 20px 10px 20px;
-             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-             background-color: #fafafa;
-         }
-
-         .shipping{
-             height: 28px;
-             width: 98.75%;
-             margin-top: 8px;
-            margin-bottom: 22px;
-         }
-         label{
-             font-weight: bold;
-             font-size: 15px;
-             color: #5a5858;
-          
-         }
-
-        .star{
-             font-size: 13px;
-             color: #e13431;
-         }
-
-         #submit{
-             width: 20%;
-             border: #444444;
-             background-color: #444444;
-             color: white;
-             height: 35px;
-             cursor: pointer;
-             margin: 10px;
-         }
-
-         #submit:hover{
+            align-items: center;
+        }
+        #butto:hover{
              border: #dd0285;
              background-color: #dd0285;
          }
 
-         #submit2{
-             width: 25%;
-             border: #444444;
-             background-color: #444444;
-             color: white;
-             height: 35px;
-             cursor: pointer;
-             margin:5px 38%;
-         }
+        form {
+            margin: 0 auto;
+            padding: 30px;
+        }
 
-         #submit2:hover{
-             border: #dd0285;
-             background-color: #dd0285;
-         }
-
-         .carddata{
-             height: 28px;
-             width: 60%;
-             margin-top: 8px;
-            margin-bottom: 22px;
-         }
-         hr{
-             margin: 10px 0px;
-         }
-
-         #orderprocess1{
-             color: black;
-             font-weight: bold;
-             margin-left: 5px;
-             font-size: 16px;
-         }
-
-         #orderprocess2{
-             color: black;
-             font-weight: bold;
-             margin-left: 5px;
-             font-size: 16px;
-         }
-
-         /* #form1{
-            /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-             background-color: #fafafa; */
-         /* } */
-
-         #form2{
-             margin-top: 10px;
-             /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-             background-color: #fafafa; */
-         }
-
-         #footerParentDiv{
-        background-color: rgb(36, 34, 34);
-        width: 102%;
-        margin: auto;
-       
-      }
-      #InsideFooterBox {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
-        gap: 30px;
-        margin-left: 5%;
-      }
-      .topicCss {
-        margin-left: 7%;
-      }
-      hr.new2 {
-        border-top: 1px dashed #d4278f;
-        width: 20%;
-        margin-left: 1px;
-        margin-top:-5%;
-        text-decoration: none;
-      }
-      hr.new3{
-        border: 1px solid white;
-        width: 85%;
-        margin-bottom: 10px;
-
-      }
-      .links-contact,.li-social{
-        list-style: none;
-        margin-left: -6%;
-      }
-      #InsideFooterBox a{
-        text-decoration: none;
-      }
-      
-      .phone{
-        margin-top: 10px;
-        margin-bottom: 20px;
-      }
-      .time{
-        margin-top: 30px;
-        margin-bottom: 20px;
-      }
-      .special{
-        font-size: 20px;
-        background-color: #c20978;
-        color: white;
-        padding: 15px;
-    border-radius: 41%;
-       
-      }
-      .connectionOnSocialSite{
-        display: flex;
-      }
-      .connectionOnSocialSite>li{
-        margin: 2px;
-      }
-      .links>li{
-        margin-bottom: 10px;
-      }
-      .links a,.mail a,.phone,.time,h3{
-        color: white;
-      }
-      .links a:hover,.mail a:hover{
-           color: #c60277;
-      }
-      .footerLastPart{
-        display: flex;
-        justify-content: space-around;
-        width: 89%;
-        margin-left: 5%;
-      }
-      #subsribeForm{
-        display: flex;
-        justify-content: space-evenly;
-        margin-left: 15%
-      }
-      #subsribeForm>#subscribe{
-        font-size: 20px;
-        padding: 10px;
-        text-decoration: none;
-        margin-left: 15px;
-       
-      }
-      #footerParentDiv>p{
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        text-align: center;
-        color: white;
-        padding: 10px;
-      }
-      #subsribeForm>button{
-        font-size: 20px;
-       border-top-right-radius: 5px;
-       border-bottom-right-radius: 5px;
-        background-color: #c20978;
-        color: white;
-        margin-top: 2px;
-      }
-
-
-
-      * {
+        h2 {
+            text-align: center;
+            font-size: 42px;
+        }
+        #hea{
+            text-align: center;
+            /* font-size: ; */
+            font-size: 20px;
+        }
+        * {
     font-family: "Roboto", sans-serif;
   }
   body{
@@ -583,7 +175,10 @@
     margin: 3rem 0 0 3rem;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
   }
-
+  
+  .loginRegisterDropdown li{
+      margin: 7px;
+  }
   
   .loginRegisterDropdown li a{
       text-decoration: none;
@@ -677,8 +272,6 @@
   .fa-bag-shopping{
     padding-right: 20px;
   }
-
-
   footer {
     color: white;
     font-family: "Roboto", sans-serif;
@@ -836,6 +429,7 @@
   }
     </style>
 </head>
+
 <body>
     <header>
         <div class="top">
@@ -1198,54 +792,24 @@
           </div>
         </div>
       </header>
-    <div id="fullbox">
-        <div id="fullbox2">
-       
-            <h2>Shipping Address</h2>
+    <div id="payment_form">
+        <h2>Payment Method</h2>
+        <hr>
+        <h1 id="hea"> Debit/Credit Card/Net banking/Wallet - PayUmoney</h1>
+        <form id="form">
+            <label for="Card">Card</label><br>
+            <input type="text" onkeyup="formatCreditCard(this)" id="credit-card" placeholder="card number"
+                maxlength="19" required />
+            <label for="CVV">CVV</label><br>
+            <input type="number" id="cvNumber" placeholder="CV number" maxlength="3" required />
+            <label for="date">Expiary date</label><br>
+            <input type="text" onkeyup="formatExpiryDate(this)" id="expiryDate" placeholder="MM/YY" maxlength="5"
+                required />
+            <label for="name">Name</label><br>
+            <input type="text" placeholder="Enter Name" id="name" required />
             <hr>
-           
-            <form action="" id="form1">
-               <div class="input">
-                   <label>First Name <span class="star">*</span></label>
-                   <input type="text" id="firstName" class="shipping">
-                  </div>
-    
-               <div class="input">
-                   <label>Last Name <span class="star">*</span></label>
-                   <input type="text" id="lastName" class="shipping">
-                  </div>
-               <div class="input">
-                   <label>Street Address <span class="star">*</span></label>
-                   <input type="text" id="address" class="shipping">
-                 </div>
-    
-               <div class="input">
-                   <label>City <span class="star">*</span></label>
-                   <input type="text" id="city" class="shipping">
-               </div>
-
-               <div class="input">
-                   <label>State <span class="star">*</span></label>
-                   <input type="text" id="state" class="shipping">
-                  </div>
-    
-               <div class="input">
-                   <label>Zip/Postal Code <span class="star">*</span></label>
-                   <input type="text" id="zipcode" class="shipping">
-                  </div>
-               <div class="input">
-                   <label>country <span class="star">*</span></label>
-                   <input type="text" id="country" class="shipping">
-                 </div>
-    
-               <div class="input">
-                   <label>Phone Number <span class="star">*</span></label>
-                   <input type="number" id="phoneNumber" class="shipping">
-               </div>
-                <hr>
-               <input type="submit" value="CONFIRM" id="submit">
-            </form>
-        </div>
+            <button id="butto" type="submit" name="submit" id="myButton">Pay</button>
+        </form>
     </div>
     <footer>
         <div class="footer-main-aj">
@@ -1368,56 +932,64 @@
         <!--footer-main-ajn-->
       </footer>
 </body>
-</html>
 <script>
-    function singOpFunction(){
-         window.location.href="Login.html"
-       }
+
+    function formatExpiryDate(v) {
+        if (window.event.keyCode == 8) {
+            return true;
+        }
+        var x = document.getElementById("expiryDate");
+        var latestInputValue = v.value.charAt(v.value.length - 1);
+        if (!Number.isInteger(+latestInputValue)) {
+            alert('Only digits are allowed');
+            x.value = "";
+        }
+
+        var index = x.value.lastIndexOf('/');
+        var test = x.value.substr(index + 1);
+        if (test.length === 2 && x.value.length < 5)
+            x.value = x.value + '/';
+    }
 
 
-    //   var btnScrollToTop = document.querySelector("#btnScrollToTop");
-    //    btnScrollToTop.addEventListener("click",  function (){
-    //        window.scrollTo({
-    //            top:0,
-    //            left:0,
-    //            behavior:"smooth",
-    //        })
-    //    })
+    function formatCreditCard(v) {
+        var x = document.getElementById("credit-card");
+        var latestInputValue = v.value.charAt(v.value.length - 1);
 
+        if (window.event.keyCode == 8) {
+            return true;
+        }
+        if (!Number.isInteger(+latestInputValue)) {
+            alert('Only digits are allowed');
+            x.value = "";
+        }
 
-       document.querySelector("#form1").addEventListener("submit",shipfun);
+        var index = x.value.lastIndexOf('-');
+        var test = x.value.substr(index + 1);
+        if (test.length === 4 && x.value.length < 19)
+            x.value = x.value + '-';
+    }
 
-       var addressArr = JSON.parse(localStorage.getItem("shippingaddress")) || [];
+    document.getElementById("form").addEventListener("submit", myform);
+    var checkarr = JSON.parse(localStorage.getItem("checkout")) || [];
+    function myform() {
+        event.preventDefault();
 
-       function shipfun(){
-           event.preventDefault();
-          
-           var objAdress = {
-               firstName : document.querySelector("#firstName").value,
-               lastName : document.querySelector("#lastName").value,
-               address : document.querySelector("#address").value,
-               city : document.querySelector("#city").value,
-               state : document.querySelector("#state").value,
-               zipcode : document.querySelector("#zipcode").value,
-               country : document.querySelector("#country").value,
-               phoneNumber : document.querySelector("#phoneNumber").value,
-           }
+        var cardDetails = {};
+        cardDetails.cardNumber = "1234-1234-1234-1234";
+        cardDetails.cvvNumber = "123";
+        cardDetails.expiryDate = "12/24";
+        var creaditCard = document.getElementById('credit-card').value;
+        var cvv = document.getElementById('cvNumber').value;
+        var expiry = document.getElementById('expiryDate').value;
 
-           addressArr.push(objAdress);
-          
-           localStorage.setItem("shippingaddress",JSON.stringify(addressArr));
-
-           alert("Thanks For filling Shipping Address. Please choose payment method");
-           document.querySelector("#firstName").value="";
-           document.querySelector("#lastName").value="";
-           document.querySelector("#address").value="";
-           document.querySelector("#city").value="";
-           document.querySelector("#state").value="";
-           document.querySelector("#zipcode").value="";
-           document.querySelector("#country").value="";
-           document.querySelector("#phoneNumber").value="";
-           window.location.href="payment.html";
-
-       }
-     
+        if (cardDetails.cardNumber.toLowerCase() == creaditCard.toLowerCase() && cardDetails.cvvNumber.toLowerCase() == cvv.toLowerCase() && cardDetails.expiryDate.toLowerCase() == expiry.toLowerCase()) {
+            location.href = "receipt.html";
+        }
+        else{
+            alert("cart detail is invalid");
+        }
+    }
 </script>
+
+</html>
