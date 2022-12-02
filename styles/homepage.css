@@ -415,14 +415,15 @@ footer {
 
  .menu-block-content-title a{
   text-decoration: none;
-  padding-left: 5px;
+  padding-left: 10px;
   color: black;
   line-height: 29px;
+  font-size: 14px;
  }
 
  .menu-block-content-title{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 5px 5px 5px 10px;
  }
 
