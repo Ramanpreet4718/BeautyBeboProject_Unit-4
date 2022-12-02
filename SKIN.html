@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700"
+  />
     <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous">
     </script>
     <style>
@@ -44,7 +48,7 @@
 
         /* --------collapse option */
         .collapsible {
-            background-color: rgb(245, 239, 239);
+            /* background-color: rgb(245, 239, 239); */
             color: rgb(69, 65, 65);
             cursor: pointer;
             padding: 18px;
@@ -87,9 +91,9 @@
         }
 
         .footer-main-aj {
-     /* display: flex;
-        flex-direction: column;
-        justify-content: center; */
+            /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
             background-color: #232323;
         }
 
@@ -1522,28 +1526,22 @@
           image_url:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/a/9aa643ebiode00000001-01.jpg",
           name: "Bioderma Cicabio Arnica+ SOS Quickly Repairs And Soothes Skin Damage",
           price: "909"
-        },
-        // {
-        //   id: 3,
-        //   image_url:"",
-        //   name: "",
-        //   price: ""
-        // },
+        }
         ];
-        
+
     display(SKIN);
 
-    // SKIN.sort(function(a,b){
+    // SKIN .sort(function(a,b){
     //     return a.price-b.price;
     // })
 
-    //   SKIN
+    //   SKIN 
 
     function display(Data) {
-        if(Data.length==0){
-            Data=SKIN;
+        if (Data.length == 0) {
+            Data = SKIN;
         }
-        document.getElementById("parent").textContent=" ";
+        document.getElementById("parent").textContent = " ";
         for (let i = 0; i < Data.length; i++) {
 
             // create elements---------------
@@ -1577,7 +1575,7 @@
             }
 
             var addtocart = document.createElement("button");
-            addtocart.textContent = "Add to Cart";
+            addtocart.innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Add to Cart';
             addtocart.style.backgroundColor = "#DD0285";
             addtocart.style.border = "#DD0285";
             addtocart.style.color = "white";
@@ -1608,7 +1606,7 @@
             pricediv.append(strikedoffprice, price, priceoff);
 
             div.append(img, productname, pricediv, addtocart)
-                console.log(Data);
+            console.log(Data);
 
             // add to cart------------------------------------
 
@@ -1620,17 +1618,19 @@
                 if (document.getElementById("cartid" + i).value == "Add to Cart") {
                     var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
                     var obj = {
-                        // img:SKIN[i].image_url,
-                        img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
-                        productname: Data[i].name,
-                        price: Data[i].price,
-                        strikedoffprice: Data[i].strikedoffprice,
+                         img:SKIN [i].image_url,
+                        //img: "https://images.meesho.com/images/products/127583082/u4fjg_400.jpg",
+                        productname: SKIN[i].name,
+                        price: SKIN[i].price,
+                        strikedoffprice: SKIN[i].strikedoffprice,
                         count: 1,
                     }
                     carta.push(obj);
                     localStorage.setItem("cartarr", JSON.stringify(carta));
                     // console.log(typeof (id));
-                    document.getElementById("cartid" + i).textContent = "Added to Cart";
+                    document.getElementById("cartid" + i).innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Added to Cart';
+                    // addtocart.innerHTML = '<i class="fa-solid fa-basket-shopping" style="padding-right:10px;"></i>'+' Add to Cart';
+
                     document.getElementById("cartid" + i).value = "Added to Cart";
 
                 }
@@ -1670,15 +1670,15 @@
     // --------------pricesort---------------
     // p1000 = document.getElementById("myCheck1");
     document.getElementById("myCheck1").addEventListener("click", sort1000);
-    var check1=true;
-    
+    var check1 = true;
+
     function sort1000() {
-        check1=!check1;
-       var below100= SKIN.filter(function(ele){
-            if(Number(ele.price)<=1000 && check1==false){
+        check1 = !check1;
+        var below100 = SKIN.filter(function (ele) {
+            if (Number(ele.price) <= 1000 && check1 == false) {
                 return ele;
             }
-            
+
         });
 
         display(below100);
@@ -1687,13 +1687,13 @@
     }
 
     document.getElementById("myCheck2").addEventListener("click", sort2000);
-    var check2=true;
+    var check2 = true;
 
     function sort2000() {
-        check2=!check2;
+        check2 = !check2;
 
-       var below100= SKIN.filter(function(ele){
-            if(Number(ele.price)>1000 && Number(ele.price)<=2000  && check2==false){
+        var below100 = SKIN.filter(function (ele) {
+            if (Number(ele.price) > 1000 && Number(ele.price) <= 2000 && check2 == false) {
                 return ele;
             }
         });
@@ -1703,13 +1703,13 @@
     }
 
     document.getElementById("myCheck3").addEventListener("click", sort3000);
-    var check3=true;
+    var check3 = true;
 
     function sort3000() {
-        check3=!check3;
+        check3 = !check3;
 
-       var below100= SKIN.filter(function(ele){
-            if(Number(ele.price)>=2000 && Number(ele.price)<=3000 && check3==false){
+        var below100 = SKIN.filter(function (ele) {
+            if (Number(ele.price) >= 2000 && Number(ele.price) <= 3000 && check3 == false) {
                 return ele;
             }
         });
