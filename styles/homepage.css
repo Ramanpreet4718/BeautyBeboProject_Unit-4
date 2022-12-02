@@ -444,7 +444,7 @@ footer {
   width: 100%;
  }
 
- .homepage-section-hotdeals-heading p{
+ .homepage-section-hotdeals-heading p, .bestProduct-container-heading p{
   padding-bottom: 2px;
   text-decoration: underline #dd0285;
   margin-bottom: 0px;
@@ -456,7 +456,7 @@ footer {
   margin: auto;
  }
 
- .homepage-section-hotdeals-products-container{
+ .homepage-section-hotdeals-products-container,.bestProduct-container-products1,.bestProduct-container-products2,.bestProduct-container-products3{
   border: 1px solid rgb(233, 233, 233);
  }
 
@@ -481,32 +481,33 @@ footer {
   font-weight: 400;
  }
 
- .homepage-section-hotdeals-productName:hover{
+ .homepage-section-hotdeals-productName:hover,.bestProduct-products-productName:hover{
   color: #dd0285;
  }
 
- .homepage-section-hotdeals-priceDiv{
+ .homepage-section-hotdeals-priceDiv,.bestProduct-products-priceDiv{
   display: flex;
   justify-content: center;
   align-items: center;
  }
 
- .homepage-section-hotdeals-mrp{
+ .homepage-section-hotdeals-mrp,.bestProduct-products-mrp{
   text-decoration: line-through;
   font-size: 13px;
   color: grey;
-  margin-right: 10px;
+  margin-right: 5px;
  }
 
- .homepage-section-hotdeals-price{
-  margin-right: 10px;
+ .homepage-section-hotdeals-price,.bestProduct-products-price{
+  margin-right: 5px;
   color: rgb(221, 2, 133) !important;
   font-weight: bold;
  }
 
- .homepage-section-hotdeals-discount{
+ .homepage-section-hotdeals-discount,.bestProduct-products-discount{
   color: #008000;
   font-weight: bold;
+  font-size: 14px;
  }
 
  .homepage-section-hotdeals-buttonDiv{
@@ -516,7 +517,7 @@ footer {
   margin-bottom: 3rem;
  }
 
- .homepage-section-hotdeals-cartButton{
+ .homepage-section-hotdeals-cartButton,.bestProduct-products-cartButton{
   margin-right: 5px;
   padding: 7px 23px;
   background-color: rgb(221, 2, 133);
@@ -526,11 +527,11 @@ footer {
   cursor: pointer;
  }
 
- .homepage-section-hotdeals-cartButton:hover{
+ .bestProduct-products-cartButton:hover,.homepage-section-hotdeals-cartButton:hover{
   opacity: 0.7;
  }
 
- .homepage-section-hotdeals-wishlistButton{
+ .homepage-section-hotdeals-wishlistButton,.bestProduct-products-wishlistButton{
   background-color: rgb(102, 102, 102);
   border: transparent;
   border-radius: 3px;
@@ -538,11 +539,11 @@ footer {
   padding: 7px 10px;
  }
 
- .homepage-section-hotdeals-wishlistButton:hover{
+ .homepage-section-hotdeals-wishlistButton:hover,.bestProduct-products-wishlistButton:hover{
   background-color: rgb(221, 2, 133);
  }
 
- .homepage-section-hotdeals-wishlistButton >.fa-heart{
+ .homepage-section-hotdeals-wishlistButton >.fa-heart,.bestProduct-products-wishlistButton>.fa-heart{
   color: white;
   font-size: 14px;
  }
@@ -606,4 +607,75 @@ footer {
   width: 100%;
 } 
 
+.bestProduct-container{
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+}
 
+.bestProduct-products-card{
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.homepage-section-bestProducts{
+  margin-bottom: .5rem;
+}
+
+.bestProduct-products-image img{
+  width: 120px;
+  height: 120px;
+}
+
+.bestProduct-products-priceDiv{
+  justify-content: start;
+}
+
+.bestProduct-products-discription{
+  overflow: hidden;
+  max-height: 48px;
+  min-height: 48px;
+ }
+
+ .bestProduct-products-cardContantDiv{
+  padding: 0px 12px;
+ }
+
+ .bestProduct-products-buttonDiv{
+  display: flex;
+  align-items: center ;
+ }
+
+ .bestProduct-products-productName{
+  font-size: 14px;
+  padding: 0px 15px;
+  text-transform: capitalize;
+  font-weight: 400;
+ }
+
+ .homepage-section-forentBanner,.homepage-section-aboutUs{
+  width: 80%;
+  margin: auto;
+ }
+
+ .homepage-section-forentBanner>img{
+  width: 100%;
+ }
+
+ .aboutUs-contant a{
+  text-decoration: none;
+  color:black ;
+ }
+
+ .aboutUs-contant p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.66;
+ }
+
+ .aboutUs-contant a:hover{
+  color: rgb(221, 2, 133);
+ }

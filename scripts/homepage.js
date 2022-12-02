@@ -292,6 +292,176 @@ function hotDealsLayout(){
     div.append(cardDiv);
 })
 
+bestSeller.map(function(element){
+    var div = document.querySelector(".bestProduct-container-products1");
+    var cardDiv = document.createElement("div");
+    cardDiv.setAttribute("class","bestProduct-products-card");
+    var cardImg = document.createElement("img");
+    var cardImgDiv = document.createElement("div");
+    cardImgDiv.setAttribute("class","bestProduct-products-image");
+    var cardNameDiv = document.createElement("div");
+    cardNameDiv.setAttribute("class","bestProduct-products-discription");
+    var cardName = document.createElement("p");
+    cardName.setAttribute("class","bestProduct-products-productName");
+    var priceDiv = document.createElement("div");
+    priceDiv.setAttribute("class","bestProduct-products-priceDiv");
+    var cardPrice = document.createElement("p");
+    cardPrice.setAttribute("class","bestProduct-products-price");
+    var cardMRP = document.createElement("p");
+    cardMRP.setAttribute("class","bestProduct-products-mrp");
+    var cardDiscount = document.createElement("p");
+    cardDiscount.setAttribute("class","bestProduct-products-discount");
+    var buttonDiv = document.createElement("div");
+    buttonDiv.setAttribute("class","bestProduct-products-buttonDiv");
+    var cardButton = document.createElement("button");
+    cardButton.setAttribute("class","bestProduct-products-cartButton");
+    var cardWishlist = document.createElement("button");
+    cardWishlist.setAttribute("class","bestProduct-products-wishlistButton");
+    var cardContantDiv = document.createElement("div");
+    cardContantDiv.setAttribute("class","bestProduct-products-cardContantDiv")
+
+    cardImg.src = element.image_url;
+    cardName.textContent = element.name;
+    cardPrice.textContent = "₹"+element.price+".00";
+    if(element.strikedoffprice==0){
+        cardMRP.textContent = "";
+    }else{
+        cardMRP.textContent = "₹"+element.strikedoffprice+".00";
+    }
+    if(element.off==0){
+        cardDiscount.textContent = "";
+    }else{
+        cardDiscount.textContent = element.off+"% off";
+    }
+
+    cardButton.innerHTML = '<i class="fa-solid fa-basket-shopping"></i>'+' Add to Cart';
+    cardWishlist.innerHTML = '<i class="fa-solid fa-heart"></i>';
+
+    cardImgDiv.append(cardImg);
+    priceDiv.append(cardMRP,cardPrice,cardDiscount);
+    buttonDiv.append(cardButton,cardWishlist)
+    cardNameDiv.append(cardName)
+
+    cardContantDiv.append(cardNameDiv,priceDiv,buttonDiv)
+    cardDiv.append(cardImgDiv,cardContantDiv);
+    div.append(cardDiv);
+
+
+})
+
+latestProducts.map(function(element){
+    var div = document.querySelector(".bestProduct-container-products2");
+    var cardDiv = document.createElement("div");
+    cardDiv.setAttribute("class","bestProduct-products-card");
+    var cardImg = document.createElement("img");
+    var cardImgDiv = document.createElement("div");
+    cardImgDiv.setAttribute("class","bestProduct-products-image");
+    var cardNameDiv = document.createElement("div");
+    cardNameDiv.setAttribute("class","bestProduct-products-discription");
+    var cardName = document.createElement("p");
+    cardName.setAttribute("class","bestProduct-products-productName");
+    var priceDiv = document.createElement("div");
+    priceDiv.setAttribute("class","bestProduct-products-priceDiv");
+    var cardPrice = document.createElement("p");
+    cardPrice.setAttribute("class","bestProduct-products-price");
+    var cardMRP = document.createElement("p");
+    cardMRP.setAttribute("class","bestProduct-products-mrp");
+    var cardDiscount = document.createElement("p");
+    cardDiscount.setAttribute("class","bestProduct-products-discount");
+    var buttonDiv = document.createElement("div");
+    buttonDiv.setAttribute("class","bestProduct-products-buttonDiv");
+    var cardButton = document.createElement("button");
+    cardButton.setAttribute("class","bestProduct-products-cartButton");
+    var cardWishlist = document.createElement("button");
+    cardWishlist.setAttribute("class","bestProduct-products-wishlistButton");
+    var cardContantDiv = document.createElement("div");
+    cardContantDiv.setAttribute("class","bestProduct-products-cardContantDiv")
+
+    cardImg.src = element.image_url;
+    cardName.textContent = element.name;
+    cardPrice.textContent = "₹"+element.price+".00";
+    if(element.strikedoffprice==0){
+        cardMRP.textContent = "";
+    }else{
+        cardMRP.textContent = "₹"+element.strikedoffprice+".00";
+    }
+    if(element.off==0){
+        cardDiscount.textContent = "";
+    }else{
+        cardDiscount.textContent = element.off+"% off";
+    }
+
+    cardButton.innerHTML = '<i class="fa-solid fa-basket-shopping"></i>'+' Add to Cart';
+    cardWishlist.innerHTML = '<i class="fa-solid fa-heart"></i>';
+
+    cardImgDiv.append(cardImg);
+    priceDiv.append(cardMRP,cardPrice,cardDiscount);
+    buttonDiv.append(cardButton,cardWishlist)
+    cardNameDiv.append(cardName)
+
+    cardContantDiv.append(cardNameDiv,priceDiv,buttonDiv)
+    cardDiv.append(cardImgDiv,cardContantDiv);
+    div.append(cardDiv);
+
+
+})
+
+mostViewed.map(function(element){
+    var div = document.querySelector(".bestProduct-container-products3");
+    var cardDiv = document.createElement("div");
+    cardDiv.setAttribute("class","bestProduct-products-card");
+    var cardImg = document.createElement("img");
+    var cardImgDiv = document.createElement("div");
+    cardImgDiv.setAttribute("class","bestProduct-products-image");
+    var cardNameDiv = document.createElement("div");
+    cardNameDiv.setAttribute("class","bestProduct-products-discription");
+    var cardName = document.createElement("p");
+    cardName.setAttribute("class","bestProduct-products-productName");
+    var priceDiv = document.createElement("div");
+    priceDiv.setAttribute("class","bestProduct-products-priceDiv");
+    var cardPrice = document.createElement("p");
+    cardPrice.setAttribute("class","bestProduct-products-price");
+    var cardMRP = document.createElement("p");
+    cardMRP.setAttribute("class","bestProduct-products-mrp");
+    var cardDiscount = document.createElement("p");
+    cardDiscount.setAttribute("class","bestProduct-products-discount");
+    var buttonDiv = document.createElement("div");
+    buttonDiv.setAttribute("class","bestProduct-products-buttonDiv");
+    var cardButton = document.createElement("button");
+    cardButton.setAttribute("class","bestProduct-products-cartButton");
+    var cardWishlist = document.createElement("button");
+    cardWishlist.setAttribute("class","bestProduct-products-wishlistButton");
+    var cardContantDiv = document.createElement("div");
+    cardContantDiv.setAttribute("class","bestProduct-products-cardContantDiv")
+
+    cardImg.src = element.image_url;
+    cardName.textContent = element.name;
+    cardPrice.textContent = "₹"+element.price+".00";
+    if(element.strikedoffprice==0){
+        cardMRP.textContent = "";
+    }else{
+        cardMRP.textContent = "₹"+element.strikedoffprice+".00";
+    }
+    if(element.off==0){
+        cardDiscount.textContent = "";
+    }else{
+        cardDiscount.textContent = element.off+"% off";
+    }
+
+    cardButton.innerHTML = '<i class="fa-solid fa-basket-shopping"></i>'+' Add to Cart';
+    cardWishlist.innerHTML = '<i class="fa-solid fa-heart"></i>';
+
+    cardImgDiv.append(cardImg);
+    priceDiv.append(cardMRP,cardPrice,cardDiscount);
+    buttonDiv.append(cardButton,cardWishlist)
+    cardNameDiv.append(cardName)
+
+    cardContantDiv.append(cardNameDiv,priceDiv,buttonDiv)
+    cardDiv.append(cardImgDiv,cardContantDiv);
+    div.append(cardDiv);
+
+
+})
 
 }
 
