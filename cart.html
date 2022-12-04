@@ -1246,7 +1246,7 @@
                     <p>Order Total Incl. GST</p>
                 </div>
                 <div>
-                    <p id="totalcost">0</p>
+                    <p id="gst">0</p>
                 </div>
             </div>
             <button id="discnt" onclick="demoDisplay1()">APPLY DISCOUNT CODE FOR 1000Rs.</button>
@@ -1475,6 +1475,11 @@
                 var tempcount=+ele.count;
                 var subtotaltemp= tempprice*tempcount;
                 totalprice += subtotaltemp;
+                if(totalprice>=1000){
+                    document.getElementById("gst").textContent=totalprice;
+                }else{
+                    document.getElementById("gst").textContent=totalprice+55;
+                }
                 document.getElementById("totalcost").textContent=totalprice;
 
 // ------
@@ -1514,6 +1519,11 @@
                     totalprice+=tempprice;
                     console.log(totalprice)
 
+                    if(totalprice>=1000){
+                    document.getElementById("gst").textContent=totalprice;
+                    }else{
+                        document.getElementById("gst").textContent=totalprice+55;
+                    }
                     document.getElementById("totalcost").textContent=totalprice;
 
 
@@ -1542,6 +1552,11 @@
                         totalprice-=tempprice;
 
                          console.log(totalprice)
+                        if(totalprice>=1000){
+                            document.getElementById("gst").textContent=totalprice;
+                        }else{
+                            document.getElementById("gst").textContent=totalprice+55;
+                        } 
 
                         document.getElementById("totalcost").textContent=totalprice;
 
@@ -1593,13 +1608,29 @@
     }
 
     // ----------------------------
+    var tokencheck =true;
         document.getElementById("disc").addEventListener("click",discountedprice );
         function discountedprice(){
             var token= document.getElementById("discountcode").value;
-            if(token==="abcd"){
+            if(token==="abcd" && tokencheck==true){
+                tokencheck=!tokencheck;
+                console.log(token);
+               
                 var t=+ document.getElementById("totalcost").textContent;
-                document.getElementById("totalcost").textContent=(t-1000);
-                console.log(t);
+
+                if(t>=1000){
+                    document.getElementById("gst").textContent=t-1000;
+                }else{
+                    document.getElementById("gst").textContent=t-1000+55;
+                }
+                if(t>=2000){
+                    document.getElementById("totalcost").textContent=(t-1000);
+                }else{
+                    window.alert("Cart Value is less than 2000Rs");
+                    tokencheck=!tokencheck;
+                    document.getElementById("totalcost").textContent=(t);
+                }
+                // console.log(t);
             }
         }
 </script>
