@@ -1,84 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gateway</title>
+    <title>Customer Login Beauty Bebo</title>
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700"
-  />
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700"
+    />
     <script
     src="https://kit.fontawesome.com/1d73357de3.js"
     crossorigin="anonymous"
   ></script>
-    <style>
-        #form>input[type=text],
-        #form>input[type=number] {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
+</head>
+<style>
+       h4{
+           /* text-align: center; */
+           margin-left:170px;
+           font-size: 18px;
+       }
+
+       #sociallink{
+          display: flex;
+          /* border: 1px solid red; */
+          justify-content: space-between;
+          width: 29%;
+          margin-left:230px;
+          margin-top: 40px;
+
+       }
+
+       #sociallink a{
+           width: 49.25%;
+           /* height: 35px; */
+           cursor: pointer;
+          
+           text-align: center;
+           text-decoration: none;
+           /* justify-content: center; */
+           padding: 8px 0px;
+           font-size: 15px;
+           color: white;
+           /* background-color:black; */
+           border-radius: 4px;
+       }
+       #facebook{
+           display: flex;
+           background-color: #3b5998;
+           border: #3b5998;
+           
+       }
+       #facebook:hover{
+           background-color: #29437c;
+           border: #29437c;
+       }
+       #google{
+           display: flex;
+           background-color: #dd4b39;
+           border: #dd4b39;
+       }
+
+       #google:hover{
+           background-color: #c44231;
+           border: #dd4b39;
+       }
+       .fa-brands{
+       
+        font-size: 20px;
+        padding: 0px 10px ;
+        /* background-color:red; */
+       }
+
+       #or{
+            margin-left: 435px;
+            margin-top: 25px;
+            font-weight: 600;
+            color: #6f6e6c;
         }
 
-        #payment_form {
-            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-            width: 33%;
-            margin: auto;
-            padding-bottom: 30px;
-            /* border-radius: 12px; */
-            margin-top: 20px;
+        #doublecontainer{
+      width: 76%;
+      margin: auto;
+      /* height: 430px; */
+      display: flex;
+      justify-content: space-between;
+
+        }
+
+        .signin{
+            width: 48.60%;
+            /* height: 430px; */
             margin-bottom: 20px;
-            justify-content: space-between;             
-            padding: 10px 20px 10px 20px;
-             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-             background-color: #fafafa;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        .signin2{
+            width: 90%;
+            /* height: 350px; */
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .personal{
+            font-size: 16px;
+        }
+
+        hr{
+            margin-top: -10px;
+            border:0.01px solid #eeeeee;
 
         }
 
-        #butto {
-            width: 20%;
-            padding: 12px;
+        .discrip{
+            font-size: 14px;
+            margin-top: 32px;
+            margin-bottom: 30px;
+            color: #6f6e6c;
+        }
 
-            /* border: 1px solid rgba(209, 213, 219); */
-            /* background-color: teal; */
-            /* border-radius: 4px; */
-            box-sizing: border-box;
-            margin-top: 35px;
-            margin-bottom: 16px;
-            resize: vertical;
+        #email{
+            height: 30px;
+            width: 98.75%;
+            margin-top: 11px;
+           margin-bottom: 25px;
+        }
+        #pass{
+            height: 30px;
+            width: 98.75%;
+            margin-top: 11px;
+           margin-bottom: 25px;
+        }
+        label{
+            font-weight: bold;
+            font-size: 15px;
+            color: #5a5858;
+         
+        }
+
+        .star{
+            font-size: 13px;
+            color: #e13431;
+        }
+        #submit{
+            width: 18%;
             border: #444444;
             background-color: #444444;
             color: white;
+            height: 35px;
             cursor: pointer;
-            align-items: center;
-        }
-        #butto:hover{
-             border: #dd0285;
-             background-color: #dd0285;
-         }
-
-        form {
-            margin: 0 auto;
-            padding: 30px;
         }
 
-        h2 {
-            text-align: center;
-            font-size: 42px;
+        #submit:hover{
+            border: #dd0285;
+            background-color: #dd0285;
         }
-        #hea{
-            text-align: center;
-            /* font-size: ; */
-            font-size: 20px;
+
+        #submit2{
+           width: 35%;
+            border: #444444;
+            background-color: #444444;
+            color: white;
+            height: 35px;
+            cursor: pointer;
         }
-        * {
+
+        #submit2:hover{
+           border: #dd0285;
+            background-color: #dd0285;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+            font-size: 15px;
+
+        }
+
+        a:hover{
+            color: #dd0285;
+        }
+
+        /* Header CSS*/
+  * {
     font-family: "Roboto", sans-serif;
   }
   body{
@@ -272,6 +379,8 @@
   .fa-bag-shopping{
     padding-right: 20px;
   }
+
+  /*Footer*/
   footer {
     color: white;
     font-family: "Roboto", sans-serif;
@@ -427,9 +536,7 @@
     align-items: flex-start;
     flex-direction: column;
   }
-    </style>
-</head>
-
+</style>
 <body>
     <header>
         <div class="top">
@@ -792,25 +899,49 @@
           </div>
         </div>
       </header>
-    <div id="payment_form">
-        <h2>Payment Method</h2>
-        <hr>
-        <h1 id="hea"> Debit/Credit Card/Net banking/Wallet - PayUmoney</h1>
-        <form id="form">
-            <label for="Card">Card</label><br>
-            <input type="text" onkeyup="formatCreditCard(this)" id="credit-card" placeholder="card number"
-                maxlength="19" required />
-            <label for="CVV">CVV</label><br>
-            <input type = "number" id="cvNumber" placeholder="CV number" maxlength = "3" oninput="formatcvv(this)" required/>
-            <label for="date">Expiary date</label><br>
-            <input type="text" onkeyup="formatExpiryDate(this)" id="expiryDate" placeholder="MM/YY" maxlength="5"
-                required />
-            <label for="name">Name</label><br>
-            <input type="text" placeholder="Enter Name" id="name" required />
-            <hr>
-            <button id="butto" type="submit" name="submit" id="myButton">Pay</button>
-        </form>
+    <h4>CUSTOMER LOGIN</h4>
+
+    <div id="sociallink">
+        <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=578720822792858&kid_directed_site=0&app_id=578720822792858&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.12%2Fdialog%2Foauth%3Fauth_type%3Drerequest%26client_id%3D578720822792858%26state%3Ddf8ff6295cebed33bc4096472f1b7e07%26response_type%3Dcode%26sdk%3Dphp-sdk-5.4.4%26redirect_uri%3Dhttps%253A%252F%252Fwww.beautybebo.com%252Fsociallogin%252Fsocial%252Fcallback%252F%253Fhauth_done%253DFacebook%26scope%3Demail%252Cpublic_profile%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dc42e06ff-8754-470c-bbfc-b586fcff1eb5%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.beautybebo.com%2Fsociallogin%2Fsocial%2Fcallback%2F%3Fhauth_done%3DFacebook%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Ddf8ff6295cebed33bc4096472f1b7e07%23_%3D_&display=page&locale=en_US&pl_dbl=0" id="facebook">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div class="google">Sign in with Facebook</div></a>
+        <a href="https://accounts.google.com/o/oauth2/auth?client_id=918010942482-f07ji3th3vvf6o121sidsl5lfuedsq4p.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.beautybebo.com%2Fsociallogin%2Fsocial%2Fcallback%2F%3Fhauth.done%3DGoogle&response_type=code&scope=profile+email&access_type=offline" id="google">
+          <div><i class="fa-brands fa-google"></i></div>  
+          <div class="google">Sign in with Google</div></a>
     </div>
+    <p id="or">-- OR --</p>
+    <div id="doublecontainer">
+        <div class="signin">
+            <div class="signin2">
+
+                <form action="" id="form">
+                    <p class="personal">REGISTERED CUSTOMERS</p>
+                     <hr>
+                     <p class="discrip">If you have an account, sign in with your email address.</p>
+                     <div class="input">
+                        <label>Email <span class="star">*</span></label>
+                        <input type="email" id="email">
+                       </div>
+                     <div class="input">
+                        <label>Password <span  class="star">*</span></label>
+                        <input type="password" id="pass" >
+                      </div>
+                      <input type="submit" value="SIGN IN" id="submit">
+                      <a href="https://www.beautybebo.com/customer/account/forgotpassword/">Forgot Your Password?</a>
+                </form>
+            </div>
+        </div>
+        <div class="signin">
+            <div class="signin2">
+                <p class="personal">NEW CUSTOMERS</p>
+                <hr>
+                <p class="discrip">Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>
+                <button id="submit2">CREATE AN ACCOUNT</button>
+            </div>
+        </div>
+    </div>
+
+
     <footer>
         <div class="footer-main-aj">
           <div class="footer-top">
@@ -927,73 +1058,72 @@
               </div>
             </div>
           </div>
-          <div class="footer-bottom-2-aj">Made by Ramanpreet Singh,Manoj Kumar, Saurabh Pratap Singh & Manish Verma.</div>
+          <div class="footer-bottom-2-aj">Made by Ramanpreet Singh,Manoj Kumar, Sourav Partab Singh & Manish Verma.</div>
         </div>
         <!--footer-main-ajn-->
       </footer>
 </body>
-<script>
-    function formatcvv(v){
-        if (v.value.length > v.maxLength) 
-        v.value = v.value.slice(0, v.maxLength);
-    }
-    function formatExpiryDate(v) {
-        if (window.event.keyCode == 8) {
-            return true;
-        }
-        var x = document.getElementById("expiryDate");
-        var latestInputValue = v.value.charAt(v.value.length - 1);
-        if (!Number.isInteger(+latestInputValue)) {
-            alert('Only digits are allowed');
-            x.value = "";
-        }
-
-        var index = x.value.lastIndexOf('/');
-        var test = x.value.substr(index + 1);
-        if (test.length === 2 && x.value.length < 5)
-            x.value = x.value + '/';
-    }
-
-
-    function formatCreditCard(v) {
-        var x = document.getElementById("credit-card");
-        var latestInputValue = v.value.charAt(v.value.length - 1);
-
-        if (window.event.keyCode == 8) {
-            return true;
-        }
-        if (!Number.isInteger(+latestInputValue)) {
-            alert('Only digits are allowed');
-            x.value = "";
-        }
-
-        var index = x.value.lastIndexOf('-');
-        var test = x.value.substr(index + 1);
-        if (test.length === 4 && x.value.length < 19)
-            x.value = x.value + '-';
-    }
-
-    document.getElementById("form").addEventListener("submit", myform);
-    var checkarr = JSON.parse(localStorage.getItem("checkout")) || [];
-    function myform() {
-        event.preventDefault();
-
-        var cardDetails = {};
-        cardDetails.cardNumber = "1234-1234-1234-1234";
-        cardDetails.cvvNumber = "123";
-        cardDetails.expiryDate = "12/24";
-        var creaditCard = document.getElementById('credit-card').value;
-        var cvv = document.getElementById('cvNumber').value;
-        var expiry = document.getElementById('expiryDate').value;
-
-        if (cardDetails.cardNumber.toLowerCase() == creaditCard.toLowerCase() && cardDetails.cvvNumber.toLowerCase() == cvv.toLowerCase() && cardDetails.expiryDate.toLowerCase() == expiry.toLowerCase()) {
-          alert("Order has been placed Successfully.");  
-          location.href = "receipt.html";
-        }
-        else{
-            alert("cart detail is invalid");
-        }
-    }
-</script>
-
 </html>
+<script>
+    // document.querySelector(".gotoCartButton").addEventListener("click",sendingToCart);
+    
+    function sendingToCart(){
+      window.location.href="cart.html"
+    }
+    
+    // function singOpFunction(){
+    //          window.location.href="Register.html"
+    //        }
+    
+        var btnScrollToTop = document.querySelector("#btnScrollToTop");
+          //  btnScrollToTop.addEventListener("click",  function (){
+          //      window.scrollTo({
+          //          top:0,
+          //          left:0,
+          //          behavior:"smooth",
+          //      })
+          //  })
+    
+        document.querySelector("#submit2").addEventListener("click",createAcc);
+    
+        function createAcc(){
+            window.location.href="Register.html";
+        }
+    
+    
+        document.querySelector("#form").addEventListener("submit",signin);
+    
+        var regdUsers = JSON.parse(localStorage.getItem("account-data"));
+    
+        function signin(){
+            event.preventDefault();
+    
+            var enteredEmail = document.querySelector("#email").value;
+            var enteredPass = document.querySelector("#pass").value;
+    
+            for(var i=0;i< regdUsers.length;i++){
+    
+                if(regdUsers[i].userid==enteredEmail  &&  regdUsers[i].password==enteredPass){
+                   alert("Login Successfull");
+                     window.location.href="homepage.html";
+                    break;
+                }
+                else{
+                    console.log("Login failed Please fill correct data or create account");
+                    document.querySelector("#email").value="";
+                    document.querySelector("#pass").value="";
+                }
+            }
+        }
+        form.reset();
+
+
+
+    
+        // =============================gotoCartButton=======================
+        // document.querySelector(".gotoCartButton").addEventListener("click",sendingToCart);
+    
+        // function sendingToCart(){
+        //   window.location.href="cart.html"
+        // }
+    </script>
