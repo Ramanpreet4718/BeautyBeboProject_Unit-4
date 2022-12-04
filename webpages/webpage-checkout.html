@@ -1240,7 +1240,7 @@
     
                <div class="input">
                    <label>Phone Number <span class="star">*</span></label>
-                   <input type="number" id="phoneNumber" class="shipping" required>
+                   <input type="number" id="phoneNumber" class="shipping" maxlength = "10" oninput="phone(this)" required >
                </div>
                 <hr>
                <input type="submit" value="CONFIRM" id="submit">
@@ -1370,6 +1370,10 @@
 </body>
 </html>
 <script>
+  function phone(v){
+        if (v.value.length > v.maxLength) 
+        v.value = v.value.slice(0, v.maxLength);
+    }
     function singOpFunction(){
          window.location.href="Login.html"
        }
@@ -1416,7 +1420,7 @@
            document.querySelector("#zipcode").value="";
            document.querySelector("#country").value="";
            document.querySelector("#phoneNumber").value="";
-           window.location.href="payment.html";
+           window.location.href="webpage-payment.html";
 
        }
      

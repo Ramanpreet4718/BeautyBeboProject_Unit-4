@@ -795,13 +795,13 @@
     <div id="payment_form">
         <h2>Payment Method</h2>
         <hr>
-        <h1 id="hea"> Debit/Credit Card/Net banking/Wallet - PayUmoney</h1>
+        <h1 id="hea"> Debit/Credit Card</h1>
         <form id="form">
             <label for="Card">Card</label><br>
             <input type="text" onkeyup="formatCreditCard(this)" id="credit-card" placeholder="card number"
                 maxlength="19" required />
             <label for="CVV">CVV</label><br>
-            <input type="number" id="cvNumber" placeholder="CV number" maxlength="3" required />
+            <input type = "number" id="cvNumber" placeholder="CV number" maxlength = "3" oninput="formatcvv(this)" required/>
             <label for="date">Expiary date</label><br>
             <input type="text" onkeyup="formatExpiryDate(this)" id="expiryDate" placeholder="MM/YY" maxlength="5"
                 required />
@@ -933,7 +933,10 @@
       </footer>
 </body>
 <script>
-
+    function formatcvv(v){
+        if (v.value.length > v.maxLength) 
+        v.value = v.value.slice(0, v.maxLength);
+    }
     function formatExpiryDate(v) {
         if (window.event.keyCode == 8) {
             return true;
@@ -984,7 +987,8 @@
         var expiry = document.getElementById('expiryDate').value;
 
         if (cardDetails.cardNumber.toLowerCase() == creaditCard.toLowerCase() && cardDetails.cvvNumber.toLowerCase() == cvv.toLowerCase() && cardDetails.expiryDate.toLowerCase() == expiry.toLowerCase()) {
-            location.href = "receipt.html";
+          alert("Order has been placed Successfully.");  
+          location.href = "webpage-receipt.html";
         }
         else{
             alert("cart detail is invalid");
