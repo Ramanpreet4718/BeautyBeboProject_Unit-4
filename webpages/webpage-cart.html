@@ -11,51 +11,40 @@
 
     <style>
         @media screen and (min-width:701px) and (max-width:1000px) {
-            /* Here Write all the necessery styles for Medium Screen size  */
+      /* Here Write all the necessery styles for Medium Screen size  */
+      
+     
+    }
 
-
-        }
-
-        @media screen and (min-width:100px) and (max-width:700px) {
-
-            /* Here Write all the necessery styles for Small Screen size  */
-            header,
-            footer {
-                display: none;
-            }
-
-            .cart {
-                display: block !important;
-            }
-
-            #cart_1stsection,
-            .cart_2ndsection,
-            h1 {
-                width: 100% !important;
-                padding: 10px !important;
-            }
-
-            table {
-                font-size: 11px;
-                /* border: 1px solid; */
-                width: 90% !important;
-            }
-
-            #divbutton_in {
-                font-size: 12px !important;
-                margin: 4px;
-            }
-
-            .priceSection {
-                justify-content: start !important;
-            }
-
-            .priceSection>div {
-                margin: 5px;
-            }
-
-        }
-
+    @media screen and (min-width:100px) and (max-width:700px) {
+      /* Here Write all the necessery styles for Small Screen size  */
+      header,footer{
+        display: none;
+      }
+      .cart{
+        display: block !important;
+      }
+      #cart_1stsection ,.cart_2ndsection,h1{
+        width: 100% !important;
+        padding: 10px !important;
+      }
+      table{
+        font-size: 11px;
+        /* border: 1px solid; */
+        width: 90% !important;
+      }
+      #divbutton_in {
+        font-size: 12px !important;
+        margin: 4px;
+      }
+      .priceSection{
+        justify-content: start !important;
+      }
+      .priceSection>div{
+        margin: 5px;
+      }
+     
+    }
         /* ----------apply coupne and add sub and remove */
         #divbutton_in {
             background: #333;
@@ -66,11 +55,9 @@
             margin-right: 4px;
             border-radius: 20px;
         }
-
-        #divbutton_in:hover {
+        #divbutton_in:hover{
             background-color: #DD0285;
         }
-
         button#disc {
             margin-bottom: 10px;
             padding: 11px;
@@ -78,16 +65,13 @@
             background: #333;
             border: none;
         }
-
-        button#disc:hover {
+        button#disc:hover{
             background-color: #DD0285;
         }
-
-        /* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
         div#cart_1stsection {
             margin: 20px;
         }
-
         .cart {
             display: flex;
         }
@@ -111,7 +95,7 @@
             margin: 10px 0px;
         } */
 
-        #zipCode {
+        input {
             width: 342px;
             padding: 9px;
         }
@@ -145,7 +129,6 @@
         }
 
         table {
-            font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
         }
@@ -1237,7 +1220,7 @@
 
                     <label for="">Zip/Postal Code</label>
                     <br>
-                    <input type="text" name="" id=zipCode">
+                    <input type="text" name="" id="">
 
                 </form>
                 <p>Best Way</p>
@@ -1256,7 +1239,7 @@
                     <p>Shipping (Best Way- Max 7 Business Days)</p>
                 </div>
                 <div>
-                    <p>55</p>
+                    <p id="shippingCost"></p>
                 </div>
             </div>
             <div class="priceSection">
@@ -1264,7 +1247,7 @@
                     <p>Order Total Incl. GST</p>
                 </div>
                 <div>
-                    <p id="totalcost">0</p>
+                    <p id="gst">0</p>
                 </div>
             </div>
             <button id="discnt" onclick="demoDisplay1()">APPLY DISCOUNT CODE FOR 1000Rs.</button>
@@ -1441,7 +1424,7 @@
         div.append(p1, p2)
     }
     else {
-
+        
         var d1 = true;
         var d2 = true;
         function demoDisplay() {
@@ -1469,12 +1452,12 @@
         function DisplayCartItems() {
             var totalprice = 0;
 
-            document.querySelector("tbody").textContent = "";
+            document.querySelector("tbody").textContent="";
 
             var maindiv = document.getElementById("dataAppend");
-            // maindiv.style.margin="100px";
+                // maindiv.style.margin="100px";
 
-            cartarr.map(function (ele, i) {
+            cartarr.map(function(ele,i){
                 var divtemp = document.createElement("tr");
 
                 var imgtd = document.createElement("td");
@@ -1490,83 +1473,104 @@
                 price.textContent = ele.price;
 
                 var tempprice = +ele.price;
-                var tempcount = +ele.count;
-                var subtotaltemp = tempprice * tempcount;
+                var tempcount=+ele.count;
+                var subtotaltemp= tempprice*tempcount;
                 totalprice += subtotaltemp;
-                document.getElementById("totalcost").textContent = totalprice;
+                if(totalprice>=500){
+                    document.getElementById("gst").textContent=totalprice;
+                    document.getElementById("shippingCost").textContent = 0;
+                }else{
+                    document.getElementById("gst").textContent=totalprice+55;
+                    document.getElementById("shippingCost").textContent = 55;
+                }
+                document.getElementById("totalcost").textContent=totalprice;
 
-                // ------
+// ------
                 var quantity = document.createElement("td");
                 quantity.textContent = ele.count;
 
                 var total = document.createElement("td");
                 total.textContent = subtotaltemp;
 
+                
 
 
+                var divbutton=document.createElement("div");
+                divbutton.style.margin="15px";
 
-                var divbutton = document.createElement("div");
-                divbutton.style.margin = "15px";
 
-
-                var divbuttonRemove = document.createElement("button");
-                divbuttonRemove.textContent = "Remove From Cart"
-                divbuttonRemove.setAttribute("id", "divbutton_in");
-
+                var divbuttonRemove=document.createElement("button");
+                divbuttonRemove.textContent="Remove From Cart"
+                divbuttonRemove.setAttribute("id","divbutton_in");
+                
                 divbuttonRemove.addEventListener("click", removeCartItem);
 
-                var divbutton_increase = document.createElement("button");
-                divbutton_increase.textContent = "+";
-                divbutton_increase.setAttribute("id", "divbutton_in");
+                var divbutton_increase=document.createElement("button");
+                divbutton_increase.textContent="+";
+                divbutton_increase.setAttribute("id","divbutton_in");
 
                 divbutton_increase.addEventListener("click", addproduct);
                 var quantity = document.createElement("td");
 
-                function addproduct() {
-
-                    tempcount += 1;
+                function addproduct(){
+                    
+                    tempcount+=1;
                     quantity.textContent = tempcount;
-                    ele.count = tempcount;
-                    subtotaltemp = tempprice * tempcount;
+                    ele.count=tempcount;
+                    subtotaltemp=tempprice*tempcount;
                     total.textContent = subtotaltemp;
-                    totalprice += tempprice;
+                    totalprice+=tempprice;
                     console.log(totalprice)
 
-                    document.getElementById("totalcost").textContent = totalprice;
+                    if(totalprice>=500){
+                    document.getElementById("gst").textContent=totalprice;
+                    document.getElementById("shippingCost").textContent = 0;
+                    }else{
+                        document.getElementById("gst").textContent=totalprice+55;
+                        document.getElementById("shippingCost").textContent = 55;
+                    }
+                    document.getElementById("totalcost").textContent=totalprice;
 
 
-                    localStorage.setItem("cartarr", JSON.stringify(cartarr));
+                    localStorage.setItem("cartarr",JSON.stringify(cartarr));
 
                     // DisplayCartItems();
 
                 }
 
-                var divbutton_Decrese = document.createElement("button");
-                divbutton_Decrese.textContent = "-";
-                divbutton_Decrese.setAttribute("id", "divbutton_in");
+                var divbutton_Decrese=document.createElement("button");
+                divbutton_Decrese.textContent="-";
+                divbutton_Decrese.setAttribute("id","divbutton_in");
 
-                divbutton_Decrese.addEventListener("click", subproduct);
+                divbutton_Decrese.addEventListener("click",subproduct);
 
-                function subproduct() {
-                    if (tempcount === 1) {
+                function subproduct(){
+                    if(tempcount===1){
                         // countcost(i);
                         removeCartItem();
-                    } else {
-                        tempcount -= 1;
+                    }else{
+                        tempcount-=1;
                         quantity.textContent = tempcount;
-                        ele.count = tempcount;
-                        subtotaltemp = tempprice * tempcount;
+                        ele.count=tempcount;
+                        subtotaltemp=tempprice*tempcount;
                         total.textContent = subtotaltemp;
-                        totalprice -= tempprice;
+                        totalprice-=tempprice;
 
-                        console.log(totalprice)
+                         console.log(totalprice)
+                        if(totalprice>=500){
+                            document.getElementById("gst").textContent=totalprice;
+                            document.getElementById("shippingCost").textContent = 0;
+                        }else{
+                            document.getElementById("gst").textContent=totalprice+55;
+                            document.getElementById("shippingCost").textContent = 55;
+                        } 
 
-                        document.getElementById("totalcost").textContent = totalprice;
+                        document.getElementById("totalcost").textContent=totalprice;
 
-                        localStorage.setItem("cartarr", JSON.stringify(cartarr));
+                        localStorage.setItem("cartarr",JSON.stringify(cartarr));
                     }
-
-                }
+                    
+                } 
 
                 quantity.textContent = tempcount;
 
@@ -1575,31 +1579,31 @@
 
 
 
+                
 
 
-
-                divbutton.append(divbutton_increase, divbutton_Decrese, divbuttonRemove);
+                divbutton.append(divbutton_increase,divbutton_Decrese,divbuttonRemove);
                 maindiv.append(divbutton);
-
-                function removeCartItem() {
-                    cartarr.splice(i, 1);
-
-                    localStorage.setItem("cartarr", JSON.stringify(cartarr));
+                
+                function removeCartItem(){
+                    cartarr.splice(i,1);
+                    
+                    localStorage.setItem("cartarr",JSON.stringify(cartarr));
                     DisplayCartItems();
                     // console.log(cartarr);
                     // window.location.reload;
                 }
 
-
-            });
+               
+            }); 
         }
 
 
     }
 
 
-    // ----------header-----------
-    document.querySelector(".fa-user").addEventListener("click", dropdown);
+     // ----------header-----------
+     document.querySelector(".fa-user").addEventListener("click", dropdown);
 
     function dropdown() {
         var menu = document.querySelector(".loginRegisterDropdown");
@@ -1611,13 +1615,30 @@
     }
 
     // ----------------------------
-    document.getElementById("disc").addEventListener("click", discountedprice);
-    function discountedprice() {
-        var token = document.getElementById("discountcode").value;
-        if (token === "abcd") {
-            var t = + document.getElementById("totalcost").textContent;
-            document.getElementById("totalcost").textContent = (t - 1000);
-            console.log(t);
+    var tokencheck =true;
+        document.getElementById("disc").addEventListener("click",discountedprice );
+        function discountedprice(){
+            var token= document.getElementById("discountcode").value;
+            if(token==="abcd" && tokencheck==true){
+                tokencheck=!tokencheck;
+                console.log(token);
+               
+                var t=+ document.getElementById("totalcost").textContent;
+
+                // if(t>=500){
+                //     document.getElementById("gst").textContent=t-1000;
+                // }else{
+                //     document.getElementById("gst").textContent=t-1000+55;
+                // }
+                if(t>=2000){
+                    document.getElementById("totalcost").textContent=(t-1000);
+                    window.alert("Congratulations!! Your ₹1000/- Coupon is applied");
+                }else{
+                    window.alert("Cart Value is less than ₹2000");
+                    tokencheck=!tokencheck;
+                    document.getElementById("totalcost").textContent=(t);
+                }
+                // console.log(t);
+            }
         }
-    }
 </script>
