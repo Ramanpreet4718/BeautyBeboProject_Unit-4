@@ -1160,12 +1160,12 @@
                 </div>
                 <button type="button" class="collapsible">BRAND</button>
                 <div class="content">
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Tresemme</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Boroplus</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Boroplus</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Head & Shoulders</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Vlcc</p>
-                    <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Vega</p>
+                    <p class="text-secondary"><input type="checkbox" value="Tresemme" id="myCheck5"  onclick="brandsort1()">Tresemme</p>
+                    <p class="text-secondary"><input type="checkbox"  value="Boroplus" id="myCheck6" onclick="brandsort2()">Boroplus</p>
+                    <!-- <p class="text-secondary"><input type="checkbox" id="myCheck" value="myvalue">Boroplus</p> -->
+                    <p class="text-secondary"><input type="checkbox"  value="Head and Shoulders" id="myCheck7" onclick="brandsort3()">Head & Shoulders</p>
+                    <p class="text-secondary"><input type="checkbox"  value="Vlcc" id="myCheck8" onclick="brandsort4()">Vlcc</p>
+                    <p class="text-secondary"><input type="checkbox"  value="Vega" id="myCheck9" onclick="brandsort5()">Vega</p>
 
                 </div>
                 <button type="button" class="collapsible">HAIR TYPE </button>
@@ -1187,7 +1187,7 @@
 
             </div>
 
-            <div id="parent" style="width:80%; align-items: flex-end;">
+            <div id="parent" style="width:80%; align-items: flex-start;">
 
             </div>
 
@@ -1355,7 +1355,7 @@
 
 </html>
 <script>
-    var mensData = [
+    var HairPageData = [
         {
             image_url:
                 "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/6/f658864trese00000061_1.jpg",
@@ -1363,12 +1363,14 @@
             price: 1160,
             off: 7,
             strikedoffprice: 1200,
+            brand:"Tresemme",
         },
         {
             image_url:
                 "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/f/9f5a0dd8901248154192_1.jpg",
             name: "Boroplus Aloe Vera Gel With Green Tea",
             price: 360,
+            brand:"Boroplus",
             //   strikedoffprice: 999,
         },
         {
@@ -1378,6 +1380,7 @@
             price: 1527,
             off: 5,
             strikedoffprice: 1607,
+            brand:"Bioderma",
 
         },
         {
@@ -1387,6 +1390,7 @@
             price: 1488,
             off: 7,
             strikedoffprice: 1600,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1395,6 +1399,7 @@
             price: 1300,
             off: 7,
             strikedoffprice: 1400,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1403,6 +1408,7 @@
             price: 1488,
             off: 7,
             strikedoffprice: 1600,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1411,6 +1417,7 @@
             price: 1300,
             off: 7,
             strikedoffprice: 1400,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1418,6 +1425,7 @@
             name: "Tresemme Pro Pure Moisture Boost Serum With Aloe Essence Sulphate",
             price: 400,
             //   strikedoffprice: ,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1426,6 +1434,7 @@
             price: 651,
             off: 7,
             strikedoffprice: 700,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1434,6 +1443,7 @@
             price: 465,
             off: 7,
             strikedoffprice: 500,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1442,6 +1452,7 @@
             price: 465,
             off: 7,
             strikedoffprice: 500,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1449,6 +1460,7 @@
             name: "Tresemme Keratin Smooth Hair Serum",
             price: 350,
             //   strikedoffprice: 999,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1456,6 +1468,7 @@
             name: "Tresemme Pro Pure Damage Recovery Serum With Fermented Rice Water",
             price: 400,
             //   strikedoffprice: 3499,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1464,6 +1477,7 @@
             price: 651,
             off: 7,
             strikedoffprice: 700,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1472,6 +1486,7 @@
             price: 465,
             off: 7,
             strikedoffprice: 500,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1480,6 +1495,7 @@
             price: 465,
             off: 7,
             strikedoffprice: 500,
+            brand:"Tresemme",
         },
         {
             image_url:
@@ -1487,6 +1503,7 @@
             name: "Sunsilk Almond & Honey Shampoo",
             price: 315,
             //   strikedoffprice: 1699,
+            brand:"Sunsilk",
         },
         {
             image_url:
@@ -1495,6 +1512,7 @@
             price: 603,
             off: 7,
             strikedoffprice: 648,
+            brand:"Indulekha",
         },
         {
             image_url:
@@ -1502,6 +1520,8 @@
             name: "Livon Super Styler Hair Serum For Women & Men For Hair Straightening",
             price: 375,
             //   strikedoffprice: 4999,
+            brand:"Livon",
+
         },
         {
             image_url:
@@ -1510,6 +1530,8 @@
             price: 300,
             off: 7,
             strikedoffprice: 315,
+            brand:"Head and Shoulders",
+
         },
         {
             image_url:
@@ -1518,6 +1540,7 @@
             price: 302,
             off: 10,
             strikedoffprice: 335,
+            brand:"Shahnaz",
         },
         {
             image_url:
@@ -1526,6 +1549,8 @@
             price: 718,
             off: 10,
             strikedoffprice: 756,
+            brand:"Indulekha",
+
         },
         {
             image_url:
@@ -1534,6 +1559,8 @@
             price: 805,
             off: 8,
             strikedoffprice: 875,
+            brand:"Head and Shoulders",
+
         },
         {
             image_url:
@@ -1542,6 +1569,9 @@
             price: 338,
             off: 10,
             strikedoffprice: 375,
+            brand:"Head and Shoulders",
+            
+
         },
         {
             image_url:
@@ -1549,6 +1579,7 @@
             name: "Vlcc Onion & Fenugreek Conditioner",
             price: 299,
             //   strikedoffprice: 4999,
+            brand:"Vlcc",
         },
         {
             image_url:
@@ -1556,6 +1587,7 @@
             name: "Vlcc Onion & Fenugreek Hair Oil",
             price: 399,
             //   strikedoffprice: 2799,
+            brand:"Vlcc",
         },
         {
             image_url:
@@ -1564,6 +1596,7 @@
             price: 374,
             off: 12,
             strikedoffprice: 425,
+            brand:"Vlcc",
         },
         {
             image_url:
@@ -1572,14 +1605,16 @@
             price: 899,
             off: 10,
             strikedoffprice: 999,
+            brand:"Vega",
         },
         {
             image_url:
                 "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/c/1cb925avegax00000041_1.jpg",
-            name: "VEGA Multi-Styler Hair Brush & Hair Dryer Keratin Infused Coating & Anti-Static Bristles, (VHSD-01)",
+            name: "Vega Multi-Styler Hair Brush & Hair Dryer Keratin Infused Coating & Anti-Static Bristles, (VHSD-01)",
             price: 2613,
             off: 5,
             strikedoffprice: 2750,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1588,6 +1623,7 @@
             price: 1208,
             off: 5,
             strikedoffprice: 1299,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1596,6 +1632,7 @@
             price: 1709,
             off: 5,
             strikedoffprice: 1799,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1604,6 +1641,7 @@
             price: 446,
             off: 15,
             strikedoffprice: 525,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1612,6 +1650,7 @@
             price: 2374,
             off: 5,
             strikedoffprice: 2499,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1619,6 +1658,7 @@
             name: "Vega K-Glam 3 In 1 Hair Styler - Rose Gold (Vhscc-04)",
             price: 2184,
             strikedoffprice: 2299,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1627,6 +1667,7 @@
             price: 2089,
             off: 5,
             strikedoffprice: 2199,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1635,6 +1676,7 @@
             price: 1899,
             off: 5,
             strikedoffprice: 1999,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1643,6 +1685,7 @@
             price: 1394,
             off: 7,
             strikedoffprice: 1499,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1651,6 +1694,7 @@
             price: 1899,
             off: 5,
             strikedoffprice: 1999,
+            brand:"Vega",
         },
         {
             image_url:
@@ -1659,20 +1703,21 @@
             price: 1471,
             off: 8,
             strikedoffprice: 1599,
+            brand:"Vega",
         },
     ];
         
-    display(mensData);
+    display(HairPageData);
 
-    // mensData.sort(function(a,b){
+    // HairPageData.sort(function(a,b){
     //     return a.price-b.price;
     // })
 
-    //   mensData
+    //   HairPageData
 
     function display(Data) {
         if(Data.length==0){
-            Data=mensData;
+            Data=HairPageData;
         }
         document.getElementById("parent").textContent=" ";
         for (let i = 0; i < Data.length; i++) {
@@ -1743,8 +1788,8 @@
             pricediv.append(strikedoffprice, price, priceoff);
 
             div.append(img, productname, pricediv, addtocart)
-                console.log(Data);
-
+                // console.log(Data);
+// 
             // add to cart------------------------------------
 
             addtocart.addEventListener("click", cart);
@@ -1755,7 +1800,7 @@
                 if (document.getElementById("cartid" + i).value == "Add to Cart") {
                     var carta = JSON.parse(localStorage.getItem("cartarr")) || [];
                     var obj = {
-                        img:mensData[i].image_url,
+                        img:HairPageData[i].image_url,
                         productname: Data[i].name,
                         price: Data[i].price,
                         strikedoffprice: Data[i].strikedoffprice,
@@ -1809,7 +1854,7 @@
     
     function sort1000() {
         check1=!check1;
-       var below100= mensData.filter(function(ele){
+       var below100= HairPageData.filter(function(ele){
             if(Number(ele.price)<=1000 && check1==false){
                 return ele;
             }
@@ -1827,7 +1872,7 @@
     function sort2000() {
         check2=!check2;
 
-       var below100= mensData.filter(function(ele){
+       var below100= HairPageData.filter(function(ele){
             if(Number(ele.price)>1000 && Number(ele.price)<=2000  && check2==false){
                 return ele;
             }
@@ -1843,7 +1888,7 @@
     function sort3000() {
         check3=!check3;
 
-       var below100= mensData.filter(function(ele){
+       var below100= HairPageData.filter(function(ele){
             if(Number(ele.price)>=2000 && Number(ele.price)<=3000 && check3==false){
                 return ele;
             }
@@ -1851,6 +1896,95 @@
 
         display(below100);
         // console.log(below100);
+    }
+
+
+    // -------------------
+    document.querySelector(".search-btn").addEventListener("click", searchsort);
+    function searchsort(){
+        var searchvalue= document.getElementById("search").value.toLowerCase();
+        // console.log(searchvalue);
+        var searchedarr = HairPageData.filter(function(ele){
+            var brandname=ele.brand.toLowerCase();
+
+                if(searchvalue==brandname){
+                    return ele;
+                }
+
+        });
+        // console.log(searchedarr)
+        display(searchedarr);
+
+    }
+
+    // ---------------- brand check box sort---------------------------
+
+    var brandflag=true;
+    function brandsort1(data){
+        var brandvalue=document.getElementById("myCheck5").value.toLowerCase();
+        brandflag=!brandflag;
+        var brandarr = HairPageData.filter(function(ele){
+            var brandn=ele.brand.toLowerCase();
+                if(brandn==brandvalue && brandflag==false){
+                    return ele;
+                }
+
+        });
+        // console.log(brandarr);
+        display(brandarr);
+
+    }
+    function brandsort2(){
+        var brandvalue=document.getElementById("myCheck6").value.toLowerCase();
+        brandflag=!brandflag;
+        var brandarr = HairPageData.filter(function(ele){
+            var brandn=ele.brand.toLowerCase();
+                if(brandn==brandvalue && brandflag==false){
+                    return ele;
+                }
+
+        });
+        // console.log(brandarr);
+        display(brandarr);
+    }
+    function brandsort3(){
+        var brandvalue=document.getElementById("myCheck7").value.toLowerCase();
+        brandflag=!brandflag;
+        var brandarr = HairPageData.filter(function(ele){
+            var brandn=ele.brand.toLowerCase();
+                if(brandn==brandvalue && brandflag==false){
+                    return ele;
+                }
+
+        });
+        // console.log(brandarr);
+        display(brandarr);
+    }
+    function brandsort4(){
+        var brandvalue=document.getElementById("myCheck8").value.toLowerCase();
+        brandflag=!brandflag;
+        var brandarr = HairPageData.filter(function(ele){
+            var brandn=ele.brand.toLowerCase();
+                if(brandn==brandvalue && brandflag==false){
+                    return ele;
+                }
+
+        });
+        // console.log(brandarr);
+        display(brandarr);
+    }
+    function brandsort5(){
+        var brandvalue=document.getElementById("myCheck9").value.toLowerCase();
+        brandflag=!brandflag;
+        var brandarr = HairPageData.filter(function(ele){
+            var brandn=ele.brand.toLowerCase();
+                if(brandn==brandvalue && brandflag==false){
+                    return ele;
+                }
+
+        });
+        // console.log(brandarr);
+        display(brandarr);
     }
 
 
