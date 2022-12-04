@@ -801,7 +801,7 @@
             <input type="text" onkeyup="formatCreditCard(this)" id="credit-card" placeholder="card number"
                 maxlength="19" required />
             <label for="CVV">CVV</label><br>
-            <input type = "number" id="cvNumber" placeholder="CV number" maxlength = "3" oninput="formatcvv(this)"/>
+            <input type = "number" id="cvNumber" placeholder="CV number" maxlength = "3" oninput="formatcvv(this)" required/>
             <label for="date">Expiary date</label><br>
             <input type="text" onkeyup="formatExpiryDate(this)" id="expiryDate" placeholder="MM/YY" maxlength="5"
                 required />
@@ -987,7 +987,8 @@
         var expiry = document.getElementById('expiryDate').value;
 
         if (cardDetails.cardNumber.toLowerCase() == creaditCard.toLowerCase() && cardDetails.cvvNumber.toLowerCase() == cvv.toLowerCase() && cardDetails.expiryDate.toLowerCase() == expiry.toLowerCase()) {
-            location.href = "receipt.html";
+          alert("Order has been placed Successfully.");  
+          location.href = "receipt.html";
         }
         else{
             alert("cart detail is invalid");
