@@ -539,6 +539,14 @@
             align-items: flex-start;
             flex-direction: column;
         }
+
+        tbody tr td{
+            text-align: center;
+        }
+
+        thead tr th{
+            padding: 0px 10px;
+        }
     </style>
 </head>
 
@@ -1381,7 +1389,7 @@
 
 </html>
 <script>
-    var booleanaddress= true;
+    var booleanaddress= false;
     function proceed(){
         if(booleanaddress==false){
             window.location.href="webpage-checkout.html"
