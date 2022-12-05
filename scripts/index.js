@@ -503,6 +503,23 @@ $(document).ready(function(){
         autoplaySpeed: 10000,
       });
   });
+  
+  document.querySelector(".readMore").addEventListener("click",function(){
+    var read = document.querySelector(".readMore").textContent;
+    if(read=="Read More"){
+        var hide = document.querySelectorAll("#hide")
+        for(var i=0; i<hide.length; i++){
+            hide[i].setAttribute("id","show");
+        }
+        document.querySelector(".readMore").textContent="Read Less";
+    }else{
+        var show = document.querySelectorAll("#show");
+        for(var i=0; i<show.length; i++){
+            show[i].setAttribute("id","hide");
+        }
+        document.querySelector(".readMore").textContent="Read More";
+    }
+  })
 
   
 

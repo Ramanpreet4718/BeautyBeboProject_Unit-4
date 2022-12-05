@@ -685,3 +685,13 @@ footer {
  .aboutUs-contant a:hover{
   color: rgb(221, 2, 133);
  }
+
+ #hide{
+  display: none;
+ }
+
+ a.readMore{
+  cursor: pointer;
+  color: #dd0285;
+  font-weight: bold;
+  }

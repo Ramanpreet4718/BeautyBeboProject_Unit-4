@@ -6,14 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Customer Account Beauty Bebo</title>
-        <script
-    src="https://kit.fontawesome.com/1d73357de3.js"
-    crossorigin="anonymous"
-  ></script>
-  <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700"
-    />
+    <script src="https://kit.fontawesome.com/1d73357de3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700" />
 </head>
 <style>
     /* header css*/
@@ -299,7 +293,7 @@
         background-color: #fafafa;
         /* border: 1px solid red; */
         margin-bottom: 20px;
-        
+
 
     }
 
@@ -310,7 +304,7 @@
     }
 
     #personal {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     hr {
@@ -617,13 +611,19 @@
         align-items: flex-start;
         flex-direction: column;
     }
+
+    .register-heading {
+        font-weight: 400;
+    }
 </style>
 
 <body>
 
     <header>
         <div class="top">
-            <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="logo" />
+            <a href="../index.html">
+                <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="logo" />
+            </a>
             <div class="control">
                 <select name="select-box-cat" id="cat">
                     <option value="">All Category</option>
@@ -643,7 +643,7 @@
             </div>
             <div class="header-links">
                 <div class="wishlist-div">
-                    <a href="wishlist"><i class="fa-solid fa-heart wishlist btn"></i></a>
+                    <a href="#"><i class="fa-solid fa-heart wishlist btn"></i></a>
                 </div>
                 <div class="user-acc">
                     <i class="fa-solid fa-user user btn"></i>
@@ -651,10 +651,10 @@
                 </div>
                 <ul class="loginRegisterDropdown">
                     <li>
-                        <a href=".login">Login</a>
+                        <a href="./webpage-login.html">Login</a>
                     </li>
                     <li>
-                        <a href=".register">Register</a>
+                        <a href="./webpage-register.html">Register</a>
                     </li>
                 </ul>
             </div>
@@ -663,7 +663,7 @@
             <div class="nav-menu">
                 <ul>
                     <li class="nav-links">
-                        <a href=".makeup">MAKEUP</a>
+                        <a href="./webpage-makeup.html">MAKEUP</a>
                         <div>
                             <ul>
                                 <li>
@@ -847,7 +847,7 @@
                         </div>
                     </li>
                     <li class="nav-links">
-                        <a href=".skin">SKIN</a>
+                        <a href="./webpage-skin.html">SKIN</a>
                         <div>
                             <ul>
                                 <li>
@@ -980,7 +980,7 @@
                         </div>
                     </li>
                     <li class="nav-links">
-                        <a href=".hair">HAIR</a>
+                        <a href="./webpage-hair.html">HAIR</a>
                         <div>
                             <ul>
                                 <li>
@@ -1044,7 +1044,7 @@
                         </div>
                     </li>
                     <li class="nav-links">
-                        <a href=".personalCare">PERSONAL CARE</a>
+                        <a href="./webpage-personalcare.html">PERSONAL CARE</a>
                         <div style="width: 500%;">
                             <ul>
                                 <li>
@@ -1111,7 +1111,7 @@
                         </div>
                     </li>
                     <li class="nav-links">
-                        <a href=".momBabyCare">MOM & BABY CARE</a>
+                        <a href="./webpage-momBaby.html">MOM & BABY CARE</a>
                         <div style="width: 400%;">
                             <ul>
                                 <li>
@@ -1166,7 +1166,7 @@
                         </div>
                     </li>
                     <li class="nav-links">
-                        <a href=".fragrance">FRAGRANCE</a>
+                        <a href="./webpage-fregrance.html">FRAGRANCE</a>
                         <div>
                             <ul>
                                 <li>
@@ -1182,7 +1182,7 @@
                         </div>
                     </li>
                     <li class="nav-links">
-                        <a href=".ayurveda">AYURVEDA</a>
+                        <a href=".#">AYURVEDA</a>
                         <div>
                             <ul>
                                 <li>
@@ -1251,11 +1251,11 @@
                 </ul>
             </div>
             <div class="nav-cart">
-                <a href=".cart"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
+                <a href="./webpage-cart.html"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
             </div>
         </div>
     </header>
-    <h4>CREATE NEW CUSTOMER ACCOUNT</h4>
+    <h4 class="register-heading">CREATE NEW CUSTOMER ACCOUNT</h4>
 
     <div id="sociallink">
         <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=578720822792858&kid_directed_site=0&app_id=578720822792858&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.12%2Fdialog%2Foauth%3Fauth_type%3Drerequest%26client_id%3D578720822792858%26state%3Ddf8ff6295cebed33bc4096472f1b7e07%26response_type%3Dcode%26sdk%3Dphp-sdk-5.4.4%26redirect_uri%3Dhttps%253A%252F%252Fwww.beautybebo.com%252Fsociallogin%252Fsocial%252Fcallback%252F%253Fhauth_done%253DFacebook%26scope%3Demail%252Cpublic_profile%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dc42e06ff-8754-470c-bbfc-b586fcff1eb5%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.beautybebo.com%2Fsociallogin%2Fsocial%2Fcallback%2F%3Fhauth_done%3DFacebook%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Ddf8ff6295cebed33bc4096472f1b7e07%23_%3D_&display=page&locale=en_US&pl_dbl=0"
@@ -1294,7 +1294,7 @@
 
             <div class="input">
                 <label>Email <span class="star">*</span></label>
-                <input type="email" id="email"  required>
+                <input type="email" id="email" required>
             </div>
 
             <div class="input">
@@ -1315,7 +1315,7 @@
         </div>
         </div>
     </form>
-    
+
     <footer>
         <div class="footer-main-aj">
             <div class="footer-top">
@@ -1454,46 +1454,52 @@
 </html>
 
 <script>
-    document.querySelector("form").addEventListener("submit",signup);
-    var Details=JSON.parse(localStorage.getItem("account-data")) || [];
+    // ----------header-----------
+    document.querySelector(".fa-user").addEventListener("click", dropdown);
 
-    function signup(){
-      event.preventDefault();
-      var name=document.getElementById("firstname").value;
-      /*var name=document.getElementById("#lastName").value;*/
-      
-      var userid=document.getElementById("email").value;
-      var password=document.getElementById("pass").value;
-      var conpassword=document.getElementById("conPass").value;
-
-      if(password==conpassword){
-        var obj={
-        name:name,
-        userid:userid,
-            password:password,
+    function dropdown() {
+        var menu = document.querySelector(".loginRegisterDropdown");
+        if (menu.style.display == "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
         }
-        Details.push(obj);
-        localStorage.setItem("account-data",JSON.stringify(Details));
-       window.alert("Account Created Succesfully")
-       window.location.href="webpage-login.html"
-      }else{
-            window.alert("Password Miss-match")
-      }
-      form.reset();
+    }
 
-      
-      // console.log(Details)
+
+    //------------SignUp------------
+    document.querySelector("form").addEventListener("submit", signup);
+    var Details = JSON.parse(localStorage.getItem("account-data")) || [];
+
+    function signup() {
+        event.preventDefault();
+        var name = document.getElementById("firstname").value;
+        /*var name=document.getElementById("#lastName").value;*/
+
+        var userid = document.getElementById("email").value;
+        var password = document.getElementById("pass").value;
+        var conpassword = document.getElementById("conPass").value;
+
+        if (password == conpassword) {
+            var obj = {
+                name: name,
+                userid: userid,
+                password: password,
+            }
+            Details.push(obj);
+            localStorage.setItem("account-data", JSON.stringify(Details));
+            window.alert("Account Created Succesfully")
+            window.location.href = "webpage-login.html"
+        } else {
+            window.alert("Password Miss-match")
+        }
+        form.reset();
+
 
 
     }
-    function formatphone(v){
-        if (v.value.length > v.maxLength) 
-        v.value = v.value.slice(0, v.maxLength);
+    function formatphone(v) {
+        if (v.value.length > v.maxLength)
+            v.value = v.value.slice(0, v.maxLength);
     }
 </script>
-
-
-
-
-
-
