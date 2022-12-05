@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script
+      src="https://kit.fontawesome.com/1d73357de3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,200.300,400,500,,600,700"
+    />
+    <title>Buy Beauty Product Online shopping, Cosmetics Online shopping - Beauty Bebo</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <a href="#">
+          <img
+          src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png"
+          alt="logo"
+        />
+        </a>
+        <div class="control">
+          <select name="select-box-cat" id="cat">
+            <option value="">All Category</option>
+            <option value="Make up">Make up</option>
+            <option value="Skin">Skin</option>
+            <option value="Hair">Hair</option>
+            <option value="Personal Care">Personal Care</option>
+            <option value="Mom & Baby Care">Mom & Baby Care</option>
+            <option value="Fragrance">Fragrance</option>
+            <option value="Ayurveda">Ayurveda</option>
+          </select>
+          <span>|</span>
+          <input type="text" id="search" placeholder="Enter Your Search..." />
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="header-links">
+          <div class="wishlist-div">
+            <a href="#"
+              ><i class="fa-solid fa-heart wishlist btn"></i
+            ></a>
+          </div>
+          <div class="user-acc">
+            <i class="fa-solid fa-user user btn"></i>
+            <span>My Account</span>
+          </div>
+          <ul class="loginRegisterDropdown">
+            <li>
+              <a href="./webpages/webpage-login.html">Login</a>
+            </li>
+            <li>
+              <a href="./webpages/webpage-register.html">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="nav-menu">
+          <ul>
+            <li class="nav-links">
+              <a href="./webpages/webpage-makeup.html">MAKEUP</a>
+              <div>
+                <ul>
+                  <li><p>FACE</p></li>
+                  <li><p>BB Cream</p></li>
+                  <li><p>Blush</p></li>
+                  <li><p>Bronzer</p></li>
+                  <li><p>CC Cream</p></li>
+                  <li><p>Contour</p></li>
+                  <li><p>Concealer</p></li>
+                  <li><p>Compact & Powder</p></li>
+                  <li><p>Face Primer</p></li>
+                  <li><p>Foundation</p></li>
+                  <li><p>Highlighters</p></li>
+                  <li><p>Loose Powder</p></li>
+                  <li><p>Makeup Kits</p></li>
+                  <li><p>Makeup Remover</p></li>
+                  <li><p>Setting Spray</p></li>
+                </ul>
+
+                <ul>
+                  <li><p>EYE</p></li>
+                  <li><p>Contact Lenses</p></li>
+                  <li><p>Eye Kit</p></li>
+                  <li><p>Eyeliner</p></li>
+                  <li><p>Eye Shadow</p></li>
+                  <li><p>Eye Primer</p></li>
+                  <li><p>Eye-Palettes</p></li>
+                  <li><p>Eye Makeup Remover</p></li>
+                  <li><p>Eye Brow Enhancers</p></li>
+                  <li><p>False Eyelashes</p></li>
+                  <li><p>Kajal</p></li>
+                  <li><p>Mascara</p></li>
+                  <li><p>Under Eye Concealer</p></li>
+                </ul>
+
+                <ul>
+                  <li>
+                    <p>LIPS</p>
+                  </li>
+                  <li>
+                    <p>Lipstick</p>
+                  </li>
+                  <li>
+                    <p>Liquid Lipstick</p>
+                  </li>
+                  <li>
+                    <p>Lip Liner</p>
+                  </li>
+                  <li>
+                    <p>Lip Gloss</p>
+                  </li>
+                  <li>
+                    <p>Lip Balm</p>
+                  </li>
+                  <li>
+                    <p>Lip Crayon</p>
+                  </li>
+                  <li>
+                    <p>Lip Stain</p>
+                  </li>
+                  <li>
+                    <p>Lip Plumper</p>
+                  </li>
+                </ul>
+
+                <ul>
+                  <li>
+                    <p>NAILS</p>
+                  </li>
+                  <li>
+                    <p>Manicure & Pedicure Kits</p>
+                  </li>
+                  <li>
+                    <p>Nail Polish</p>
+                  </li>
+                  <li>
+                    <p>Nail Care</p>
+                  </li>
+                  <li>
+                    <p>Nail Polish Sets</p>
+                  </li>
+                  <li>
+                    <p>Nail Art Kits</p>
+                  </li>
+                  <li>
+                    <p>Nail Polish Remover</p>
+                  </li>
+                </ul>
+
+                <ul>
+                  <li>
+                    <p>TOOLS BRUSHES</p>
+                  </li>
+                  <li>
+                    <p>Blush Brush</p>
+                  </li>
+                  <li>
+                    <p>Eyelash Curlers</p>
+                  </li>
+                  <li>
+                    <p>Eye Brush</p>
+                  </li>
+                  <li>
+                    <p>Face Brush</p>
+                  </li>
+                  <li>
+                    <p>Lip Brush</p>
+                  </li>
+                  <li>
+                    <p>Makeup Pouches</p>
+                  </li>
+                  <li>
+                    <p>Mirrors</p>
+                  </li>
+                  <li>
+                    <p>Sponges & Applicators</p>
+                  </li>
+                  <li>
+                    <p>Sharpeners</p>
+                  </li>
+                  <li>
+                    <p>Tweezers</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-links">
+              <a href="./webpages/webpage-skin.html">SKIN</a>
+              <div>
+                <ul>
+                  <li><p>EYE CARE</p></li>
+                  <li><p>Dark Circles</p></li>
+                  <li><p>Eye Contour Care</p></li>
+                  <li><p>Eye Cream</p></li>
+                  <li><p>Eye Masks</p></li>
+                  <li><p>Eye Serums</p></li>
+                  <li><p>Puffiness</p></li>
+                  <li><p>Under Eye Creams</p></li>
+                  <li><p>Under Eye Wrinkles</p></li>
+                </ul>
+
+                <ul>
+                  <li><p>FACE CARE</p></li>
+                  <li><p>Anti- Ageing Creams</p></li>
+                  <li><p>Bleach Creams</p></li>
+                  <li><p>Brightening Cream</p></li>
+                  <li><p>Face Wash</p></li>
+                  <li><p>Facial Wipes</p></li>
+                  <li><p>Face Oil</p></li>
+                  <li><p>Face Cleansers</p></li>
+                  <li><p>Facial Kits</p></li>
+                  <li><p>Face Tools</p></li>
+                  <li><p>Moisturizer</p></li>
+                  <li><p>Mask & Peels</p></li>
+                  <li><p>Serum</p></li>
+                  <li><p>Toner & Astringents</p></li>
+                  <li><p>Cleansing Creams</p></li>
+                </ul>
+
+                <ul>
+                  <li><p>BODY CARE</p></li>
+                  <li><p>All Cream</p></li>
+                  <li><p>Body Moisturizers</p></li>
+                  <li><p>Body Toners</p></li>
+                  <li><p>Body Sun Care</p></li>
+                  <li><p>Brightening Lotion</p></li>
+                  <li><p>Dark Circles & Wrinkles</p></li>
+                  <li><p>Day Cream</p></li>
+                  <li><p>Foot Cream</p></li>
+                  <li><p>Hair Remover Cream</p></li>
+                  <li><p>Hand Creams</p></li>
+                  <li><p>Hands & Feet</p></li>
+                  <li><p>Kits & Combos</p></li>
+                  <li><p>Night Cream</p></li>
+                  <li><p>Neck Creams</p></li>
+                </ul>
+
+                <img style="width: 58%;" src="https://www.beautybebo.com/pub/media/mega-menu/SKIN_cATA.jpg" alt="">
+              </div>
+            </li>
+            <li class="nav-links">
+              <a href="./webpages/webpage-hair.html">HAIR</a>
+              <div>
+                <ul>
+                  <li><p>HAIR CARE</p></li>
+                  <li><p>Color Protection</p></li>
+                  <li><p>Dandruff</p></li>
+                  <li><p>Dry Shampoo</p></li>
+                  <li><p>Gels & Waxes</p></li>
+                  <li><p>Hair Spray</p></li>
+                  <li><p>Hair Color/ Dye</p></li>
+                  <li><p>Hair Creams & Masks </p></li>
+                  <li><p>Hair Styling</p></li>
+                  <li><p>Hairfall & Thinning </p></li>
+                  <li><p>Straighteners </p></li>
+                </ul>
+
+                <ul>
+                  <li><p>HAIR LOSS</p></li>
+                  <li><p>Conditioner</p></li>
+                  <li><p>Hair Oil</p></li>
+                  <li><p>Hair Serum</p></li>
+                  <li><p>Hair Growth Solutions</p></li>
+                  <li><p>Shampoo</p></li>
+                </ul>
+
+                <img style="width: 72%;" src="https://www.beautybebo.com/pub/media/mega-menu/hair_cata.jpg" alt="headandsholder">
+              </div>
+            </li>
+            <li class="nav-links">
+              <a href="./webpages/webpage-personalcare.html">PERSONAL CARE</a>
+              <div style="width: 500%;">
+                <ul>
+                  <li><p>BATH & BODY</p></li>
+                  <li><p>Body Cleansers</p></li>
+                  <li><p>Body Massage Oil</p></li>
+                  <li><p>Body Wash</p></li>
+                  <li><p>Creams</p></li>
+                  <li><p>Essential Oils</p></li>
+                  <li><p>Foot Cream</p></li>
+                  <li><p>Scrubs & Exfoliants</p></li>
+                  <li><p>Ubtan & Face Packs</p></li>
+                </ul>
+
+                <ul>
+                  <li><p>BATHING ACCESSORIES</p></li>
+                  <li><p>Bath Brushes</p></li>
+                  <li><p>Loofahs</p></li>
+                  <li><p>Shower Caps</p></li>
+                  <li><p>Sponges</p></li>
+                </ul>
+
+                <ul>
+                  <li><p>BATH & SHOWER</p></li>
+                  <li><p>Body Soaps</p></li>
+                  <li><p>Shower Gel</p></li>
+                </ul>
+
+                <img src="https://www.beautybebo.com/pub/media/mega-menu/personal_cata.jpg" alt="personalcare">
+              </div>
+            </li>
+            <li class="nav-links">
+              <a href="./webpages/webpage-momBaby.html">MOM & BABY CARE</a>
+              <div style="width: 400%;">
+                <ul>
+                  <li><p>BABY CARE</p></li>
+                  <li><p>Bath Time</p></li>
+                  <li><p>Diapers</p></li>
+                  <li><p>Lotions & Creams</p></li>
+                  <li><p>Oils</p></li>
+                  <li><p>Powder</p></li>
+                  <li><p>Shampoo</p></li>
+                  <li><p>Soaps</p></li>
+                  <li><p>Sterilizer & Cleaners</p></li>
+                  <li><p>Rash Cream</p></li>
+                  <li><p>Wipes</p></li>
+                </ul>
+
+                <ul>
+                  <li><p>MOM CARE</p></li>
+                  <li><p>Lotions & Creams</p></li>
+                  <li><p>Personal Care</p></li>
+                </ul>
+
+                <img style="width:65%;" src="https://www.beautybebo.com/pub/media/mega-menu/mom_baby_cata.jpg" alt="babycare">
+              </div>
+            </li>
+            <li class="nav-links">
+              <a href="./webpages/webpage-fregrance.html">FRAGRANCE</a>
+              <div>
+                <ul>
+                  <li><p>Perfumes</p></li>
+                  <li><p>Deodorants roll ons</p></li>
+                  <li><p>Body Mist/Spray</p></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-links">
+              <a href="#">AYURVEDA</a>
+              <div>
+                <ul>
+                  <li><p>NATURAL SKIN CARE</p></li>
+                  <li><p>Body Wash</p></li>
+                  <li><p>Body Lotion</p></li>
+                  <li><p>Cleansers</p></li>
+                  <li><p>Cream</p></li>
+                  <li><p>Eye Care</p></li>
+                  <li><p>Face Wash</p></li>
+                  <li><p>Gel</p></li>
+                  <li><p>Lip Care</p></li>
+                  <li><p>Mask</p></li>
+                  <li><p>Pack</p></li>
+                  <li><p>Scrub</p></li>
+                  <li><p>Sun Protection</p></li>
+                </ul>
+
+                <ul>
+                  <li><p>NATURAL HAIR CARE</p></li>
+                  <li><p>Conditioner</p></li>
+                  <li><p>Hair Oils</p></li>
+                  <li><p>Hair Serum</p></li>
+                  <li><p>Hair Gel</p></li>
+                  <li><p>Shampoo</p></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-cart">
+          <a href="./webpages/webpage-cart.html"><i class="fa-solid fa-bag-shopping"></i>MY CART</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="homepage-section1">
+      <div class="homepage-section1-left">
+        <div class="menu-block-title">
+          <p><i class="fa-solid fa-list-ul"></i> ALL CATEGORIES</p>
+        </div>
+        <div class="menu-block-content">
+          <div class="menu-block-content-title">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt="">
+            <a href="./webpages/webpage-makeup.html">Makeup</a>
+          </div>
+          <div class="menu-block-content-title">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt="">
+            <a href="./webpages/webpage-skin.html">Skin</a>
+          </div>
+          <div class="menu-block-content-title">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt="">
+            <a href="./webpages/webpage-hair.html">Hair</a>
+          </div>
+          <div class="menu-block-content-title">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt="">
+            <a href="./webpages/webpage-personalcare.html">Personal Care</a>
+          </div>
+          <div class="menu-block-content-title">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt="">
+            <a href="./webpages/webpage-momBaby.html">Mom & Baby Care</a>
+          </div>
+          <div class="menu-block-content-title">
+            <img src="https://www.beautybebo.com/pub/media/fragrance.png" alt="">
+            <a href="./webpages/webpage-fregrance.html">Fragrance</a>
+          </div>
+          <div class="menu-block-content-title">
+            <img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt="">
+            <a href="#">Ayurveda</a>
+          </div>
+        </div>
+      </div>
+      <div class="homepage-section1-right-wapper" >
+        <div class="homepage-section1-right">
+          <div class="slide">
+            <img src="./assets/homepage/Slider_banner_1-min.jpg" alt="shampoo">
+          </div>
+          <div class="slide">
+            <img src="./assets/homepage/Mamaearth_banner_1-min.jpg" alt="mamaEarth">
+          </div>
+          <div class="slide">
+            <img src="./assets/homepage/Ponds_Forent_Banner_6-min.jpg" alt="ponds">
+          </div>
+        </div>
+        <div class="homepage-section1-right-slider-dots"></div>
+      </div>
+    </section>
+
+    <section class="homepage-section-blueHeaven">
+      <div class="homepage-section-blueHeaven-container">
+        <img src="./assets/homepage/Blue_heaven_Forent_3-min.jpg" alt="blueHevenBanner">
+      </div>
+    </section>
+
+    <section class="homepage-section-hotdeals">
+      <div class="homepage-section-hotdeals-container">
+        <div class="homepage-section-hotdeals-heading">
+          <p>
+            HOT DEALS
+          </p>
+        </div>
+        <div class="homepage-section-hotdeals-products-container">
+          <div class="homepage-section-hotdeals-products">
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="joyandLotusAdd">
+      <div class="joyAdd">
+        <img src="./assets/homepage/joy_banner.gif" alt="joy_banner">
+      </div>
+      <div class="lotusAdd">
+        <img src="./assets/homepage/lotus_banner.gif" alt="lotus_banner">
+      </div>
+    </section>
+
+    <section class="listtingtabs-gird">
+      <img src="./assets/homepage/Forent_Banner_5-min.jpg" alt="Forent_Banner">
+    </section>
+
+    <section class="homepage-section-bestProducts">
+      <div class="bestProduct-container">
+        <div class="bestProduct-container-bestSaller">
+          <div class="bestProduct-container-heading">
+            <p>BEST SELLER</p>
+          </div>
+          <div class="bestProduct-container-products1"></div>
+        </div>
+        <div class="bestProduct-container-latestProducts">
+          <div class="bestProduct-container-heading">
+            <p>LATEST PRODUCTS</p>
+          </div>
+          <div class="bestProduct-container-products2"></div>
+        </div>
+        <div class="bestProduct-container-MostViewed">
+          <div class="bestProduct-container-heading">
+            <p>MOST VIEWED</p>
+          </div>
+          <div class="bestProduct-container-products3"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="homepage-section-forentBanner">
+        <img src="./assets/homepage/1599-Forent-banner-4.gif" alt="forentBanner">
+    </section>
+
+    <section class="homepage-section-aboutUs">
+      <div class="aboutUs-heading">
+        <h1>Welcome to Beauty Products Online Shopping India- Beauty Bebo</h1>
+      </div>
+      <div class="aboutUs-contant">
+          <p>If you are looking for a flawless radiant face outlook for a special occasion, then we have the perfect tips for you. As you must already know, the conspicuous flawless outlook you want for your wedding, a date, a dinner party or for a modelling competition is only achieved through makeup.</p>
+          <p>Don’t get me wrong, you are naturally beautiful, that’s obvious. But everyone else is, so how will you will you ensure that you are different? Read on for hot irresistible tips before you <b>buy beauty products online</b>!</p>
+          <p><b>Clean Your Face First!</b></p>
+          <p>Before embarking on any makeup, always ensure that your face is clean. Need some assistance in absolute cleaning? Visit our range of face wash <b>beauty products online</b> for your best pick. We have made it our duty to carefully select the best products for you, so that you don’t experience breaks and allergies after use. So now you can be confident that your <b>buy cosmetic online shopping</b> will be worth your time and effort.</p>
+          <p>Wondering then how you will make a choice among the spectrum available? Most of our products are purely natural in ingredient, so you can as well check for your favorite ingredient combination. If not sure, we are still here for you. We can help narrow down your options, together with you.</p>
+          <p id="hide"><b>Apply a Moisturizer</b></p>
+          <p id="hide">Next, you need a moisturizer in your<b> </b><a href="https://www.beautybebo.com/makeup.html"><b>makeup kit</b></a>. Moisturizers keep your face glowing regardless of the mood of the day. Most essentially, moisturizers will keep your skin hydrated from the outside, while your constant hydration by taking fluids enhance the efforts.</p>
+          <p id="hide">Our moisturizers range from matte, ponds, creams and gels, all to ensure that your specific need is met. Just go through the list for a better selection, which will aid you through your <b>cosmetic online shopping. </b>With the best moisturizer, it will also work as a primer. Hence, you don’t have to buy an extra product, which saves you some cost.<b></b></p>
+          <p id="hide"><b>Get Your Makeup Kit</b></p>
+          <p id="hide">Your general makeup will consist, of more than the moisturizer. Some o the other major components include the foundation, which you use on your whole face. Then there is the concealer, which you concentrate on areas of the face you want to hide. There is the brightener and highlighter, which you will highlight areas you want conspicuous on your face.</p>
+          <p id="hide">And don’t forget to look into our range of toners for your best shot at a firmer face and neck.</p>
+          <p id="hide">We have the most effective <a href="https://www.beautybebo.com/"><b>beauty products India</b></a> has dreamt of to replenish your kit, so don’t miss out!</p>
+          <p id="hide"><b>Enhance the Outlook of the Eyes</b></p>
+          <p id="hide">At this point, your eyebrows should be in the shape and size you want them to be. Now you can brush them up to bring out a perfect outlook. Apply eye pencil to cover any gaps within the eyebrows for an ideal outlook.</p>
+          <p id="hide">If the area surrounding your eyes has a different color shade, probably more tanned or lighter in color in comparison to your general face color, then pay attention to the area.</p>
+          <p id="hide">Use concealers to bring out the perfect shade you want for a uniform outlook. Alternatively, you can use the highlighter to bring attention to your eyes, which even adds to a seemingly large-eye size.</p>
+          <p id="hide">If your eyes are starting to show wrinkles, then our under-eye wrinkle creams from our <b>cosmetic online shop</b> should come in handy.</p>
+          <p id="hide">Want to finish up with a luminating cosmetic product for a conspicuously radiant look? Go ahead and make your <a href="https://www.beautybebo.com/makeup.html"><b>makeup</b></a> experience more appealing.</p>
+          <p id="hide"><b>Your Lips?</b></p>
+          <p id="hide">For a natural beauty look, go for a glossy lip gloss or a light lipstick. Or are you going out with the girls, and thicker lips your way? Our range of matte lipstick collection should work for you.</p>
+          <p id="hide"><b>Bottom Line</b></p>
+          <p id="hide">Want to <a href="https://www.beautybebo.com/"><b>buy beauty products online</b></a> to improve your makeup kit? We are always there for you, ready to help.</p>
+          <p id="hide">All you have to do is take a step, look into our products and try us. Looking forward to seeing you!</p>      </div>
+          <a class="readMore">Read More</a>
+        </section>
+
+    <footer>
+      <div class="footer-main-aj">
+        <div class="footer-top">
+          <div class="divide">
+            <div class="one">
+              <div class="footer-block-title">
+                <h3>CONTACT INFO</h3>
+              </div>
+              <div class="list-contact-aj">
+                <ul class="links-contact">
+                  <li class="phone">(+91) 97990 30777</li>
+                  <li class="mail">
+                    <a href="mailto:support@beautybebo.com">support@beautybebo.com</a><br><a href="mailto:sales@beautybebo.com">sales@beautybebo.com
+                    </a>
+                  </li>
+                  <li class="time">Open time: 10:00AM - 7:00PM</li>
+                </ul>
+              </div>
+              <div class="socials-wrap">
+                <ul class="links-contact">
+                  <li class="li-social facebook-social">
+                    <a title="Facebook" href="https://www.facebook.com/BeautyBebo-339715696750230/" target="_blank"><span class="fa fa-facebook icon-social" aria-hidden="true"></span></a>
+                  </li>
+                  <li class="li-social pinterest-social">
+                    <a title="Instagram" href="https://www.instagram.com/beautybeboofficial/" target="_blank"><span class="fa fa-instagram icon-social" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="two">
+              <div class="footer-block-title">
+                <h3>QUICK LINKS</h3>
+              </div>
+              <div class="footer-block-content">
+                <ul class="links">
+                  <li><a href="./pages/aboutus.html">About us</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                  <li>
+                    <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+                  </li>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                  <li>
+                    <a href="/return-policy">Return and Refund Policy</a>
+                  </li>
+                  <li><a href="/shipping-policy">Shipping Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="divide">
+            <div class="three">
+              <div class="footer-block-title">
+                <h3>CUSTOMER</h3>
+              </div>
+              <div class="footer-block-content">
+                <ul class="links">
+                  <li><a href="/customer/account/">My Account</a></li>
+                  <li><a href="/track-order/">Track your Order</a></li>
+                  <li><a href="/order-return">Order Returns</a></li>
+                  <li><a href="/wishlist/">Wishlist</a></li>
+                  <li><a href="/blog/">News &amp; Events</a></li>
+                  <li><a href="./pages/faq.html">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="four">
+              <div class="footer-block-title">
+                <h3>CATEGORIES</h3>
+              </div>
+              <div class="footer-block-content categories">
+                <ul class="links">
+                  <li>
+                    <a href="https://www.beautybebo.com/makeup.html?___store=default"><span>Makeup</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.beautybebo.com/skin.html?___store=default"><span>Skin</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.beautybebo.com/hair.html?___store=default"><span>Hair</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.beautybebo.com/personal-care.html?___store=default"><span>Personal Care</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.beautybebo.com/mom-baby-care.html?___store=default"><span>Mom &amp; Baby Care</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.beautybebo.com/fragrance.html?___store=default"><span>Fragrance</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.beautybebo.com/ayurveda.html?___store=default"><span>Ayurveda</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-1-aj">
+          <div class="footer-payment_img">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
+          </div>
+          <div class="footer-right-signup">
+            <div><span>Signup For Newsletter</span></div>
+            <div class="signup-buttons-place">
+              <div>
+                <input type="text" class="enter-signup-text" placeholder="Signup For Newsletter">
+              </div>
+
+              <div>
+                <input type="button" value="Subscribe" class="enter-signup-button">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-2-aj">Made by Ramanpreet Singh, Manoj Kumar, Saurabh Pratap Singh & Manish Verma.</div>
+      </div>
+      <!--footer-main-ajn-->
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="scripts/index.js"></script>	
+  </body>
+</html>
