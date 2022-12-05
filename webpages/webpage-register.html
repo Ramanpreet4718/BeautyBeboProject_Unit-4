@@ -1278,11 +1278,11 @@
                 <!-- <label>First Name <span>*</span></label> -->
                 <div>
                     <label>First Name <span class="star">*</span></label>
-                    <input type="text" id="firstName">
+                    <input type="text" id="firstName" required>
                 </div>
                 <div>
                     <label>Last Name <span class="star">*</span></label>
-                    <input type="text" id="lastName">
+                    <input type="text" id="lastName" required>
                 </div>
             </div>
             <div class="form-check">
@@ -1294,21 +1294,21 @@
 
             <div class="input">
                 <label>Email <span class="star">*</span></label>
-                <input type="email" id="email">
+                <input type="email" id="email"  required>
             </div>
 
             <div class="input">
                 <label>Phone <span class="star">*</span></label>
-                <input type="text" id="phone">
+                <input type="text" id="phone" maxlength="10" oninput="formatphone(this)" required>
             </div>
             <div class="input">
                 <label>Password <span class="star">*</span></label>
-                <input type="password" id="pass">
+                <input type="password" id="pass" required>
             </div>
 
             <div class="input">
                 <label>Confirm Password <span class="star">*</span></label>
-                <input type="password" id="conPass">
+                <input type="password" id="conPass" required>
             </div>
 
             <input type="submit" value="CREATE AN ACCOUNT" id="submit">
@@ -1475,7 +1475,7 @@
         Details.push(obj);
         localStorage.setItem("account-data",JSON.stringify(Details));
        window.alert("Account Created Succesfully")
-       window.location.href="Login.html"
+       window.location.href="webpage-login.html"
       }else{
             window.alert("Password Miss-match")
       }
@@ -1483,6 +1483,12 @@
 
       
       // console.log(Details)
+
+
+    }
+    function formatphone(v){
+        if (v.value.length > v.maxLength) 
+        v.value = v.value.slice(0, v.maxLength);
     }
 </script>
 
