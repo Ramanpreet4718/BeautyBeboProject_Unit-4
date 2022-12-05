@@ -46,6 +46,11 @@
      
     }
         /* ----------apply coupne and add sub and remove */
+        .cart{
+            width: 80%;
+            margin: auto;
+        }
+
         #divbutton_in {
             background: #333;
             padding: 5px 14px;
@@ -95,9 +100,18 @@
             margin: 10px 0px;
         } */
 
-        input {
+        #zip {
             width: 342px;
             padding: 9px;
+        }
+        select#Country,#State{
+            width: 360px;
+            padding: 11px;
+            margin: 10px 0px;
+        }
+        input#discountcode {
+            width: 200px;
+            padding: 10px;
         }
 
         label {
@@ -1166,8 +1180,9 @@
             </div>
         </div>
     </header>
-
-    <h1>SHOPPING CART</h1>
+    <div class="cart">
+        <h1>SHOPPING CART</h1>
+    </div>
     <div class="cart" id="cart">
         <div id="cart_1stsection" style="width:70% ;">
             <div>
@@ -1193,7 +1208,7 @@
             <div class="address" id="myP1" style="display:none;">
                 <form action="">
                     <label for="">Country</label> <br>
-                    <select id="Country">
+                    <select id="Country" class="country">
                         <option value="India">India</option>
                     </select>
                     <br>
@@ -1220,7 +1235,7 @@
 
                     <label for="">Zip/Postal Code</label>
                     <br>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="zip" required>
 
                 </form>
                 <p>Best Way</p>
@@ -1260,7 +1275,7 @@
             </div>
             <div>
 
-                <button class="checkout">PROCEED TO CHECKOUT</button>
+                <button class="checkout" onclick="proceed()">PROCEED TO CHECKOUT</button>
             </div>
         </div>
     </div>
@@ -1403,6 +1418,14 @@
 
 </html>
 <script>
+    var booleanaddress= true;
+    function proceed(){
+        if(booleanaddress==false){
+            window.location.href="webpage-checkout.html"
+        }else{
+            alert("Please Fill Shipping Address")
+        }
+    }
 
     var cartarr = JSON.parse(localStorage.getItem("cartarr")) || [];
     // console.log(cartarr.length);
@@ -1428,6 +1451,7 @@
         var d1 = true;
         var d2 = true;
         function demoDisplay() {
+            booleanaddress=!booleanaddress;
             if (d1 == true) {
                 document.getElementById("myP1").style.display = "block";
                 d1 = !d1;
@@ -1496,7 +1520,7 @@
 
 
                 var divbutton=document.createElement("div");
-                divbutton.style.margin="15px";
+                divbutton.style.margin="20px 0px";
 
 
                 var divbuttonRemove=document.createElement("button");
@@ -1548,6 +1572,10 @@
                     if(tempcount===1){
                         // countcost(i);
                         removeCartItem();
+                        window.location.reload;
+                        // localStorage.setItem("cartarr",JSON.stringify(cartarr));
+
+                        // DisplayCartItems();
                     }else{
                         tempcount-=1;
                         quantity.textContent = tempcount;
