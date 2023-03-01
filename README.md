@@ -14,14 +14,6 @@ This is a group project for unit 4 construct week
 
 Javascript, HTML, CSS and Localstorage
 
-<!-- ## Team members
-
-- [@Manish Verma](https://github.com/manish9427) -->
-
-## Clone Snaps
-
-<img src="beautybebo.png"/>
-
 ## Deployed link
 
 Netlify Link- https://beautybebo-pt-web-08.netlify.app/index.html
